@@ -1,13 +1,17 @@
 <template>
   <div id="app">
+    <title-header></title-header>
     <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+import TitleHeader from './components/TitleHeader';
+
 export default {
   name: 'app',
+  components: { TitleHeader },
 };
 </script>
 
