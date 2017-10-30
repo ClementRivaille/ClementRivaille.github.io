@@ -4,10 +4,10 @@
       <router-link to="skills">Skills</router-link>
     </li>
     <li>
-      <router-link to="creations">Creations</router-link>
+      <router-link to="experiences">Experiences</router-link>
     </li>
     <li>
-      <router-link to="experiences">Experiences</router-link>
+      <router-link to="creations">Creations</router-link>
     </li>
   </ul>
 </template>
@@ -25,6 +25,7 @@ export default {
   ul {
     display: flex;
     justify-content: center;
+    list-style: none;
   }
   li {
     min-width: 2.5em;
