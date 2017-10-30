@@ -1,10 +1,10 @@
 <template>
   <ul>
     <li>
-      <router-link to="skills">Skills</router-link>
+      <router-link to="about">About</router-link>
     </li>
     <li>
-      <router-link to="experiences">Experiences</router-link>
+      <router-link to="skills">Skills</router-link>
     </li>
     <li>
       <router-link to="creations">Creations</router-link>

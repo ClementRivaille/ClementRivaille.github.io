@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Skills from '@/components/Skills';
 import Creations from '@/components/Creations';
-import Experiences from '@/components/Experiences';
+import About from '@/components/About';
 
 Vue.use(Router);
 
@@ -20,9 +20,9 @@ export default new Router({
       component: Creations,
     },
     {
-      path: '/experiences',
-      name: 'experiences',
-      component: Experiences,
+      path: '/about',
+      name: 'about',
+      component: About,
     },
   ],
 });
