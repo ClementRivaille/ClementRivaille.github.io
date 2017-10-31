@@ -12,7 +12,6 @@ export default new Router({
       path: '/skills',
       name: 'skills',
       component: Skills,
-      alias: '/',
     },
     {
       path: '/creations',
@@ -23,6 +22,7 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About,
+      alias: '/',
     },
   ],
 });
