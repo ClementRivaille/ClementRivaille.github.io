@@ -15,12 +15,25 @@
         </li>
       </ul>
       <h3>Experiences</h3>
+      <ul class="list-vignettes">
+        <li v-for="experience in experiences">
+          <experience v-bind="experience"></experience>
+        </li>
+      </ul>
       <h3>Formations</h3>
+      <ul class="list-vignettes">
+        <li v-for="formation in formations">
+          <formation v-bind="formation"></formation>
+        </li>
+      </ul>
     </article>
   </div>
 </template>
 
 <script>
+import Experience from './Experience';
+import Formation from './Formation';
+
 export default {
   name: 'skills',
   data() {
@@ -51,7 +64,7 @@ export default {
         },
         {
           group: 'Groupe Yves-Rocher',
-          location: 'Saint-Avé, France',
+          location: 'La Gacilly, France',
           period: 'april 2011 - june 2011',
           post: 'Internship',
           description: 'Regression testing of web-services',
@@ -73,11 +86,12 @@ export default {
       ],
     };
   },
+  components: { Experience, Formation },
 };
 </script>
 
 <style scoped>
-  ul.list-tags {
+  ul {
     display: flex;
     list-style: none;
     flex-direction: row;
