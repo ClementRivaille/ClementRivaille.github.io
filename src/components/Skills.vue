@@ -95,6 +95,7 @@ export default {
     display: flex;
     list-style: none;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .tag {
     margin: 0 0.3em;

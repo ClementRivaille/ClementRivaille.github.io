@@ -15,8 +15,13 @@ export default {
 </script>
 
 <style>
+html, body, #app, #page {
+  height: 100%;
+}
+
 body {
   background: #5ee0e0;
+  margin: 0;
 }
 
 #app {
@@ -30,5 +35,6 @@ body {
   margin: 0em 10em;
   padding: 0.1em 0.7em;;
   background: white;
+  min-width: 30em;
 }
 </style>
