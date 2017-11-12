@@ -16,7 +16,7 @@
       </ul>
       <h3>Experiences</h3>
       <ul class="list-vignettes">
-        <li v-for="experience in experiences">
+        <li v-for="experience in experiences" class="experience-item">
           <experience v-bind="experience"></experience>
         </li>
       </ul>
@@ -38,7 +38,7 @@ export default {
   name: 'skills',
   data() {
     return {
-      languages: ['Javascript', 'HTML5', 'CSS3', 'Java', 'Python', 'C#', 'LaTeX', 'SQL'],
+      languages: ['Javascript', 'HTML5', 'CSS3', 'Typescript', 'ES6', 'Java', 'Python', 'C#', 'LaTeX', 'SQL'],
       technologies: ['AngularJS', 'Node.js', 'Web Audio API', 'git', 'Vue.js', 'React', 'Flask'],
       experiences: [
         {
@@ -96,12 +96,23 @@ export default {
     list-style: none;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
+    align-content: space-between;
+    margin-bottom: 0.2em;
+    padding-left: 0.5em;
   }
   .tag {
-    margin: 0 0.3em;
     background: #23a794;
     color: white;
     padding: 0.3em 0.6em;
     border-radius: 0.5em;
+  }
+  li {
+    margin-right: 0.6em;;
+    margin-bottom: 1em;
+  }
+  .experience-item {
+    display: flex;
+    align-items: stretch;
   }
 </style>

@@ -90,5 +90,12 @@ ul {
   display: flex;
   list-style: none;
   flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+li {
+  display: flex;
+  align-items: stretch;
+  margin: 0.5em;
 }
 </style>

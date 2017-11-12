@@ -1,12 +1,12 @@
 <template>
   <ul>
-    <li>
+    <li :class="{active: $route.name === 'about' }">
       <router-link to="about">About</router-link>
     </li>
-    <li>
+    <li :class="{active: $route.name === 'skills' }">
       <router-link to="skills">Skills</router-link>
     </li>
-    <li>
+    <li :class="{active: $route.name === 'creations' }">
       <router-link to="creations">Creations</router-link>
     </li>
   </ul>
@@ -26,9 +26,23 @@ export default {
     display: flex;
     justify-content: center;
     list-style: none;
+
+    margin-bottom: 0;
+    padding-left: 0;
   }
   li {
     min-width: 2.5em;
-    margin: 0 0.5em;
+    margin: 0;
+    padding: 0.2em 1em;
+    background-color: #5d88c7;
+    border: 1px solid #efefef;
+    border-bottom: none;
+  }
+  li.active {
+    background-color: #ab6161;
+  }
+  a {
+    color: white;
+    text-decoration: none;
   }
 </style>

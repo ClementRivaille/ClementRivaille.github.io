@@ -24,30 +24,30 @@ export default {
 
 <style scoped>
 * {
-  background: #f9f9f9;
+  background-color: #aed1e2;
 }
 
 a {
   color: black;
   text-decoration: none;
+  display: flex;
+  align-items: stretch;
 }
 div {
   display: block;
   padding: 0;
   max-width: 20em;
-  margin: 0.5em;
-  border: 2px solid black;
-  border-radius: 0.5em;
 }
 h4 {
-  border-radius: 0.5em 0.5em 0 0;
-  background-color: white;
+  color: white;
+  background-color: #39406f;
   margin: 0;
   padding: 0.2em 0.4em;
   font-size: 1.1em;
 }
 img {
-  max-width: 20em;
+  max-width: 300px;
+  min-width: 100%;
 }
 p {
   padding: 0 0.8em;

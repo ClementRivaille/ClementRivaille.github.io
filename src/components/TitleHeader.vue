@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 * {
-  background: #db70a5;
+  background: #265647;
   color: white;
 }
 header {

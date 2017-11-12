@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="experience">
     <header>
       <h4>{{ group }}</h4>
-      <span>{{ post }} ({{period}}), {{location}}</span>
+      <span class="details">{{ post }} ({{period}}), {{location}}</span>
     </header>
-    <div>
+    <div class="description">
       {{description}}
     </div>
 
@@ -23,4 +23,25 @@ export default {
   ],
 };
 </script>
+
+<style scoped>
+.experience {
+  background-color: #aed1e2;
+  padding: 0.7em;
+  margin: 0;
+  max-width: 300px;
+  min-width: 120px;
+  color: #404040;
+}
+h4 {
+  margin: 0;
+}
+.details {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.description {
+  margin-top: 0.6em;
+}
+</style>
 
