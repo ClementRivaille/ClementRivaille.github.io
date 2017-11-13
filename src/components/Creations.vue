@@ -115,4 +115,7 @@ li {
   align-items: stretch;
   margin: 0.5em;
 }
+p {
+  margin-bottom: 0;
+}
 </style>
