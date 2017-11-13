@@ -2,19 +2,21 @@
   <header>
     <h1>Clément Rivaille</h1>
     <div>Software Engineer - Front-End Developer</div>
+    <links-list></links-list>
     <head-menu></head-menu>
   </header>
 </template>
 
 <script>
 import HeadMenu from './HeadMenu';
+import LinksList from './LinksList';
 
 export default {
   name: 'title-header',
   data() {
     return {};
   },
-  components: { HeadMenu },
+  components: { HeadMenu, LinksList },
 };
 </script>
 
