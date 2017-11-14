@@ -3,6 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import i18n from './i18n/i18n';
 
 Vue.config.productionTip = false;
 
@@ -10,6 +11,12 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
+  i18n,
+  template: '<App @changeLocale="value => changeLocale(value)"/>',
   components: { App },
+  methods: {
+    changeLocale: (locale) => {
+      i18n.locale = locale;
+    },
+  },
 });

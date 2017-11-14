@@ -11,6 +11,9 @@ import TitleHeader from './components/TitleHeader';
 export default {
   name: 'app',
   components: { TitleHeader },
+  methods: {
+    changeLocale(locale) { this.$emit('changeLocale', locale); },
+  },
 };
 </script>
 
