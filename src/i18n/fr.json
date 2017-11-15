@@ -1,11 +1,23 @@
 {
   "header": {
-    "title": "Ingénieur Génie Logiciel - Développeur Front-End"
+    "title": "Ingénieur Génie Logiciel - Développeur Front-End",
+    "menu": {
+      "about": "Présentation",
+      "skills": "Compétences",
+      "creations": "Créations"
+    }
   },
   "about": {
     "title": "Présentation",
     "dev": "Développeur front-end spécialisé dans les frameworks javascript tels qu'AngularJS, React et Vue. Je m'intéresse ) l'intégration, l'ergonomie et l'accessibilité, ainsi qu'à la communication. Mon objectif est de créer le pont entre les designers et les développeurs, en ayant conscience des défis et contraintes de chaque côté. Le développement d'interfaces est un domaine passionant pour ses technologies et méthodes en constante évolution. Mais c'est surtout une activité forçant à l'empathie envers les utilisateurs, et permettant de travailler au sein de rpofils variés, allant de développeurs back-end jusqu'aux artistes. Cette richesse et l'aspect humain sont ce que j'apprécie en priorité.",
     "games": "Je développe aussi des jeux sur mon temps libre. Ils sont pour la plupart expérimentaux, narratifs ou contemplatifs, avec parfois une focalisation sur la musique générative. C'est une manière efficace d'expérimenter avec des technologies, notamment la Web Audio API. Ces jeux m'encouragent aussi à créer des projets non-uitilitaires, n'utilisant les technologies que pour le divertissement ou l'art, et ainsi les rendre plus humaines. Le jeu-vidéo est le medium idéal pour combiner mes compétences de développeurs avec d'autres passions, comme l'écriture ou la composition.",
     "perso": "En dehors de ces activités, j'aime le théâtre (en tant que comédien amateur), le montage vidéo, le piano, les marches et les jeux de société."
+  },
+  "skills": {
+    "title": "Compétences et expériences",
+    "technologies": "Technologies",
+    "languages": "Langages",
+    "experiences": "Expériences",
+    "formations": "Formations"
   }
 }

@@ -1,13 +1,13 @@
 <template>
   <ul>
     <li :class="{active: $route.name === 'about' }">
-      <router-link to="about">About</router-link>
+      <router-link to="about">{{ $t('header.menu.about') }}</router-link>
     </li>
     <li :class="{active: $route.name === 'skills' }">
-      <router-link to="skills">Skills</router-link>
+      <router-link to="skills">{{ $t('header.menu.skills') }}</router-link>
     </li>
     <li :class="{active: $route.name === 'creations' }">
-      <router-link to="creations">Creations</router-link>
+      <router-link to="creations">{{ $t('header.menu.creations') }}</router-link>
     </li>
   </ul>
 </template>

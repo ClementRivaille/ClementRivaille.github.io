@@ -1,26 +1,26 @@
 <template>
   <div>
-    <h2>Skills &amp; Experiences</h2>
+    <h2>{{ $t('skills.title') }}</h2>
     <article>
-      <h3>Technologies</h3>
+      <h3>{{ $t('skills.technologies') }}</h3>
       <ul class="list-tags">
         <li v-for="technology in technologies">
           <span class="tag">{{technology}}</span>
         </li>
       </ul>
-      <h3>Languages</h3>
+      <h3>{{ $t('skills.languages') }}</h3>
       <ul class="list-tags">
         <li v-for="language in languages">
           <span class="tag">{{language}}</span>
         </li>
       </ul>
-      <h3>Experiences</h3>
+      <h3>{{ $t('skills.experiences') }}</h3>
       <ul class="list-vignettes">
         <li v-for="experience in experiences" class="experience-item">
           <experience v-bind="experience"></experience>
         </li>
       </ul>
-      <h3>Formations</h3>
+      <h3>{{ $t('skills.formations') }}</h3>
       <ul class="list-vignettes">
         <li v-for="formation in formations">
           <formation v-bind="formation"></formation>
