@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <locale-setting @changeLocale="changeLocale" :locale="locale" id="locale-setting"></locale-setting>
     <title-header></title-header>
     <router-view id="page"/>
   </div>
@@ -7,12 +8,20 @@
 
 <script>
 import TitleHeader from './components/TitleHeader';
+import LocaleSetting from './components/LocaleSetting';
 
 export default {
   name: 'app',
-  components: { TitleHeader },
+  components: { TitleHeader, LocaleSetting },
+  props: ['defaultLocale'],
+  data() {
+    return { locale: this.defaultLocale };
+  },
   methods: {
-    changeLocale(locale) { this.$emit('changeLocale', locale); },
+    changeLocale(locale) {
+      this.$emit('changeLocale', locale);
+      this.locale = locale;
+    },
   },
 };
 </script>
@@ -47,6 +56,12 @@ h2 {
   padding: 0em 0.7em;;
   background: #e4e4e4;
   min-height: 100%;
+}
+
+#locale-setting {
+  position:absolute;
+  right: 0;
+  top: 0;
 }
 
 @media screen and (min-width: 800px) {

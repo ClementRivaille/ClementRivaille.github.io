@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>Clément Rivaille</h1>
-    <div>Software Engineer - Front-End Developer</div>
+    <div>{{ $t('header.title') }}</div>
     <links-list></links-list>
     <head-menu></head-menu>
   </header>

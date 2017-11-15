@@ -12,11 +12,16 @@ new Vue({
   el: '#app',
   router,
   i18n,
-  template: '<App @changeLocale="value => changeLocale(value)"/>',
+  template: '<App @changeLocale="value => changeLocale(value)" :default-locale="locale"/>',
   components: { App },
   methods: {
     changeLocale: (locale) => {
       i18n.locale = locale;
     },
+  },
+  data() {
+    return {
+      locale: i18n.locale,
+    };
   },
 });
