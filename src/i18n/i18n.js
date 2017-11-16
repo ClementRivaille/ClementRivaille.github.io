@@ -11,4 +11,12 @@ export default new VueI18n({
     en,
     fr,
   },
+  dateTimeFormats: {
+    en: {
+      short: { year: 'numeric', month: 'short' },
+    },
+    fr: {
+      short: { year: 'numeric', month: 'short' },
+    },
+  },
 });

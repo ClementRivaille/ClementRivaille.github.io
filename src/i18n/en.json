@@ -14,10 +14,39 @@
     "perso": "Outside of these activities, I enjoy theatre (as an amateur comedian), video editing, piano, walks and board games."
   },
   "skills": {
-    "title": "Skills &amp; Experiences",
+    "title": "Skills & Experiences",
     "technologies": "Technologies",
     "languages": "Languages",
-    "experiences": "Experiences",
-    "formations": "Formations"
-  }
+    "experiences": {
+      "header": "Experiences",
+      "mgdis": {
+        "post": "Software developper",
+        "description": "Web Front-End development for decision assisting tools used by public organisms"
+      },
+      "osytos2": {
+        "post": "Internship",
+        "description": "Conception of a tool facilitating the creation of web pages for dashboard and configuration panels"
+      },
+      "osytos1": {
+        "post": "Internship",
+        "description": "File synchronization between networks, with a web user interface"
+      },
+      "yvesrocher": {
+        "post": "Internship",
+        "description": "Regression testing of web-services"
+      }
+    },
+    "formations": {
+      "header": "Formations",
+      "esir": {
+        "type": "Master's Degree in Engineering",
+        "formation": "ESIR, Software engineering"
+      },
+      "iut": {
+        "type": "Associate's degree",
+        "formation": "IUT, Software development"
+      }
+    }
+  },
+  "today": "today"
 }

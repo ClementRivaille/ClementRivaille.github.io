@@ -17,7 +17,36 @@
     "title": "Compétences et expériences",
     "technologies": "Technologies",
     "languages": "Langages",
-    "experiences": "Expériences",
-    "formations": "Formations"
-  }
+    "experiences": {
+      "header": "Expériences",
+      "mgdis": {
+        "post": "Analyse programmeur",
+        "description": "Développement web front-end d'outils d'aide à la décision pour les organismes publics"
+      },
+      "osytos2": {
+        "post": "Stage",
+        "description": "Conception d'un outil facilitant la créations de pages web pour dashboard et panneaux de configuration"
+      },
+      "osytos1": {
+        "post": "Stage",
+        "description": "Synchronisations de fichiers entre deux espaces, avec interface web"
+      },
+      "yvesrocher": {
+        "post": "Stage",
+        "description": "Tests de non-régression de web-services"
+      }
+    },
+    "formations": {
+      "header": "Formations",
+      "esir": {
+        "type": "Diplôme d'ingénieur",
+        "formation": "ESIR, Génie Logiciel"
+      },
+      "iut": {
+        "type": "DUT",
+        "formation": "IUT Informatique"
+      }
+    }
+  },
+  "today": "aujourd'hui"
 }

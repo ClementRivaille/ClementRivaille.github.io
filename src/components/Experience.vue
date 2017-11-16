@@ -2,10 +2,14 @@
   <div class="experience">
     <header>
       <h4>{{ group }}</h4>
-      <span class="details">{{ post }} ({{period}}), {{location}}</span>
+      <span class="details">
+        {{ $t('skills.experiences.' + name + '.post') }}<br/>
+        {{ $d(period.begin, 'short') }}&nbsp;-&nbsp;{{ period.end ? $d(period.end, 'short') : $t('today') }},
+        {{location}}
+      </span>
     </header>
     <div class="description">
-      {{description}}
+      {{ $t('skills.experiences.' + name + '.description') }}
     </div>
 
   </div>
@@ -15,6 +19,7 @@
 export default {
   name: 'experience',
   props: [
+    'name',
     'group',
     'location',
     'period',
