@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <locale-setting @changeLocale="changeLocale" :locale="locale" id="locale-setting"></locale-setting>
     <title-header></title-header>
-    <router-view id="page"/>
+    <locale-setting @changeLocale="changeLocale" :locale="locale" id="locale-setting"></locale-setting>
+    <main><router-view id="page"></router-view></main>
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style>
-html, body, #app {
+html, body, #app, main {
   height: 100%;
 }
 
@@ -50,6 +50,10 @@ h2 {
   padding: 0.1em 0.3em 0.1em 0.3em;
   color: white;
   display: inline-block;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 #page {

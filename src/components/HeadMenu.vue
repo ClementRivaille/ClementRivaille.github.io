@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul role="navigation">
     <li :class="{active: $route.name === 'about' }">
       <router-link to="about">{{ $t('header.menu.about') }}</router-link>
     </li>

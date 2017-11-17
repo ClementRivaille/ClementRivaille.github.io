@@ -70,8 +70,11 @@ img {
 li {
   margin-right: 0.5em;
 }
+a:focus {
+  opacity: 0.5;
+}
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
   ul {
     position: absolute;
     top: 0;

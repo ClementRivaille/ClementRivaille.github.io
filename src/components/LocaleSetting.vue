@@ -30,4 +30,7 @@ button {
   font-size: 0.9em;
   border-radius: 4px;
 }
+button:focus {
+  opacity: 0.15;
+}
 </style>
