@@ -3,7 +3,7 @@
     <div>
       <h4>{{title}}</h4>
       <img v-if="img" :alt="title" :src="img"/>
-      <p>{{description}}</p>
+      <p>{{ $t(`creations.${name}.description`)}}</p>
     </div>
   </a>
 </template>
@@ -13,10 +13,10 @@
 export default {
   name: 'project-link',
   props: [
+    'name',
     'title',
     'url',
     'img',
-    'description',
   ],
 };
 
@@ -51,5 +51,6 @@ img {
 }
 p {
   padding: 0 0.8em;
+  margin-bottom: 0.6em;
 }
 </style>
