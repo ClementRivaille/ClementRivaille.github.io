@@ -1,15 +1,17 @@
 <template>
-  <ul role="navigation">
-    <li :class="{active: $route.name === 'about' }">
-      <router-link to="about">{{ $t('header.menu.about') }}</router-link>
-    </li>
-    <li :class="{active: $route.name === 'skills' }">
-      <router-link to="skills">{{ $t('header.menu.skills') }}</router-link>
-    </li>
-    <li :class="{active: $route.name === 'creations' }">
-      <router-link to="creations">{{ $t('header.menu.creations') }}</router-link>
-    </li>
-  </ul>
+  <nav>
+    <ul role="navigation">
+      <li :class="{active: $route.name === 'about' }">
+        <router-link to="about">{{ $t('header.menu.about') }}</router-link>
+      </li>
+      <li :class="{active: $route.name === 'skills' }">
+        <router-link to="skills">{{ $t('header.menu.skills') }}</router-link>
+      </li>
+      <li :class="{active: $route.name === 'creations' }">
+        <router-link to="creations">{{ $t('header.menu.creations') }}</router-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
