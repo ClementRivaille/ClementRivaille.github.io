@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul role="contact">
     <li v-for="link in links">
       <a :title="link.name" :href="link.url">
         <img :src="link.icon"></img>
@@ -32,6 +32,11 @@ export default {
           icon: linkedinIcon,
         },
         {
+          name: 'twitter',
+          url: 'https://twitter.com/Itooh_',
+          icon: twitterIcon,
+        },
+        {
           name: 'github',
           url: 'https://github.com/ClementRivaille',
           icon: githubIcon,
@@ -40,11 +45,6 @@ export default {
           name: 'itch.io',
           url: 'https://itooh.itch.io/',
           icon: itchIcon,
-        },
-        {
-          name: 'twitter',
-          url: 'https://twitter.com/Itooh_',
-          icon: twitterIcon,
         },
         {
           name: 'youtube',
