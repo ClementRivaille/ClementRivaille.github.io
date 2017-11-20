@@ -5,8 +5,11 @@ import fr from './fr.json';
 
 Vue.use(VueI18n);
 
+const locale = localStorage.getItem('lang') ||
+  ((navigator.language === 'en' || navigator.language === 'fr') ? navigator.language : 'en');
+
 export default new VueI18n({
-  locale: 'en',
+  locale,
   messages: {
     en,
     fr,

@@ -21,6 +21,7 @@ export default {
     changeLocale(locale) {
       this.$emit('changeLocale', locale);
       this.locale = locale;
+      localStorage.setItem('lang', locale);
     },
   },
 };
