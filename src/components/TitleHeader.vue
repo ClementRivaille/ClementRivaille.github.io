@@ -22,7 +22,6 @@ export default {
 
 <style scoped>
 * {
-  background: #265647;
   color: white;
 }
 header {

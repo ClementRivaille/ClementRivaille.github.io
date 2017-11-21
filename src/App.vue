@@ -33,7 +33,7 @@ html, body, #app, main {
 }
 
 body {
-  background: #39406f;
+  background-color: #4c4b5a;
   margin: 0;
 }
 

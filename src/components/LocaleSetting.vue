@@ -26,9 +26,10 @@ button {
   opacity: 0.3;
   border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 0.9em;
   border-radius: 4px;
+  color: #4c4b5a;
 }
 button:focus {
   opacity: 0.15;
