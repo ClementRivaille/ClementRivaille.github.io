@@ -11,7 +11,13 @@
     "title": "About",
     "dev": "Front-end developer specialized in javascript frameworks such as AngularJS, React and Vue, I'm interested in integration, ergonomics and accessibility, as well as communication. My goal is to build bridges between designers and developpers, by understanding challenges and constraints on both sides. UX development is an exciting field for its evolving technologies and paradigms. But it foremost forces empathy toward users, and allows to work with various profiles going from back-end developers to artists. This richness and its human aspect is what I enjoy the most.",
     "games": "I also develop games on my spare time. They are mostly experimental, narrative and contemplative, with sometimes a focus on generative music. It's a great way to experiment with technologies, notably the Web Audio API. They also encourage me to create non utilitarian projects, using technologies only for entertainment, art, and in the end making them more human. Games are the ideal media to combine my developpers skills with some of my hobbies, such as writing and composing.",
-    "perso": "Outside of these activities, I enjoy theatre (as an amateur comedian), video editing, piano, walks and board games."
+    "perso": "Outside of these activities, I enjoy theatre (as an amateur comedian), video editing, piano, walks and board games.",
+    "useful": {
+      "title": "Useful informations",
+      "age": "Age:",
+      "location": "Living location:",
+      "employer": "Currrent employer:"
+    }
   },
   "skills": {
     "title": "Skills & Experiences",
