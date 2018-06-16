@@ -10,6 +10,14 @@
       </li>
     </ul>
 
+    <h3> {{ $t('creations.tools.title') }}</h3>
+    <p v-html="$t('creations.tools.summary')"></p>
+    <ul>
+      <li v-for="tool in tools">
+        <project-link v-bind="tool"></project-link>
+      </li>
+    </ul>
+
     <h3> {{ $t('creations.experiments.title') }}</h3>
     <p v-html="$t('creations.experiments.summary')"></p>
 
@@ -35,12 +43,19 @@ import landscape from '../assets/landscape.png';
 import harmonitImg from '../assets/harmonit.png';
 import onceuponImg from '../assets/onceupon.png';
 import terribleImg from '../assets/terrible.png';
+import bloodImg from '../assets/blood.png';
 
 export default {
   name: 'creations',
   data() {
     return {
       games: [
+        {
+          title: 'Blood Not Allowed',
+          url: 'https://itooh.itch.io/blood-not-allowed',
+          img: bloodImg,
+          name: 'blood-not-allowed',
+        },
         {
           title: 'Moog Memories',
           url: 'https://itooh.itch.io/moog-memories',
@@ -90,6 +105,13 @@ export default {
           url: 'https://github.com/ClementRivaille/terrible-logos',
           img: terribleImg,
           name: 'terrible-logos',
+        },
+      ],
+      tools: [
+        {
+          title: 'Orchestre-JS',
+          url: 'https://github.com/ClementRivaille/orchestre-js',
+          name: 'orchestre-js',
         },
       ],
     };

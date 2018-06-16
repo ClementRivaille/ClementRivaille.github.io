@@ -68,6 +68,10 @@
       "title": "Videos (French)",
       "summary": "<p>In 2015, I started making videos for Youtube. At the time it was mostly experimental: I tried doing sketches, essays, game analysis… With a schedule of one video per week, my goal was to learn this medium and explore what I could do. Some of the results are bad, some are absolutely terrible, and a few are actually still pretty okay!</p> <p>In 2017, I decided to focus on game-design videos. Since then I've been doing essays about independant games, strange creations, and original usages of the game medium. My goal is to bring reflexions on how we define video-game, show new and creative way to use it, and share thoughts on some unknown games.</p> <p>As stated, those videoas are in French. They can be seen on the channel <a href='{link}' target='_blank'>Excursions Virtuelles</a> (Virtual Wanders).</p>"
     },
+    "tools": {
+      "title": "Tools",
+      "summary": "Libraries and utilitary softwares that I've developed."
+    },
     "moog-memories": {
       "description": "Interactive music in HTML5, made in 48 hours for the Music Game Jam"
     },
@@ -91,6 +95,12 @@
     },
     "terrible-logos": {
       "description": "Weirdly styled text, using BEM methodology"
+    },
+    "blood-not-allowed": {
+      "description": "A text-only comedy-horror musical"
+    },
+    "orchestre-js": {
+      "description": "A web audio library to dynamically manage instrumental layers in a song."
     }
   },
   "today": "today"
