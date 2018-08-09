@@ -17,13 +17,14 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
   name: 'about',
   data() {
-    // Calculate age…
-    const birth = new Date('1991/10/06');
-    const age = Math.floor((new Date() - birth) / 1000 / 60 / 60 / 24 / 365);
-    return { age };
+    return {
+      age: moment().diff('1991-06-10', 'years', false),
+    };
   },
 };
 </script>
