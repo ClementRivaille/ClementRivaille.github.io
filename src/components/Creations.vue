@@ -44,12 +44,19 @@ import harmonitImg from '../assets/harmonit.png';
 import onceuponImg from '../assets/onceupon.png';
 import terribleImg from '../assets/terrible.png';
 import bloodImg from '../assets/blood.png';
+import octaveImg from '../assets/in-octave.png';
 
 export default {
   name: 'creations',
   data() {
     return {
       games: [
+        {
+          title: 'In Octave',
+          url: 'https://itooh.itch.io/in-octave',
+          img: octaveImg,
+          name: 'in-octave',
+        },
         {
           title: 'Blood Not Allowed',
           url: 'https://itooh.itch.io/blood-not-allowed',

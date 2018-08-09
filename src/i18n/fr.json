@@ -51,6 +51,10 @@
       "iut": {
         "type": "DUT",
         "formation": "IUT Informatique"
+      },
+      "rgaa": {
+        "type": "Formation Professionelle Accessibilité Web",
+        "formation": "Concevoir et développer des sites conformes au RGAA 3"
       }
     }
   },
@@ -70,13 +74,13 @@
     },
     "tools": {
       "title": "Outils",
-      "summary": "Librairies ou programmes utilitaires que j'ai pu développer."
+      "summary": "Librairies ou programmes utilitaires que j'ai développé."
     },
     "moog-memories": {
-      "description": "Musique interactive en HTML5, réalisée en 48 heures pour la Music Game Jam"
+      "description": "Musique interactive en HTML5, réalisée pour la Music Game Jam 2017"
     },
     "tabletop-dance": {
-      "description": "Puzzle shooter créé durant la GMTK Jam"
+      "description": "Puzzle shooter créé durant la GMTK Jam 2017"
     },
     "safe-bots": {
       "description": "Puzzle développé sur une semaine"
@@ -98,6 +102,9 @@
     },
     "blood-not-allowed": {
       "description": "Comédie horrifique musicale, entièrement textuel"
+    },
+    "in-octave": {
+      "description": "Jeu de tir avec musique procédurale"
     },
     "orchestre-js": {
       "description": "Une librairie audio web permettant de manipuler dynamiquement des couches instrumentales d'une musique."

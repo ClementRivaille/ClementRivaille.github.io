@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       languages: ['Javascript', 'HTML5', 'CSS3', 'Typescript', 'ES6', 'Java', 'Python', 'C#', 'LaTeX', 'SQL'],
-      technologies: ['AngularJS', 'Node.js', 'Web Audio API', 'git', 'Vue.js', 'React', 'redux', 'Flask'],
+      technologies: ['AngularJS', 'Node.js', 'Web Audio API', 'git', 'Vue.js', 'React', 'redux', 'WCAG', 'Express', 'Flask'],
       experiences: [
         {
           name: 'mgdis',
@@ -86,6 +86,11 @@ export default {
         },
       ],
       formations: [
+        {
+          name: 'rgaa',
+          establishment: 'Atalan',
+          years: '2018',
+        },
         {
           name: 'esir',
           type: 'Master\'s Degree in Engineering',
