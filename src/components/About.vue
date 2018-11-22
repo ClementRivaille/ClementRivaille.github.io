@@ -8,8 +8,8 @@
   <div class="useful">
     <h3> {{ $t('about.useful.title' ) }} </h3>
     <ul>
-      <li> <strong>{{ $t('about.useful.location') }}</strong> Vannes, France </li>
-      <li> <strong>{{ $t('about.useful.employer') }}</strong> <a href="https://www.mgdis.fr">MGDIS</a></li>
+      <li> <strong>{{ $t('about.useful.location') }}</strong> Nantes, France </li>
+      <li> <strong>{{ $t('about.useful.employer') }}</strong> <a href="https://lonestone.consulting">Lone Stone</a></li>
       <li> <strong>{{ $t('about.useful.age') }}</strong> {{ age }}</li>
     </ul>
   </div>

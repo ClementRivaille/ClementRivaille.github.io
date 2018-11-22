@@ -39,14 +39,25 @@ export default {
   data() {
     return {
       languages: ['Javascript', 'HTML5', 'CSS3', 'Typescript', 'ES6', 'Java', 'Python', 'C#', 'LaTeX', 'SQL'],
-      technologies: ['AngularJS', 'Node.js', 'Web Audio API', 'git', 'Vue.js', 'React', 'redux', 'WCAG', 'Express', 'Flask'],
+      technologies: ['Vue.js', 'React', 'Angular', 'Node.js', 'redux', 'Web Audio API', 'git', 'WCAG', 'Express', 'Flask'],
       experiences: [
+        {
+          name: 'lonestone',
+          group: 'Lone Stone',
+          location: 'Nantes, France',
+          period: {
+            begin: new Date('2018/11/05'),
+          },
+          post: 'Software developper',
+          description: 'Web Front-End developent for decision assisting tools used by public organisms',
+        },
         {
           name: 'mgdis',
           group: 'MGDIS',
           location: 'Vannes, France',
           period: {
             begin: new Date('2014/11/01'),
+            end: new Date('2018/10/26'),
           },
           post: 'Software developper',
           description: 'Web Front-End developent for decision assisting tools used by public organisms',
@@ -79,7 +90,7 @@ export default {
           location: 'La Gacilly, France',
           period: {
             begin: new Date('2011/04/01'),
-            end: new Date('2014/06/30'),
+            end: new Date('2011/06/30'),
           },
           post: 'Internship',
           description: 'Regression testing of web-services',
