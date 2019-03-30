@@ -74,7 +74,7 @@
     },
     "videos": {
       "title": "Videos (French)",
-      "summary": "<p>In 2015, I started making videos for Youtube. At the time it was mostly experimental: I tried sketches, essays, game analysis… With a schedule of one video per week, my goal was to learn this medium and explore what I could do. Some of the results are bad, some are absolutely terrible, and a few are actually still pretty okay!</p> <p>In 2017, I decided to focus on game-design videos. Since then I've been doing essays about independant games, strange creations, and original usages of the game medium. My goal is to bring reflexions on how we define video-games, show new and creative way to use them, and share thoughts on some unknown games.</p> <p>As stated, those videoas are in French. They can be seen on the channel <a href='{link}' target='_blank'>Excursions Virtuelles</a> (Virtual Wanders).</p>"
+      "summary": "<p>In 2015, I started making videos on Youtube. For two years I experimented with the medium, by producing on a regular basis videos of various styles (sketches, analyses, essays…). It isn't until 2017 that I decided to focus on game-design.</p> <p>My goal is to create reflexions on how we define video-games, show new and creative ways to use them, and share thoughts on some alternative games.</p> <p>These videos can be seen on the channel <a href='{link}' target='_blank'>Excursions Virtuelles</a> (Virtual Wanders). As stated, they are in French. However, I do my best to have them subtitled. Although those subtitles are also in French, you can either use the auto-translate or contact me if you want me to add English subtitles for a particular video.</p>"
     },
     "tools": {
       "title": "Tools",
@@ -112,6 +112,9 @@
     },
     "orchestre-js": {
       "description": "A web audio library to dynamically manage instrumental layers in a song."
+    },
+    "joy-phases": {
+      "description": "A musical phasing sequencer"
     }
   },
   "today": "today"

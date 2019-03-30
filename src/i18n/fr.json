@@ -74,7 +74,7 @@
     },
     "videos": {
       "title": "Vidéos",
-      "summary": "<p>En 2015, j'ai commencé à réaliser des vidéos sur Youtube. À ce stade elles étaient surtout expérimentales : je me suis essayé aux sketchs, aux essais, aux analyses de jeux… Avec un planning d'une vidéo par semaine, mon objectif était d'apprendre à utiliser le medium et explorer ce que je pouvais réaliser. Il en a résulté des vidéos parfois mauvaises, parfois épouvantables, et d'autres malgré tout encore sympathiques !</p> <p>En 2017, j'ai pris la décision de me focaliser sur les vidéos d'analyse de game-design. Depuis j'ai créé des essais sur des jeux indépendants, des créations intriguantes, et des utilisations originales du medium ludique. Mon but est d'amener des réflexions sur comment l'on définit le jeu-vidéo, montrer des façons nouvelles et créatives de l'utiliser, et partager des opinions sur quelques jeux méconnus.</p> <p>Ces vidéos peuvent être visionnées depuis la chaîne <a href='{link}' target='_blank'>Excursions Virtuelles</a>.</p>"
+      "summary": "<p>En 2015, j'ai commencé à réaliser des vidéos sur Youtube. Pendant deux ans j'ai expérimenté avec le medium, en produisant des vidéos régulièrement dans des genres différents (sketchs, analyses, essais…). Ce n'est qu'en 2017 que j'ai pris la décision de me focaliser sur le sujet du game-design.</p> <p>Mon but est de créer des réflexions sur comment l'on définit le jeu-vidéo, montrer des façons nouvelles et créatives de l'utiliser, et partager des opinions sur quelques jeux alternatifs.</p> <p>Ces vidéos peuvent être visionnées depuis la chaîne <a href='{link}' target='_blank'>Excursions Virtuelles</a>.</p>"
     },
     "tools": {
       "title": "Outils",
@@ -112,6 +112,9 @@
     },
     "orchestre-js": {
       "description": "Une librairie audio web permettant de manipuler dynamiquement des couches instrumentales d'une musique."
+    },
+    "joy-phases": {
+      "description": "Un séquenceur musical avec déphasage"
     }
   },
   "today": "aujourd'hui"

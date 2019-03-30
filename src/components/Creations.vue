@@ -120,6 +120,11 @@ export default {
           url: 'https://github.com/ClementRivaille/orchestre-js',
           name: 'orchestre-js',
         },
+        {
+          title: 'Joy Phases',
+          url: 'https://github.com/ClementRivaille/joy-phases',
+          name: 'joy-phases',
+        },
       ],
     };
   },
