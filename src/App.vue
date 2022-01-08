@@ -1,30 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="w-full h-full bg-blue-300 flex justify-center items-center">
+    <!-- <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> -->
+    <!-- <router-view /> -->
+    <AnimatedText />
   </div>
-  <router-view />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script lang="ts" setup>
+import AnimatedText from "./components/atoms/AnimedText.vue";
+import { useConductorProvider } from "./utils/conductor";
+
+const { instruments, loop } = useConductorProvider();
+
+async function startConductor() {
+  await instruments.load();
+  loop.start();
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+startConductor();
+</script>
