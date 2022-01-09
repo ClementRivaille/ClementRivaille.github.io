@@ -15,7 +15,7 @@ const { instruments, loop } = useConductorProvider();
 
 async function startConductor() {
   await instruments.load();
-  loop.start();
+  //loop.start();
 }
 
 startConductor();

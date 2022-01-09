@@ -1,0 +1,32 @@
+<template>
+  <span
+    class="icon"
+    :class="{
+      'w-24': size === 'xl',
+      'w-16': size === 'l',
+      'w-10': size === 'm',
+      'w-6': size === 's' || !size,
+    }"
+  >
+    <SvgIcon />
+  </span>
+</template>
+
+<script setup lang="ts">
+import { iconsMap, IconsName } from "@/utils/icons";
+const props = defineProps<{
+  name?: keyof typeof IconsName;
+  size?: "s" | "m" | "l" | "xl";
+}>();
+
+const SvgIcon = iconsMap[props.name || "piano"];
+</script>
+
+<style scoped lang="scss">
+.icon {
+  fill: white;
+  > * {
+    width: 100%;
+  }
+}
+</style>
