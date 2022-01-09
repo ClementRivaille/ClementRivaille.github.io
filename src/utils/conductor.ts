@@ -1,7 +1,10 @@
+import { StoreData } from "@/store";
 import { Sequence, Transport } from "tone";
 import { inject, provide } from "vue";
+import { useStore } from "vuex";
 import Instruments from "./instruments";
 import Signal, { Callback } from "./signal";
+import { useAction } from "./vuex-hooks";
 
 enum Provided {
   instruments = "instruments",
@@ -11,6 +14,10 @@ enum Provided {
 
 export enum Events {
   beat = "beat",
+  rhodes = "rhodes",
+  synth = "synth",
+  clarinet = "clarinet",
+  drums = "drums",
 }
 
 export function useConductorProvider() {
@@ -60,5 +67,35 @@ export function useSubscribe(event: Events, callback: Callback) {
 
   return () => {
     signal?.unsubscribe(event, callback);
+  };
+}
+
+export function useConductor() {
+  const instruments = useInstruments();
+  const signal = inject<Signal<Events>>(Provided.signal);
+  const setWave = useAction("setWave");
+  const { state } = useStore<StoreData>();
+
+  return {
+    playRhodes: () => {
+      instruments?.playRhodes();
+      signal?.emit(Events.rhodes);
+    },
+    playClarinet: () => {
+      instruments?.playClarinet();
+      signal?.emit(Events.clarinet);
+    },
+    playSynth: () => {
+      instruments?.playSynth();
+      signal?.emit(Events.synth);
+    },
+    playDrums: () => {
+      instruments?.playDrums();
+      signal?.emit(Events.drums);
+    },
+    toggleWaveEffect: () => {
+      instruments?.setEffect(!state.wave);
+      setWave(!state.wave);
+    },
   };
 }

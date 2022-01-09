@@ -1,26 +1,36 @@
-import { ActionContext, ActionTree, createStore } from "vuex";
+import { ActionContext, ActionTree, createStore, MutationTree } from "vuex";
 
 export interface StoreData {
-  active: true;
+  wave: boolean;
 }
 
+enum MutationsType {
+  setWave = "setWave",
+}
+
+const mutations: MutationTree<StoreData> = {
+  [MutationsType.setWave]: (state, value: boolean) => {
+    state.wave = value;
+  },
+};
+
 export interface Actions {
-  activate: (
+  setWave: (
     context: ActionContext<StoreData, StoreData>,
     value: boolean
   ) => void;
 }
 const actions: Actions = {
-  activate: (store, value: boolean) => {
-    store.commit("TEST", value);
+  setWave: (store, value: boolean) => {
+    store.commit(MutationsType.setWave, !!value);
   },
 };
 
 export default createStore<StoreData>({
   state: {
-    active: true,
+    wave: false,
   },
-  mutations: {},
+  mutations,
   actions: { ...actions } as ActionTree<StoreData, StoreData>,
   modules: {},
 });

@@ -13,6 +13,8 @@ export enum IconsName {
   water = "water",
 }
 
+export type IconSize = "s" | "m" | "l" | "xl";
+
 export const iconsMap: { [key in IconsName]: VueElementConstructor<any> } = {
   drum,
   flute,

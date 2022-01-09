@@ -126,7 +126,7 @@ export default class Instruments {
       ...buildScaleNotes(scale.notes, 5, 3),
     ];
 
-    this.clarinetNotes = [
+    this.synthNotes = [
       ...buildScaleNotes(scale.notes, 4, 3),
       ...buildScaleNotes(scale.notes, 5, 3),
     ];
@@ -173,7 +173,7 @@ export default class Instruments {
           {
             baseUrl: "./instruments/bass/",
             onload: resolve,
-            volume: 5,
+            volume: 4,
           }
         ).connect(bassReverb);
         bassReverb.generate();
@@ -198,7 +198,7 @@ export default class Instruments {
           {
             baseUrl: "./instruments/rhodes/",
             onload: resolve,
-            volume: -3,
+            volume: -6,
           }
         ).connect(rhodesReverb);
         rhodesReverb.generate();
@@ -227,7 +227,7 @@ export default class Instruments {
             release: 4,
             baseUrl: "./instruments/clarinet/",
             onload: resolve,
-            volume: -2,
+            volume: -4,
           }
         ).connect(clarinetReverb);
         clarinetReverb.generate();
@@ -250,7 +250,7 @@ export default class Instruments {
           {
             baseUrl: "./instruments/synth/",
             onload: resolve,
-            volume: 12,
+            volume: 8,
           }
         ).connect(synthReverb);
         synthReverb.generate();
@@ -283,7 +283,7 @@ export default class Instruments {
           },
           {
             onload: resolve,
-            volume: 10,
+            volume: 6,
           }
         ).connect(drumReverb);
         drumReverb.generate();

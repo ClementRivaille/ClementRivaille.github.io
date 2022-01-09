@@ -1,6 +1,6 @@
 <template>
   <span
-    class="icon"
+    class="icon inline-block"
     :class="{
       'w-24': size === 'xl',
       'w-16': size === 'l',
@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
-import { iconsMap, IconsName } from "@/utils/icons";
+import { IconSize, iconsMap, IconsName } from "@/utils/icons";
 const props = defineProps<{
   name?: keyof typeof IconsName;
-  size?: "s" | "m" | "l" | "xl";
+  size?: IconSize;
 }>();
 
 const SvgIcon = iconsMap[props.name || "piano"];
