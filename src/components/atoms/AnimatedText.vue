@@ -1,11 +1,11 @@
 <template>
   <div
     :aria-label="msg"
-    class="max-w-1/3 text-white opacity-70 font-bold text-9xl"
+    class="md:max-w-1/3 text-white opacity-70 font-bold text-5xl md:text-9xl"
   >
     <span
       aria-hidden
-      v-for="(letter, index) in msg"
+      v-for="(letter, index) in [...msg]"
       :key="index"
       :style="{ color: activeLetter === index ? 'red' : 'white' }"
     >

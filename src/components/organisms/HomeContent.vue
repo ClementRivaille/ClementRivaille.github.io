@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col gap-16 justify-center items-center">
-    <AnimedText />
-    <Toolbar>
+  <div class="flex flex-col gap-8 md:gap-16 justify-center items-center">
+    <AnimatedText />
+    <MusicToolbar>
       <ButtonIcon name="piano" size="m" @click="onClickPiano" />
       <ButtonIcon name="violin" size="m" @click="onClickViolin" />
       <ButtonIcon name="flute" size="m" @click="onClickFlute" />
@@ -14,7 +14,7 @@
         role="switch"
         :aria-checked="state.wave"
       />
-    </Toolbar>
+    </MusicToolbar>
   </div>
 </template>
 
@@ -22,8 +22,8 @@
 import { StoreData } from "@/store";
 import { useConductor } from "@/utils/conductor";
 import { useStore } from "vuex";
-import AnimedText from "../atoms/AnimedText.vue";
-import Toolbar from "../atoms/Toolbar.vue";
+import AnimatedText from "../atoms/AnimatedText.vue";
+import MusicToolbar from "../atoms/MusicToolbar.vue";
 import ButtonIcon from "../molecules/ButtonIcon.vue";
 
 const { playRhodes, playClarinet, playSynth, playDrums, toggleWaveEffect } =

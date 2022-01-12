@@ -2,10 +2,10 @@
   <span
     class="icon inline-block"
     :class="{
-      'w-24': size === 'xl',
-      'w-16': size === 'l',
-      'w-10': size === 'm',
-      'w-6': size === 's' || !size,
+      ['w-12 md:w-24']: size === 'xl',
+      ['w-8 md:w-16']: size === 'l',
+      ['w-6 md:w-10']: size === 'm',
+      ['w-4 md:w-6']: size === 's' || !size,
     }"
   >
     <SvgIcon />
