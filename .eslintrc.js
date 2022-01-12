@@ -19,6 +19,7 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "vue/multi-word-component-names": "warn"
+    "vue/multi-word-component-names": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { varsIgnorePattern: "^_" }]
   },
 };

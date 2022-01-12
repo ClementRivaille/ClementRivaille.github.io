@@ -1,14 +1,18 @@
 <template>
   <div
-    class="w-full h-full bg-blue-300 flex justify-center items-start pt-12 md:items-center md:pt-0"
+    class="w-full h-full bg-blue-300 flex justify-center items-start md:items-center md:pt-0"
   >
-    <HomeContent />
+    <AnimatedBackground />
+    <div class="pt-12 z-10">
+      <HomeContent />
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { useConductorProvider } from "./utils/conductor";
 import HomeContent from "./components/organisms/HomeContent.vue";
+import AnimatedBackground from "./components/organisms/AnimatedBackground.vue";
 
 const { instruments, loop } = useConductorProvider();
 
