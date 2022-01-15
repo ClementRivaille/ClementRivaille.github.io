@@ -8,6 +8,7 @@
           v-for="(circle, ci) of corner"
           :key="ci"
           :position="circle.position"
+          :active="circle.active"
         ></BackgroundBubble>
       </div>
     </div>
@@ -16,7 +17,7 @@
 
 <script setup lang="ts">
 import { Events, useSubscribe } from "@/utils/conductor";
-import { ref, reactive } from "vue";
+import { ref, reactive, computed } from "vue";
 import BackgroundBubble from "../atoms/BackgroundBubble.vue";
 
 interface CircleData {
@@ -24,16 +25,22 @@ interface CircleData {
   position: { x: number; y: number };
 }
 const circles = ref<CircleData[][]>([]);
+const activeCircle = reactive({
+  set: -1,
+  idx: -1,
+});
 
 function initCircles() {
   const circlesSet: CircleData[][] = [];
-  for (const _i of Array(4)) {
+  for (const setIdx of [...Array(4).keys()]) {
     const nbCircles = Math.ceil(Math.random() * 3);
     const cornerCircles: CircleData[] = [];
-    for (let _c = 0; _c < nbCircles; _c++) {
+    for (let circleIdx = 0; circleIdx < nbCircles; circleIdx++) {
       cornerCircles.push(
         reactive({
-          active: false,
+          active: computed(
+            () => activeCircle.set === setIdx && activeCircle.idx === circleIdx
+          ),
           position: { x: Math.random(), y: Math.random() },
         })
       );
@@ -49,6 +56,24 @@ function initCircles() {
         circle.position = { x: Math.random(), y: Math.random() };
       }
     }
+  });
+
+  useSubscribe(Events.clarinet, () => {
+    // Pick a random circle
+    let circleSetIdx = activeCircle.set;
+    let circleIdx = activeCircle.idx;
+    while (
+      circleSetIdx === activeCircle.set &&
+      circleIdx === activeCircle.idx
+    ) {
+      circleSetIdx = Math.floor(Math.random() * circles.value.length);
+      const circleSet = circles.value[circleSetIdx];
+      circleIdx = Math.floor(Math.random() * circleSet.length);
+    }
+
+    // Set active circle
+    activeCircle.set = circleSetIdx;
+    activeCircle.idx = circleIdx;
   });
 }
 
