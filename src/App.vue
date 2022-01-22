@@ -1,6 +1,13 @@
 <template>
   <div
-    class="w-full h-full bg-blue-300 flex justify-center items-start md:items-center md:pt-0"
+    class="
+      w-full
+      h-full
+      flex
+      justify-center
+      items-start
+      md:items-center md:pt-0
+    "
   >
     <AnimatedBackground />
     <div class="pt-12 z-10">

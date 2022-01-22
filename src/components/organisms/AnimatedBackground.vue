@@ -1,6 +1,15 @@
 <template>
   <div
-    class="z-0 absolute grid grid-rows-2 grid-cols-2 w-screen h-72 md:overflow-hidden md:h-screen"
+    class="
+      bg-primary
+      z-0
+      absolute
+      grid grid-rows-2 grid-cols-2
+      w-screen
+      h-72
+      md:overflow-hidden md:h-screen
+    "
+    :class="THEMES[themeIdx]"
   >
     <div v-for="(corner, i) in circles" :key="i" class="">
       <div class="relative w-full h-full">
@@ -76,6 +85,25 @@ function initCircles() {
     activeCircle.idx = circleIdx;
   });
 }
-
 initCircles();
+
+// Background color
+const THEMES = [
+  "theme-blue",
+  "theme-green",
+  "theme-pink",
+  "theme-gray",
+  "theme-red",
+  "theme-yellow",
+  "theme-purple",
+  "theme-black",
+];
+const themeIdx = ref(0);
+useSubscribe(Events.rhodes, () => {
+  let nextTheme = Math.floor(Math.random() * THEMES.length);
+  while (nextTheme === themeIdx.value) {
+    nextTheme = Math.floor(Math.random() * THEMES.length);
+  }
+  themeIdx.value = nextTheme;
+});
 </script>
