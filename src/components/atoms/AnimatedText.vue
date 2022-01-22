@@ -1,7 +1,17 @@
 <template>
   <div
     :aria-label="msg"
-    class="md:max-w-1/3 text-white opacity-70 font-bold text-5xl md:text-9xl"
+    class="
+      max-w-full
+      md:max-w-1/3
+      text-white
+      opacity-70
+      font-bold
+      text-5xl
+      md:text-9xl
+      title-font
+      text-center
+    "
   >
     <span
       aria-hidden
@@ -35,5 +45,8 @@ useSubscribe(Events.beat, () => updateLetter());
 <style lang="scss" scoped>
 .active {
   color: red;
+}
+.title-font {
+  font-family: var(--title-font);
 }
 </style>
