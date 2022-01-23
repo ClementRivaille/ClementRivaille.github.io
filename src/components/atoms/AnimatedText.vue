@@ -1,18 +1,7 @@
 <template>
   <Motion
     :aria-label="msg"
-    class="
-      max-w-full
-      md:max-w-1/3
-      min-w-max
-      text-white
-      opacity-70
-      font-bold
-      text-5xl
-      md:text-9xl
-      title-font
-      text-center
-    "
+    class="max-w-full md:max-w-1/3 min-w-max text-white opacity-70 font-bold text-5xl md:text-9xl title-font text-center"
     :animate="pivotAnimation"
     :transition="pivotTrans"
   >
@@ -29,7 +18,20 @@
       :animate="waveAnimation"
       :transition="makeWaveTransition(index)"
     >
-      {{ letter }}
+      <Motion
+        tag="span"
+        class="inline-flex"
+        :animate="activeLetter === index ? { translateY: [-20, 0] } : {}"
+        :transition="{
+          easing: spring({
+            stiffness: 3000,
+            velocity: 400,
+            mass: 0.8,
+          }),
+        }"
+      >
+        {{ letter }}
+      </Motion>
     </Motion>
   </Motion>
 </template>
@@ -40,13 +42,14 @@ import { Events, useSubscribe } from "@/utils/conductor";
 import { computed, ref } from "@vue/reactivity";
 import { useStore } from "vuex";
 import { Motion } from "motion/vue";
+import { spring } from "motion";
 
-const msg = "Stuff I Make";
+const msg = "Stuff I Make";
 const activeLetter = ref(0);
 
 const updateLetter = () => {
   let newValue = (activeLetter.value + 1) % msg.length;
-  while (msg[newValue] === " ") {
+  while (msg[newValue] === " ") {
     newValue = (newValue + 1) % msg.length;
   }
   activeLetter.value = newValue;

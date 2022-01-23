@@ -34,7 +34,7 @@ const posAnim = computed(() => ({
   top: toPercent(props.position.y),
   left: toPercent(props.position.x),
 }));
-const posTrans = { duration: 0.4, easing: glide({ velocity: 8 }) };
+const posTrans = { easing: glide({ velocity: 8 }) };
 
 const activeAnimActive = ref(false);
 // Start animation once active
@@ -60,7 +60,7 @@ const activeAnim = computed<MotionKeyframesDefinition>(() =>
   activeAnimActive.value
     ? {
         opacity: [1, 0.2],
-        transform: ["scale(1.2)", "scale(1)"],
+        transform: ["scale(1.3)", "scale(1)"],
       }
     : {}
 );
