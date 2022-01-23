@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-col min-h-full">
-    <div class="flex justify-center items-center flex-1 min-h-0">
+  <div class="flex flex-col min-h-full overflow-hidden">
+    <div
+      class="flex justify-center items-center flex-1 min-h-0 overflow-hidden"
+    >
       <AnimatedText />
     </div>
     <MusicToolbar>

@@ -5,19 +5,23 @@
     :animate="posAnim"
     :transition="posTrans"
   >
-    <Motion
-      class="bg-white opacity-20 rounded-full w-12 h-12 md:w-24 md:h-24"
-      :animate="activeAnim"
-      :transition="activeTrans"
-      @motioncomplete="onActivAnimationEnd"
-    />
+    <Motion :animate="waveAnimation" :transition="waveTransition">
+      <Motion
+        class="bg-white opacity-20 rounded-full w-12 h-12 md:w-24 md:h-24"
+        :animate="activeAnim"
+        :transition="scaleTrans"
+        @motioncomplete="onActivAnimationEnd"
+      />
+    </Motion>
   </Motion>
 </template>
 
 <script setup lang="ts">
-import { glide } from "motion";
+import { StoreData } from "@/store";
+import { AnimationListOptions, glide, MotionKeyframesDefinition } from "motion";
 import { Motion } from "motion/vue";
 import { computed, ref, watch } from "vue";
+import { useStore } from "vuex";
 interface BubbleCoordinates {
   x: number;
   y: number;
@@ -52,15 +56,44 @@ const onActivAnimationEnd = () => {
   activeAnimActive.value = false;
 };
 
-const activeAnim = computed(() =>
+const activeAnim = computed<MotionKeyframesDefinition>(() =>
   activeAnimActive.value
-    ? { opacity: [1, 0.2], transform: ["scale(1.2)", "scale(1)"] }
+    ? {
+        opacity: [1, 0.2],
+        transform: ["scale(1.2)", "scale(1)"],
+      }
     : {}
 );
-const activeTrans = {
+const scaleTrans: AnimationListOptions = {
   duration: 1.4,
   easing: "ease-out",
 };
+
+// Wave animation
+const { state } = useStore<StoreData>();
+const waveAnimation = computed<MotionKeyframesDefinition>(() =>
+  state.wave
+    ? {
+        transform: [
+          "scale(1)",
+          "scale(0.7)",
+          "scale(1)",
+          "scale(1.6)",
+          "scale(1)",
+        ],
+      }
+    : {}
+);
+const waveTransition = computed<AnimationListOptions>(() =>
+  state.wave
+    ? {
+        duration: 1.2,
+        repeat: Infinity,
+        easing: ["ease-out", "ease-in", "ease-out", "ease-in", "linear"],
+        delay: Math.random() * 1.2,
+      }
+    : { duration: 0.4, easing: "ease-out" }
+);
 </script>
 
 <style scoped lang="scss">

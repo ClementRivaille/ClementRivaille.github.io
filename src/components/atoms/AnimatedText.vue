@@ -1,9 +1,10 @@
 <template>
-  <div
+  <Motion
     :aria-label="msg"
     class="
       max-w-full
       md:max-w-1/3
+      min-w-max
       text-white
       opacity-70
       font-bold
@@ -12,21 +13,33 @@
       title-font
       text-center
     "
+    :animate="pivotAnimation"
+    :transition="pivotTrans"
   >
-    <span
+    <Motion
+      tag="span"
+      class="inline-flex"
       aria-hidden
       v-for="(letter, index) in [...msg]"
       :key="index"
-      :style="{ color: activeLetter === index ? 'red' : 'white' }"
+      :style="{
+        color: activeLetter === index ? 'red' : 'white',
+        ...(letter === ' ' ? { width: '0.3em' } : {}),
+      }"
+      :animate="waveAnimation"
+      :transition="makeWaveTransition(index)"
     >
       {{ letter }}
-    </span>
-  </div>
+    </Motion>
+  </Motion>
 </template>
 
 <script lang="ts" setup>
+import { StoreData } from "@/store";
 import { Events, useSubscribe } from "@/utils/conductor";
-import { ref } from "@vue/reactivity";
+import { computed, ref } from "@vue/reactivity";
+import { useStore } from "vuex";
+import { Motion } from "motion/vue";
 
 const msg = "Stuff I Make";
 const activeLetter = ref(0);
@@ -40,6 +53,37 @@ const updateLetter = () => {
 };
 
 useSubscribe(Events.beat, () => updateLetter());
+
+const { state } = useStore<StoreData>();
+const waveAnimation = computed(() =>
+  state.wave
+    ? {
+        translateY: [0, 30, 0, -30, 0],
+      }
+    : { translateY: 0 }
+);
+const makeWaveTransition = (index: number) =>
+  state.wave
+    ? {
+        repeat: Infinity,
+        delay: index * 0.07,
+        duration: 1,
+        easing: ["ease-out", "ease-in", "ease-out", "ease-in", "linear"],
+      }
+    : { duration: 0.3, easing: "ease-out" };
+
+const pivotAnimation = computed(() =>
+  state.wave ? { rotate: [0, -5, 0, 5, 0] } : { rotate: 0 }
+);
+const pivotTrans = computed(() =>
+  state.wave
+    ? {
+        repeat: Infinity,
+        duration: 4,
+        easing: ["ease-out", "ease-in", "ease-out", "ease-in", "linear"],
+      }
+    : { duration: 0.5, easing: "ease-out" }
+);
 </script>
 
 <style lang="scss" scoped>
