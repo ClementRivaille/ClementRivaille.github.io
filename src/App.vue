@@ -1,14 +1,7 @@
 <template>
   <DynamicTheme>
     <div
-      class="
-        w-full
-        h-full
-        flex
-        justify-center
-        items-start
-        md:items-center md:pt-0
-      "
+      class="w-full h-full flex justify-center items-start md:items-center md:pt-0"
     >
       <AnimatedBackground />
       <HomeContent class="pt-12 pb-6 md:pb-10 z-10" />

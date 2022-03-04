@@ -5,40 +5,40 @@
 @layer base {
   @font-face {
     font-family: "arista";
-    src: url('./fonts/Arista2.0.ttf');
+    src: url("./fonts/Arista2.0.ttf");
   }
   @font-face {
     font-family: "ataristocrat";
-    src: url('./fonts/ATARISTOCRAT.ttf');
+    src: url("./fonts/ATARISTOCRAT.ttf");
   }
   @font-face {
     font-family: "bungee";
-    src: url('./fonts/Bungee-Regular.otf');
+    src: url("./fonts/Bungee-Regular.otf");
   }
   @font-face {
     font-family: "geosanslight";
-    src: url('./fonts/GeosansLight.ttf');
+    src: url("./fonts/GeosansLight.ttf");
   }
   @font-face {
     font-family: "leaguespartan";
-    src: url('./fonts/LeagueSpartan-Bold.otf');
+    src: url("./fonts/LeagueSpartan-Bold.otf");
   }
   @font-face {
     font-family: "oswald";
-    src: url('./fonts/Oswald-Regular.ttf');
+    src: url("./fonts/Oswald-Regular.ttf");
   }
   @font-face {
     font-family: "uroob";
-    src: url('./fonts/Uroob-Regular.ttf');
+    src: url("./fonts/Uroob-Regular.ttf");
   }
   @font-face {
     font-family: "yrsa";
-    src: url('./fonts/Yrsa-SemiBold.ttf');
+    src: url("./fonts/Yrsa-SemiBold.ttf");
   }
 
   .theme-blue {
     --color-primary: theme("colors.blue.400");
-    --color-secondary: theme("colors.blue.600");
+    --color-secondary: theme("colors.blue.500");
   }
 
   .theme-green {
