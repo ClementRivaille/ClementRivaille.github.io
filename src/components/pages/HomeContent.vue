@@ -1,5 +1,13 @@
 <template>
-  <div class="min-h-screen min-w-screen grid grid-cols-1 grid-rows-1">
+  <div
+    class="
+      absolute
+      min-h-screen
+      w-screen
+      grid grid-cols-1 grid-rows-1
+      md:overflow-hidden
+    "
+  >
     <div
       class="
         row-start-1 row-span-1
@@ -51,7 +59,7 @@
           icon="puzzle"
           label="Games"
           class="self-start justify-self-start"
-          @click="setPage(Page.Games)"
+          @open="setPage(Page.Games)"
         />
       </div>
       <div class="flex content-center items-center">
@@ -59,7 +67,7 @@
           icon="music"
           label="Music"
           class="self-start justify-self-end"
-          @click="setPage(Page.Music)"
+          @open="setPage(Page.Music)"
         />
       </div>
       <div class="flex content-center items-center">
@@ -67,7 +75,7 @@
           icon="film"
           label="Videos"
           class="self-end justify-self-start"
-          @click="setPage(Page.Videos)"
+          @open="setPage(Page.Videos)"
         />
       </div>
       <div class="flex content-center items-center">
@@ -75,7 +83,7 @@
           icon="user"
           label="About me"
           class="self-end justify-self-end"
-          @click="setPage(Page.About)"
+          @open="setPage(Page.About)"
         />
       </div>
     </div>

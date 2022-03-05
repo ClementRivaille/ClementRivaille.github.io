@@ -3,7 +3,7 @@
     <div class="w-full h-full">
       <AnimatedBackground />
       <div class="z-10 absolute h-screen w-screen overflow-auto">
-        <Transition>
+        <Transition :mode="transitionMode">
           <HomeContent v-if="state.page === Page.Home" />
           <InfoPage title="Games" v-else-if="state.page === Page.Games">
             <div>GAMES!</div>
@@ -32,6 +32,7 @@ import { useStore } from "vuex";
 import { StoreData } from "./store";
 import Page from "./utils/pages";
 import InfoPage from "./components/templates/InfoPage.vue";
+import { computed } from "vue";
 
 const { instruments, loop } = useConductorProvider();
 
@@ -43,6 +44,12 @@ async function startConductor() {
 }
 
 startConductor();
+
+const transitionMode = computed(() =>
+  [Page.Games, Page.Music, Page.Videos, Page.About].includes(state.page)
+    ? "in-out"
+    : "default"
+);
 </script>
 
 <style scoped lang="scss">
