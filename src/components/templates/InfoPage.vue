@@ -11,10 +11,27 @@
       text-white
     "
   >
-    <div class="flex">
-      <button @click="() => setPage(Page.Home)">Back</button>
-      <h1 class="flex-1 text-center">{{ title }}</h1>
-    </div>
+    <Motion
+      class="relative flex"
+      :initial="{
+        translateY: -300,
+      }"
+      :animate="{
+        translateY: 0,
+      }"
+      :transition="{
+        duration: 0.8,
+        easing: 'ease-out',
+      }"
+    >
+      <CloseButton
+        @click="() => setPage(Page.Home)"
+        class="top-0 l-0 absolute"
+      />
+      <Heading class="flex-1" :icon="icon">
+        {{ title }}
+      </Heading>
+    </Motion>
     <div class="flex-1 flex justify-center items-center">
       <slot />
     </div>
@@ -22,12 +39,17 @@
 </template>
 
 <script setup lang="ts">
+import { IconsName } from "@/utils/icons";
 import Page from "@/utils/pages";
 import { useAction } from "@/utils/vuex-hooks";
+import Heading from "../atoms/Heading.vue";
+import CloseButton from "../atoms/CloseButton.vue";
+import { Motion } from "motion/vue";
 
 const setPage = useAction("setPage");
 
 defineProps<{
   title: string;
+  icon: keyof typeof IconsName;
 }>();
 </script>

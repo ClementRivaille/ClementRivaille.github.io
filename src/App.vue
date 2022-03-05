@@ -5,17 +5,33 @@
       <div class="z-10 absolute h-screen w-screen overflow-auto">
         <Transition :mode="transitionMode">
           <HomeContent v-if="state.page === Page.Home" />
-          <InfoPage title="Games" v-else-if="state.page === Page.Games">
-            <div>GAMES!</div>
+          <InfoPage
+            title="Games"
+            icon="puzzle"
+            v-else-if="state.page === Page.Games"
+          >
+            <div>Lorem ipsum…</div>
           </InfoPage>
-          <InfoPage title="Music" v-else-if="state.page === Page.Music">
-            <div>Music</div>
+          <InfoPage
+            title="Music"
+            icon="music"
+            v-else-if="state.page === Page.Music"
+          >
+            <div>Lorem ipsum…</div>
           </InfoPage>
-          <InfoPage title="Videos" v-else-if="state.page === Page.Videos">
-            <div>Youtube</div>
+          <InfoPage
+            title="Videos"
+            icon="film"
+            v-else-if="state.page === Page.Videos"
+          >
+            <div>Lorem ipsum…</div>
           </InfoPage>
-          <InfoPage title="About Me" v-else-if="state.page === Page.About">
-            <div>Hello</div>
+          <InfoPage
+            title="About Me"
+            icon="user"
+            v-else-if="state.page === Page.About"
+          >
+            <div>Lorem ipsum…</div>
           </InfoPage>
         </Transition>
       </div>
