@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-full min-w-full grid grid-cols-1 grid-rows-1">
+  <div class="min-h-screen min-w-screen grid grid-cols-1 grid-rows-1">
     <div
       class="
         row-start-1 row-span-1
@@ -33,6 +33,7 @@
     </div>
     <div
       class="
+        z-20
         row-start-1 row-span-1
         col-start-1 col-span-1
         grid grid-rows-2 grid-cols-2
@@ -50,6 +51,7 @@
           icon="puzzle"
           label="Games"
           class="self-start justify-self-start"
+          @click="setPage(Page.Games)"
         />
       </div>
       <div class="flex content-center items-center">
@@ -57,6 +59,7 @@
           icon="music"
           label="Music"
           class="self-start justify-self-end"
+          @click="setPage(Page.Music)"
         />
       </div>
       <div class="flex content-center items-center">
@@ -64,6 +67,7 @@
           icon="film"
           label="Videos"
           class="self-end justify-self-start"
+          @click="setPage(Page.Videos)"
         />
       </div>
       <div class="flex content-center items-center">
@@ -71,6 +75,7 @@
           icon="user"
           label="About me"
           class="self-end justify-self-end"
+          @click="setPage(Page.About)"
         />
       </div>
     </div>
@@ -85,10 +90,13 @@ import AnimatedText from "../atoms/AnimatedText.vue";
 import MusicToolbar from "../atoms/MusicToolbar.vue";
 import ButtonIcon from "../molecules/ButtonIcon.vue";
 import PageButton from "../atoms/PageButton.vue";
+import Page from "@/utils/pages";
+import { useAction } from "@/utils/vuex-hooks";
 
 const { playRhodes, playClarinet, playSynth, playDrums, toggleWaveEffect } =
   useConductor();
 const { state } = useStore<StoreData>();
+const setPage = useAction("setPage");
 
 const onClickPiano = () => {
   playRhodes();
