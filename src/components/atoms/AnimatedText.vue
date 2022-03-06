@@ -35,9 +35,8 @@
         :animate="activeLetter === index ? { translateY: [-20, 0] } : {}"
         :transition="{
           easing: spring({
-            stiffness: 3000,
-            velocity: 400,
-            mass: 0.8,
+            stiffness: 2500,
+            mass: 0.6,
           }),
         }"
       >

@@ -12,7 +12,7 @@
     "
   >
     <Motion
-      class="relative flex"
+      class="relative flex pb-12"
       :initial="{
         translateY: -300,
       }"
@@ -32,7 +32,7 @@
         {{ t(`${state.page}.header`) }}
       </Heading>
     </Motion>
-    <div class="flex-1 flex justify-center items-center">
+    <div>
       <slot />
     </div>
   </div>

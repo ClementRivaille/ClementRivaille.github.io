@@ -3,28 +3,28 @@
     <div class="w-full h-full">
       <AnimatedBackground />
       <div class="z-10 absolute h-screen w-screen overflow-auto">
-        <Transition :mode="transitionMode">
+        <Transition name="fade-page" :mode="transitionMode">
           <HomeContent v-if="state.page === Page.Home" />
           <InfoPage
             title="Games"
             icon="puzzle"
             v-else-if="state.page === Page.Games"
           >
-            <div>Lorem ipsum…</div>
+            <ContentShowcase category="games" />
           </InfoPage>
           <InfoPage
             title="Music"
             icon="music"
             v-else-if="state.page === Page.Music"
           >
-            <div>Lorem ipsum…</div>
+            <ContentShowcase category="music" />
           </InfoPage>
           <InfoPage
             title="Videos"
             icon="film"
             v-else-if="state.page === Page.Videos"
           >
-            <div>Lorem ipsum…</div>
+            <ContentShowcase category="videos" />
           </InfoPage>
           <InfoPage
             title="About Me"
@@ -49,6 +49,7 @@ import { StoreData } from "./store";
 import Page from "./utils/pages";
 import InfoPage from "./components/templates/InfoPage.vue";
 import { computed } from "vue";
+import ContentShowcase from "./components/organisms/ContentShowcase.vue";
 
 const { instruments, loop } = useConductorProvider();
 
@@ -69,15 +70,17 @@ const transitionMode = computed(() =>
 </script>
 
 <style scoped lang="scss">
-.v-enter-active,
-.v-leave-active {
+.fade-page-enter-active,
+.fade-page-leave-active {
   transition: opacity 0.5s ease;
   position: absolute;
   width: 100vw;
 }
 
-.v-enter-from,
-.v-leave-to {
+.fade-page-enter-from,
+.fade-page-leave-to {
+  transition: opacity 0.5s ease;
+
   opacity: 0;
 }
 </style>
