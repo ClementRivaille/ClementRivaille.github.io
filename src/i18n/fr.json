@@ -1,121 +1,25 @@
 {
-  "header": {
-    "title": "Ingénieur Génie Logiciel - Développeur Front-End",
-    "menu": {
-      "about": "Présentation",
-      "skills": "Compétences",
-      "creations": "Créations"
+  "home": {
+    "title": "Je crée des trucs",
+    "back": "Retour",
+    "instruments": {
+      "piano": "Clavier",
+      "flute": "Flûte",
+      "violin": "Cordes",
+      "drum": "Percussions",
+      "wave": "Effet"
     }
+  },
+  "games": {
+    "header": "Jeux"
+  },
+  "music": {
+    "header": "Musique"
+  },
+  "videos": {
+    "header": "Vidéos"
   },
   "about": {
-    "title": "Présentation",
-    "dev": "Développeur front-end spécialisé dans les frameworks javascript tels que Vue, React et Angular, je m'intéresse à l'intégration, l'ergonomie et l'accessibilité, ainsi qu'à la communication. Mon objectif est de créer le pont entre les designers et les développeurs, en ayant conscience des défis et contraintes de chaque côté. Le développement d'interfaces est un domaine passionant pour ses technologies et méthodes en constante évolution. Mais c'est surtout une profession forçant à l'empathie envers les utilisateurs, et permettant de travailler au sein de profils variés, allant de développeurs back-end jusqu'aux artistes. Cette richesse et ses aspects humains sont ce que j'apprécie en priorité.",
-    "games": "Je développe aussi des jeux sur mon temps libre. Ils sont pour la plupart expérimentaux, narratifs ou contemplatifs, avec parfois une focalisation sur la musique générative. C'est une manière efficace d'expérimenter avec des technologies, notamment la Web Audio API. Ces jeux m'encouragent aussi à créer des projets non-uitilitaires, n'employant les technologies que pour le divertissement ou l'art, et ainsi les rendre plus humaines. Le jeu-vidéo est le medium idéal pour combiner mes compétences de développeurs avec d'autres passions, comme l'écriture ou la composition.",
-    "perso": "En dehors de ces activités, j'aime le théâtre (en tant que comédien amateur), le montage vidéo, le piano, les marches et les jeux de société.",
-    "useful": {
-      "title": "Infos pratiques",
-      "age": "Âge :",
-      "location": "Lieu de résidence :",
-      "employer": "Employeur :"
-    }
-  },
-  "skills": {
-    "title": "Compétences et expériences",
-    "technologies": "Technologies",
-    "languages": "Langages",
-    "experiences": {
-      "header": "Expériences",
-      "lonestone": {
-        "post": "Développeur JS",
-        "description": "Développement front-end et back-end de sites et d'applications web"
-      },
-      "mgdis": {
-        "post": "Analyste programmeur",
-        "description": "Développement web front-end d'outils d'aide à la décision pour les organismes publics"
-      },
-      "osytos2": {
-        "post": "Stage",
-        "description": "Conception d'un outil facilitant la créations de pages web pour dashboard et panneaux de configuration"
-      },
-      "osytos1": {
-        "post": "Stage",
-        "description": "Synchronisations de fichiers entre deux espaces, avec interface web"
-      },
-      "yvesrocher": {
-        "post": "Stage",
-        "description": "Tests de non-régression de web-services"
-      }
-    },
-    "formations": {
-      "header": "Formations",
-      "esir": {
-        "type": "Diplôme d'ingénieur",
-        "formation": "ESIR, Génie Logiciel"
-      },
-      "iut": {
-        "type": "DUT",
-        "formation": "IUT Informatique"
-      },
-      "rgaa": {
-        "type": "Formation Professionelle Accessibilité Web",
-        "formation": "Concevoir et développer des sites conformes au RGAA 3"
-      }
-    }
-  },
-  "creations": {
-    "title": "Créations",
-    "games": {
-      "title": "Jeux",
-      "summary": "Je développe des jeux vidéo depuis 2016. Je crée surtout des jeux courts pour le web. Certains ont été réalisés lors de jams de 48 heures. Vous pouvez trouver la liste complète sur <a href='{link}'>itch.io</a>."
-    },
-    "experiments": {
-      "title": "Expériences",
-      "summary": "Quelques créations personelles réalisées pour essayer ou apprendre diverses technologies."
-    },
-    "videos": {
-      "title": "Vidéos",
-      "summary": "<p>En 2015, j'ai commencé à réaliser des vidéos sur Youtube. Pendant deux ans j'ai expérimenté avec le medium, en produisant des vidéos régulièrement dans des genres différents (sketchs, analyses, essais…). Ce n'est qu'en 2017 que j'ai pris la décision de me focaliser sur le sujet du game-design.</p> <p>Mon but est de créer des réflexions sur comment l'on définit le jeu-vidéo, montrer des façons nouvelles et créatives de l'utiliser, et partager des opinions sur quelques jeux alternatifs.</p> <p>Ces vidéos peuvent être visionnées depuis la chaîne <a href='{link}' target='_blank'>Excursions Virtuelles</a>.</p>"
-    },
-    "tools": {
-      "title": "Outils",
-      "summary": "Librairies ou programmes utilitaires que j'ai développé."
-    },
-    "moog-memories": {
-      "description": "Musique interactive en HTML5, réalisée pour la Music Game Jam 2017"
-    },
-    "tabletop-dance": {
-      "description": "Puzzle shooter créé durant la GMTK Jam 2017"
-    },
-    "safe-bots": {
-      "description": "Puzzle développé sur une semaine"
-    },
-    "deep-sea-school": {
-      "description": "Jeu d'exploration et de narration"
-    },
-    "landscape-sounds": {
-      "description": "Musique générative créée procéduralement par la Web Audio API"
-    },
-    "harmonit": {
-      "description": "Outil de calcul d'accords, fait avec React Redux"
-    },
-    "once-upon-nothing": {
-      "description": "Générateur de phrases aléatoires, en Angular 2"
-    },
-    "terrible-logos": {
-      "description": "Texte bizarrement sylilisé, utilisant la méthode BEM"
-    },
-    "blood-not-allowed": {
-      "description": "Comédie horrifique musicale, entièrement textuel"
-    },
-    "in-octave": {
-      "description": "Jeu de tir avec musique procédurale"
-    },
-    "orchestre-js": {
-      "description": "Une librairie audio web permettant de manipuler dynamiquement des couches instrumentales d'une musique."
-    },
-    "joy-phases": {
-      "description": "Un séquenceur musical avec déphasage"
-    }
-  },
-  "today": "aujourd'hui"
+    "header": "Qui je suis"
+  }
 }

@@ -18,12 +18,15 @@
     "
   >
     <Icon name="close" size="s" />
-    <span class="label">Back</span>
+    <span class="label">{{ t("home.back") }}</span>
   </button>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import Icon from "./Icon.vue";
+
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">

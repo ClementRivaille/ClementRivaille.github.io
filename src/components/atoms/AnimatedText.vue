@@ -9,7 +9,7 @@
       opacity-70
       font-bold
       text-5xl
-      md:text-9xl
+      md:text-8xl
       title-font
       text-center
     "
@@ -54,8 +54,11 @@ import { computed, ref } from "@vue/reactivity";
 import { useStore } from "vuex";
 import { Motion } from "motion/vue";
 import { spring } from "motion";
+import { useI18n } from "vue-i18n";
 
-const msg = "Stuff I Make";
+const { t } = useI18n();
+
+const msg = t("home.title");
 const activeLetter = ref(0);
 
 const updateLetter = () => {

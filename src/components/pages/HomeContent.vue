@@ -25,10 +25,30 @@
         <AnimatedText />
       </div>
       <MusicToolbar>
-        <ButtonIcon name="piano" size="m" @click="onClickPiano" />
-        <ButtonIcon name="violin" size="m" @click="onClickViolin" />
-        <ButtonIcon name="flute" size="m" @click="onClickFlute" />
-        <ButtonIcon name="drum" size="m" @click="onClickDrum" />
+        <ButtonIcon
+          name="piano"
+          size="m"
+          @click="onClickPiano"
+          :aria-label="t('home.instruments.piano')"
+        />
+        <ButtonIcon
+          name="violin"
+          size="m"
+          @click="onClickViolin"
+          :aria-label="t('home.instruments.violin')"
+        />
+        <ButtonIcon
+          name="flute"
+          size="m"
+          @click="onClickFlute"
+          :aria-label="t('home.instruments.flute')"
+        />
+        <ButtonIcon
+          name="drum"
+          size="m"
+          @click="onClickDrum"
+          :aria-label="t('home.instruments.drum')"
+        />
         <ButtonIcon
           name="water"
           size="m"
@@ -36,6 +56,7 @@
           :active="state.wave"
           role="switch"
           :aria-checked="state.wave"
+          :aria-label="t('home.instruments.wave')"
         />
       </MusicToolbar>
     </div>
@@ -57,7 +78,7 @@
       <div class="flex content-center items-center">
         <PageButton
           icon="puzzle"
-          label="Games"
+          :label="t('games.header')"
           class="self-start justify-self-start"
           @open="setPage(Page.Games)"
         />
@@ -65,7 +86,7 @@
       <div class="flex content-center items-center">
         <PageButton
           icon="music"
-          label="Music"
+          :label="t('music.header')"
           class="self-start justify-self-end"
           @open="setPage(Page.Music)"
         />
@@ -73,7 +94,7 @@
       <div class="flex content-center items-center">
         <PageButton
           icon="film"
-          label="Videos"
+          :label="t('videos.header')"
           class="self-end justify-self-start"
           @open="setPage(Page.Videos)"
         />
@@ -81,7 +102,7 @@
       <div class="flex content-center items-center">
         <PageButton
           icon="user"
-          label="About me"
+          :label="t('about.header')"
           class="self-end justify-self-end"
           @open="setPage(Page.About)"
         />
@@ -100,6 +121,9 @@ import ButtonIcon from "../molecules/ButtonIcon.vue";
 import PageButton from "../atoms/PageButton.vue";
 import Page from "@/utils/pages";
 import { useAction } from "@/utils/vuex-hooks";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const { playRhodes, playClarinet, playSynth, playDrums, toggleWaveEffect } =
   useConductor();

@@ -29,7 +29,7 @@
         class="top-0 l-0 absolute"
       />
       <Heading class="flex-1" :icon="icon">
-        {{ title }}
+        {{ t(`${state.page}.header`) }}
       </Heading>
     </Motion>
     <div class="flex-1 flex justify-center items-center">
@@ -45,8 +45,14 @@ import { useAction } from "@/utils/vuex-hooks";
 import Heading from "../atoms/Heading.vue";
 import CloseButton from "../atoms/CloseButton.vue";
 import { Motion } from "motion/vue";
+import { useStore } from "vuex";
+import { StoreData } from "@/store";
+import { useI18n } from "vue-i18n";
 
 const setPage = useAction("setPage");
+
+const { state } = useStore<StoreData>();
+const { t } = useI18n();
 
 defineProps<{
   title: string;
