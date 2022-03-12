@@ -20,6 +20,89 @@
     "header": "Videos"
   },
   "about": {
-    "header": "About me"
+    "header": "About me",
+    "name": "Clément Rivaille",
+    "profession": "Web developer",
+    "location": "Nantes, France",
+    "presentation": [
+      "I work in web since several years now. The web is a platform I admire, for the sharing of knowledge as well as the open (and chaotic) expression it allows. I have a particular interest for UX and accessibility. But in a more general way I enjoy development for the communication it implies. Developing an app is in my opinion a challenge of understanding towards the needs, designers, other team members, and final users.",
+      "I also like to put my developers skills into more creative projects. Coding for something “useless”, systems that are just pleasant or beautiful. Whereas it's for musical softwares or games Logiciels musicaux ou jeux, creation is for me an exploration lead by curiosity. I'm tweaking programs for the satisfaction of discovering their final result. As you can see here, I keep an affection for the 2000s web, a giant mess of surprising and expressives pages.",
+      "Beside this, I enjoy hiking, tabletop games, animation, fusion jazz and my tyrannical cat."
+    ]
+  },
+  "contents": {
+    "games": {
+      "description": "I develop small games as a hobby, mostly with Godot or HTML5. Often focused on music, my game-design philosophy is to look for the pleasure of the instant. Without any goal or challenge, I try to create playful interactions and explorable systems. As such I consider this very web site as a playable space.",
+      "echoes-traveler": {
+        "title": "Echoes Traveler",
+        "description": "A musical exploration game. Close your eyes, and let yourself wander into a world entirely made of instruments. Will you be able to solve its secrets?"
+      },
+      "colorful-grid": {
+        "title": "One Colorful Grid",
+        "description": "A minimalist but challenging rhythm game, where music is fully dynamic. I took inspiration from Rhythm Heaven as well as the Bit. Trip. saga to achieve a game-design that is “difficult, but never too punitive”."
+      },
+      "hells-vignette": {
+        "title": "Hells Vignette",
+        "description": "A text-only narrative web game, in which you take a stay in Hells. An ethereal and surrealist world, where damned souls try to find meaning in their tortures. Lucky for you, A generous guide takes you to a tour and keeps you company.."
+      },
+      "desert-vroom": {
+        "title": "Desert Vroom 2021",
+        "description": "A game in the style of early 2000s 3D racing games. Unless it's a psychedelic journey across the desert? How far will the glitches take you?"
+      },
+      "octave": {
+        "title": "In Octave",
+        "description": "Puzzle shooter where the goal is to survive to your own bouncing shoots. The game's music is entirely procedural, and evolve along player's progression."
+      },
+      "sampler": {
+        "title": "Godot Simple Sampler",
+        "description": "Godot plugin to create dynamic music with sampler instruments. I very often use dynamic instruments in my game, thus it became handy to make an extension dedicated to it. If you want to make games with Godot (you won't regret it), this small tool will allow you to easily make some pretty sound-designs!"
+      }
+    },
+    "music": {
+      "description": "Generative music and minimalism fascinate me. I like to design logic system that produce harmonic atmospheres our emerging melodies. Also with an interactive aspect, because playing music is a primordial pleasure that I want to share. Thus I don't really have any song to share here, but playful musical applications.",
+      "colors-universe": {
+        "title": "Colors of the Universe",
+        "description": "A journey into the heart of harmonics. Dive into an abstract symphony reacting to all your moves, in an infinite microcosm of colors. By looking carefully, you might even find the solution to its conundrum…"
+      },
+      "echo-night": {
+        "title": "Echo Sings at Night",
+        "description": "A break-out mixed with generative music inspired by Brian Eno. As sounds bounce in a chaotic way, melodies repeat themselves and create a slow and peaceful rhythm."
+      },
+      "bazza-nava": {
+        "title": "Bazza Nava",
+        "description": "Small synth for kids are in my taste the best toys ever. Pressing buttons to make music, it's just wonderful. This game aim to recreate this joy, letting aside seriousness. Music by serendipity and playfulness"
+      },
+      "joy-phases": {
+        "title": "Joy Phases",
+        "description": "A web tool to create phased music, in the style of Steve Reich's Piano Phase. It allows to repeat melodies on several bar, progressively superposing them to make new patterns emerge. it is also possible to change tonality and mode during the song, as well as exporting it in MIDI."
+      },
+      "blood-not-allowed": {
+        "title": "Blood Not Allowed",
+        "description": "A text-only narrative game in which you explore a manor occupied by skeletons. Each of its room has its own musical atmosphere, progressing along player's exploration. The whole forms an absurd and dreamy story, settled in a weird jazz atmosphere."
+      },
+      "orchestre-js": {
+        "title": "Orchestre-JS",
+        "description": "JS/TS tool to manage dynamic music in a web app or game. It allow to synchronize several music layers in order to toggle them in rhythm. I use it in several of my project, and made it as easy to learn as possible!"
+      }
+    },
+    "videos": {
+      "description": "This content is in French, although some of the videos have subtitles, and those automatically generated are actually not that bad. With my Youtube Channel “Excursions Virtuelles”, I share thought on video games as a imaginary to explore. From emotions procured by game-design to what a virtual world is expressing, as well as web culture and, always, escapism. I also enjoy video creation as an exercice in writing, rhythm, and even acting.",
+      "traversees": {
+        "title": "Traversées",
+        "description": "Virtual spaces have a lot to tel! Through their architectures, their arts, the way we explore them… This series of short videos invite to discover memorable game landscapes."
+      },
+      "side-web": {
+        "title": "Side Web",
+        "description": "Series on web amateur fan-creation, around video-game. Because this kind of creation, despite its marginality and sometime weirdness, has its place in our culture, and deserve that we talk about it! We'll thus here discuss about fan-comics, music covers, fan-games, parodies… Art transformed by emerging culture."
+      },
+      "art-random": {
+        "title": "art.random",
+        "description": "Series of three videos about procedural generation as an artistic process. What can we express through systems of which we don't control the final result? With ever changing creations, different on each new look! Randomness has a lot to offer, as well in video games that in other arts."
+      },
+      "horribles": {
+        "title": "Manifesto for horrible games",
+        "description": "Games don't have to always be fun! By confining us in happiness, they prevent us to see beyond our ego. This essay slightly tinted in irony suggest to envision games with some frustration, pain, boredom, nastiness and stupidity. Unpleasing games, but authentic. Because without darkness, there is no light."
+      }
+    }
   }
 }

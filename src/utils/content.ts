@@ -42,15 +42,10 @@ export const contents: Contents = {
     {
       key: "sampler",
       img: "https://placekitten.com/g/300/300",
-      link: "https://itooh.itch.io/godot-simple-sampler",
+      link: "https://github.com/ClementRivaille/godot-simple-sampler",
     },
   ],
   [ContentCategory.music]: [
-    {
-      key: "echoes-traveler-ost",
-      img: "https://placekitten.com/g/300/300",
-      link: "https://soundcloud.com/itooh-web/sets/echoes-traveler-soundtrack",
-    },
     {
       key: "colors-universe",
       img: "https://placekitten.com/g/300/300",
@@ -67,6 +62,11 @@ export const contents: Contents = {
       link: "https://itooh.itch.io/bazza-nava",
     },
     {
+      key: "joy-phases",
+      img: "https://placekitten.com/g/300/300",
+      link: "https://clementrivaille.github.io/joy-phases/",
+    },
+    {
       key: "blood-not-allowed",
       img: "https://placekitten.com/g/300/300",
       link: "https://itooh.itch.io/blood-not-allowed",
@@ -74,7 +74,7 @@ export const contents: Contents = {
     {
       key: "orchestre-js",
       img: "https://placekitten.com/g/300/300",
-      link: "https://itooh.itch.io/orchestre-js",
+      link: "https://clementrivaille.github.io/orchestre-js/",
     },
   ],
   [ContentCategory.videos]: [
@@ -94,9 +94,9 @@ export const contents: Contents = {
       link: "https://www.youtube.com/watch?v=8ZjwHW8Ifwo",
     },
     {
-      key: "lampadaires",
+      key: "horribles",
       img: "https://placekitten.com/g/300/300",
-      link: "https://www.youtube.com/watch?v=R9xc73FsQDA",
+      link: "https://youtu.be/0o84IzSAFqQ",
     },
   ],
 };

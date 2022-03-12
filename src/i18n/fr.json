@@ -20,6 +20,89 @@
     "header": "Vidéos"
   },
   "about": {
-    "header": "Qui je suis"
+    "header": "Qui je suis",
+    "name": "Clément Rivaille",
+    "profession": "Développeur web",
+    "location": "Nantes, France",
+    "presentation": [
+      "Je travaille dans le web depuis plusieurs années à présent. Le web est une plate-forme que j'admire, pour le partage de connaissances ainsi que l'expression ouverte (et chaotique) qu'elle permet. Je m'intéresse ainsi particulièrement à l'UX et l'accessibilité. Mais le développement de manière plus générale me plait aussi la communication que ça implique. Développer une app est pour moi surtout un enjeu de compréhension envers les besoins, les designers, les autres membres de l'équipe, et les utilisateurs finaux.",
+      "J'aime aussi mettre mes compétence de développeur au service de projets plus créatifs. Coder à des fins « inutiles », pour des systèmes qui se contentent d'être plaisants ou beaux. Logiciels musicaux ou jeux, la création est pour moi une exploration motivée par la curiosité. Je bidouille pour la satisfaction de découvrir le résultat final. Comme vous pouvez le voir ici, je conserve une affection pour le web des années 2000, gloubiboulga de pages surprenantes et expressives.",
+      "En dehors de ceci, j'aime la randonnée, les jeux de société, l'animation, le jazz fusion et mon chat tyrannique."
+    ]
+  },
+  "contents": {
+    "games": {
+      "description": "Je développe des petits jeux en tant que hobby, principalement sous Godot ou HTML5. Souvent focalisé sur la musique, mon approche du game-design est de cibler l'amusement du présent. Sans objectif ou difficulté, je recherche à produire des interaction amusantes et des systèmes explorables. Je considère d'ailleurs le présent site comme une de mes créations ludiques.",
+      "echoes-traveler": {
+        "title": "Echoes Traveler",
+        "description": "Un jeu d'exploration entièrement musical. Fermez les yeux, et laissez-vous vous perdre au travers d'un monde composé uniquement d'instruments. Saurez-vous en percer les secrets ?"
+      },
+      "colorful-grid": {
+        "title": "One Colorful Grid",
+        "description": "Un jeu de rythme minimaliste mais exigeant, où la musique est entièrement dynamique ! Je me suis inspiré de Rhythm Heaven ainsi que de la saga Bit. Trip. pour cibler un game-design « difficile, mais peu punitif »."
+      },
+      "hells-vignette": {
+        "title": "Vignette des Enfers",
+        "description": "Jeu web narratif textuel, dans lequel vous vivez un séjour aux enfers. Un monde éthéré et surréaliste, où les damnés tentent de trouver du sens dans leurs tortures. Heureusement pour vous, un guide vous propose généreusement de vous faire visiter en vous tenant compagnie."
+      },
+      "desert-vroom": {
+        "title": "Desert Vroom 2021",
+        "description": "Un jeu dans le style des jeux de course 3D du début des années 2000. À moins qu'il ne s'agisse d'une traversée de désert psychédélique ? Jusqu'où les glitches pourront-ils vous emmener ?"
+      },
+      "octave": {
+        "title": "In Octave",
+        "description": "Puzzle shooter où le but est de survivre à vos propres tirs rebondissants. La musique du jeu a la particularité d'être générée procéduralement, et d'évoluer avec la progression du joueur."
+      },
+      "sampler": {
+        "title": "Godot Simple Sampler",
+        "description": "Plugin Godot permettant de créer de la musique dynamique à l'aide d'instruments samplers. J'utilise beaucoup d'instruments dynamiques dans mes jeux, aussi il m'est vite devenu pratique d'en faire une extension dédiée. Si vous voulez faire des jeux sous Godot (vous ne le regretterez pas), ce petit outil vous permet de faire facilement du beau sound-design !"
+      }
+    },
+    "music": {
+      "description": "La musique générative et le minimalisme me fascinent. J'aime concevoir des systèmes logiques produisant des atmosphères harmoniques ou des mélodies émergentes. Avec également une composante interactive, car jouer de la musique procure un plaisir primitif que je souhaite partager. Je n'ai donc pas vraiment de morceaux à montrer ici, mais des applications musicales ludiques.",
+      "colors-universe": {
+        "title": "Colors of the Universe",
+        "description": "Un voyage au cœur des harmoniques. Plongez à l'intérieur d'une symphonie abstraite réagissant à tous vos mouvements, dans un microcosme de couleurs infini. En cherchant bien, vous pourriez même trouver la solution de son énigme…"
+      },
+      "echo-night": {
+        "title": "Echo Sings at Night",
+        "description": "Un casse-brique mélangé à de la musique générative inspirée par Brian Eno. Alors que les sons rebondissent de façon chaotique, les mélodies se répètent et forment un rythme lent et paisible."
+      },
+      "bazza-nava": {
+        "title": "Bazza Nava",
+        "description": "Les synthés pour enfants sont à mes yeux les meilleurs des jouets. Appuyer sur un bouton pour faire de la musique, c'est euphorique. Ce jeu tente de recréer cette joie, en délaissant le sérieux. La musique par tâtonnement et amusement."
+      },
+      "joy-phases": {
+        "title": "Joy Phases",
+        "description": "Un outil web de création de musique déphasée, dans le style de Piano Phase de Steve Reich. Il permet de répéter des mélodies sur plusieurs mesures, en les superposant progressivement pour voir de nouveaux motifs émerger. Il est également possible de changer la tonalité et le mode durant le morceau, ainsi que de l'exporter en MIDI. "
+      },
+      "blood-not-allowed": {
+        "title": "Blood Not Allowed",
+        "description": "Un jeu narratif textuel dans lequel vous explorez un manoir habité par des squelettes. Chaque pièce y possède sa propre atmosphère musicale, évoluant avec l'exploration du joueur. Le tout forme un récit absurde et onirique baignant dans une atmosphère jazz."
+      },
+      "orchestre-js": {
+        "title": "Orchestre-JS",
+        "description": "Outil JS/TS pour gérer de la musique dynamique dans une application ou jeu web. Il permet de synchroniser plusieurs pistes musicales de manière à les activer ou les désactiver en rythme. Je l'utilise dans plusieurs de mes projets, et l'ai conçu pour être le plus simple d'utilisation possible !"
+      }
+    },
+    "videos": {
+      "description": "Au travers de la chaîne Youtube Excursions Virtuelles, je partage des réflexions sur le jeu-vidéo comme un imaginaire à explorer. Des émotions que peut procurer un game-design, à ce qu'exprime un environnement virtuel, en passant parfois par la culture web et, toujours, l'évasion. Mais ce qui me plait dans la création de vidéo, c'est aussi l'exercice sur l'écriture, le rythme et même le jeu d'acteur.",
+      "traversees": {
+        "title": "Traversées",
+        "description": "Les espaces virtuels ont beaucoup à nous dire ! Par leurs architectures, leurs styles visuels, la façon dont on les explore… Cette série de courtes vidéos invite à faire découvrir des paysages de jeu mémorables."
+      },
+      "side-web": {
+        "title": "Side Web",
+        "description": "Série sur la fan-création amateure web, autour du jeu-vidéo. Car cette création, bien que marginale et parfois étrange, a elle aussi sa place dans notre culture, et a un intérêt légitime ! On s'intéresse donc ici aux fan-comics, reprises musicales, fan-games, parodies… L'art transformé par la culture émergente."
+      },
+      "art-random": {
+        "title": "art.random",
+        "description": "Série de trois vidéos sur la génération procédurale en tant que procédé artistique. Que peut-on exprimer à partir de systèmes dont on ne contrôle pas le résultat final ? Des créations en changement permanent, différentes à chaque nouveau regard ! L'aléatoire a beaucoup à offrir, aussi bien dans le jeu-vidéo que dans d'autres domaines artistiques."
+      },
+      "horribles": {
+        "title": "Manifeste pour jeux horribles",
+        "description": "Les jeux n'ont pas à être toujours fun ! En nous enfermant dans du joyeux, ils nous empêchent de voir plus loin que notre égo. Cet essai teinté d'ironie propose de concevoir les jeux avec une part de frustration, de pénible, d'ennuyeux, de méchant et stupide. Des jeux déplaisants, mais authentiques. Car sans obscurité, il n'y a pas de lumière."
+      }
+    }
   }
 }
