@@ -4,8 +4,10 @@
       flex
       justify-center
       items-center
-      gap-3
-      text-white text-4xl
+      gap-1
+      md:gap-3
+      text-white text-2xl
+      md:text-4xl
       font-semibold
     "
   >

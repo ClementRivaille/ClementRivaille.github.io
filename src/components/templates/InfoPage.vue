@@ -4,15 +4,15 @@
       h-screen
       w-screen
       overflow-auto
-      p-8
-      pt-8
+      p-3
+      lg:p-8
       bg-secondary
       flex flex-col
       text-white
     "
   >
     <Motion
-      class="relative flex pb-12"
+      class="relative flex lg:pb-12 md:pb-8 pb-4"
       :initial="{
         translateY: -300,
       }"
@@ -32,7 +32,7 @@
         {{ t(`${state.page}.header`) }}
       </Heading>
     </Motion>
-    <div>
+    <div class="pl-2 pr-2 md:pl-16 md:pr-16 lg:pl-32 lg:pr-32">
       <slot />
     </div>
   </div>

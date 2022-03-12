@@ -1,8 +1,10 @@
 <template>
   <a
     class="
-      w-52
-      h-52
+      w-24
+      h-24
+      md:w-44 md:h-44
+      lg:w-52 lg:h-52
       rounded-full
       grid
       duration-200
@@ -10,7 +12,7 @@
       overflow-hidden
       focus:outline-none
     "
-    :class="{ 'opacity-60': active === false }"
+    :class="{ 'opacity-40 md:opacity-60': active === false }"
     :href="url"
     target="_blank"
   >
@@ -25,14 +27,19 @@
         row-start-1
         w-full
         h-full
-        flex
+        hidden
+        md:flex
         justify-center
         items-center
         text-center
         font-bold
         transition-opacity
         duration-150
-        bg-opacity-30 bg-black
+        bg-opacity-50 bg-black
+        text-base
+        md:text-xl
+        lg:text-2xl
+        p-1
       "
       :class="{ 'opacity-0': !active }"
     >

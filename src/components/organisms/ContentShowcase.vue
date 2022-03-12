@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col gap-28 items-center">
-    <div>
+  <div class="flex flex-col gap-6 md:gap-10 lg:gap-20 items-center">
+    <div class="text-base md:text-lg lg:text-xl text-center">
       {{ t(`contents.${category}.description`) }}
     </div>
-    <ul class="flex flex-wrap gap-16 justify-center">
+    <ul class="flex flex-wrap gap-4 md:gap-8 lg:gap-16 justify-center">
       <li v-for="item in contentList" :key="item.key">
         <ContentItem
           :title="t(`contents.${category}.${item.key}.title`)"
@@ -16,8 +16,14 @@
       </li>
     </ul>
     <Transition mode="out-in">
-      <div v-if="showDescription" class="text-center">
-        {{ t(`contents.${category}.${displayed?.key}.description`) }}
+      <div
+        v-if="showDescription"
+        class="text-center text-base md:text-lg lg:text-xl"
+      >
+        <h2 class="md:hidden text-lg font-semibold mb-2">
+          {{ t(`contents.${category}.${displayed?.key}.title`) }}
+        </h2>
+        <div>{{ t(`contents.${category}.${displayed?.key}.description`) }}</div>
       </div>
     </Transition>
   </div>

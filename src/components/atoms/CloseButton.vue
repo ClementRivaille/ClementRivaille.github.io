@@ -2,23 +2,27 @@
   <button
     class="
       bg-white
-      w-10
-      h-10
+      w-6
+      h-6
+      md:w-10 md:h-10
       rounded-full
       flex
       items-center
       content-start
-      pl-2
+      pl-1
+      md:pl-2
       gap-1
       overflow-hidden
       text-secondary
-      hover:w-28
-      focus:w-28 focus:outline-none
+      hover:w-20
+      focus:w-20
+      md:hover:w-28 md:focus:w-28
+      focus:outline-none
       close-btn
     "
   >
     <Icon name="close" size="s" />
-    <span class="label">{{ t("home.back") }}</span>
+    <span class="label text-sm md:text-lg">{{ t("home.back") }}</span>
   </button>
 </template>
 
