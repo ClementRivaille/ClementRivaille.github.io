@@ -10,21 +10,21 @@
             icon="puzzle"
             v-else-if="state.page === Page.Games"
           >
-            <ContentShowcase category="games" />
+            <ContentShowcase category="games" instrument="drum" />
           </InfoPage>
           <InfoPage
             title="Music"
             icon="music"
             v-else-if="state.page === Page.Music"
           >
-            <ContentShowcase category="music" />
+            <ContentShowcase category="music" instrument="rhodes" />
           </InfoPage>
           <InfoPage
             title="Videos"
             icon="film"
             v-else-if="state.page === Page.Videos"
           >
-            <ContentShowcase category="videos" />
+            <ContentShowcase category="videos" instrument="clarinet" />
           </InfoPage>
           <InfoPage
             title="About Me"

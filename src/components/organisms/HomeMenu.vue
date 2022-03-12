@@ -14,6 +14,7 @@
         icon="puzzle"
         :label="t('games.header')"
         class="self-start justify-self-start"
+        instrument="drum"
         @open="setPage(Page.Games)"
       />
     </div>
@@ -22,6 +23,7 @@
         icon="music"
         :label="t('music.header')"
         class="self-start justify-self-end"
+        instrument="rhodes"
         @open="setPage(Page.Music)"
       />
     </div>
@@ -30,6 +32,7 @@
         icon="film"
         :label="t('videos.header')"
         class="self-end justify-self-start"
+        instrument="clarinet"
         @open="setPage(Page.Videos)"
       />
     </div>
@@ -38,6 +41,7 @@
         icon="user"
         :label="t('about.header')"
         class="self-end justify-self-end"
+        instrument="synth"
         @open="setPage(Page.About)"
       />
     </div>

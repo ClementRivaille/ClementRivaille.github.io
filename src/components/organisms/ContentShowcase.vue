@@ -30,18 +30,25 @@
 </template>
 
 <script setup lang="ts">
+import { useInstruments } from "@/utils/conductor";
 import { Content, ContentCategory, contents } from "@/utils/content";
+import { PlayableInstrument } from "@/utils/instruments";
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import ContentItem from "../atoms/ContentItem.vue";
 
 const { t } = useI18n();
 
-const props = defineProps<{ category: keyof typeof ContentCategory }>();
+const props = defineProps<{
+  category: keyof typeof ContentCategory;
+  instrument: keyof typeof PlayableInstrument;
+}>();
 
 const contentList = contents[props.category];
 const displayed = ref<Content | undefined>();
 const showDescription = ref(false);
+
+const instruments = useInstruments();
 
 const displayItem = (item: Content) => {
   displayed.value = item;
@@ -50,6 +57,16 @@ const displayItem = (item: Content) => {
     setTimeout(() => (showDescription.value = true), 100);
   } else {
     showDescription.value = true;
+  }
+
+  // Play note
+  if (instruments) {
+    if (props.instrument === PlayableInstrument.clarinet)
+      instruments.playClarinet();
+    if (props.instrument === PlayableInstrument.rhodes)
+      instruments.playRhodes();
+    if (props.instrument === PlayableInstrument.drum) instruments.playDrums();
+    if (props.instrument === PlayableInstrument.synth) instruments.playSynth();
   }
 };
 </script>

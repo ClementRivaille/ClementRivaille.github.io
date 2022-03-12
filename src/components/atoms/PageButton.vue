@@ -49,16 +49,21 @@
 
 <script setup lang="ts">
 import { IconsName } from "@/utils/icons";
-import Icon from "./Icon.vue";
+import { PlayableInstrument } from "@/utils/instruments";
+import { useJingle } from "@/utils/jingles";
+import { AnimationListOptions, MotionKeyframesDefinition } from "motion";
 import { Motion } from "motion/vue";
 import { computed, ref } from "vue";
-import { AnimationListOptions, MotionKeyframesDefinition } from "motion";
+import Icon from "./Icon.vue";
 
-defineProps<{
+const props = defineProps<{
   icon: keyof typeof IconsName;
   label: string;
+  instrument: keyof typeof PlayableInstrument;
 }>();
 defineEmits(["open"]);
+
+const playJingle = useJingle(props.instrument as PlayableInstrument);
 
 const transitioning = ref(false);
 const transitionAnimation = computed<MotionKeyframesDefinition>(() =>
@@ -76,6 +81,29 @@ const transitionTransition: AnimationListOptions = {
 
 const startTransition = () => {
   transitioning.value = true;
+
+  // Play a jingle
+  let amount = 0;
+  const delays: number[] = [];
+  if (props.instrument === PlayableInstrument.drum) {
+    amount = 4 + Math.round(Math.random() * 3);
+    delays.push((110 / (8 * 60)) * 1000);
+  }
+  if (props.instrument === PlayableInstrument.rhodes) {
+    amount = 2 + Math.round(Math.random() * 1);
+    for (let i = 0; i < amount; i++) {
+      delays.push(350 + Math.random() * 600);
+    }
+  }
+  if (props.instrument === PlayableInstrument.clarinet) {
+    amount = 3 + Math.round(Math.random() * 1);
+    delays.push(300 + Math.random() * 300);
+  }
+  if (props.instrument === PlayableInstrument.synth) {
+    amount = 2 + Math.round(Math.random() * 2);
+    delays.push(300 + Math.random() * 400);
+  }
+  playJingle(amount, delays);
 };
 </script>
 

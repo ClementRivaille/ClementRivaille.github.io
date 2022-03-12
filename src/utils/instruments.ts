@@ -90,6 +90,13 @@ function buildScaleNotes(scale: string[], octave = 4, cPos = 7) {
   );
 }
 
+export enum PlayableInstrument {
+  rhodes = "rhodes",
+  clarinet = "clarinet",
+  synth = "synth",
+  drum = "drum",
+}
+
 export default class Instruments {
   private bassNotes: string[] = [];
   private rhodesNotes: string[] = [];
