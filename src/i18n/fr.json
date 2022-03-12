@@ -96,7 +96,7 @@
         "description": "Série sur la fan-création amateure web, autour du jeu-vidéo. Car cette création, bien que marginale et parfois étrange, a elle aussi sa place dans notre culture, et a un intérêt légitime ! On s'intéresse donc ici aux fan-comics, reprises musicales, fan-games, parodies… L'art transformé par la culture émergente."
       },
       "art-random": {
-        "title": "art.random",
+        "title": "art.random()",
         "description": "Série de trois vidéos sur la génération procédurale en tant que procédé artistique. Que peut-on exprimer à partir de systèmes dont on ne contrôle pas le résultat final ? Des créations en changement permanent, différentes à chaque nouveau regard ! L'aléatoire a beaucoup à offrir, aussi bien dans le jeu-vidéo que dans d'autres domaines artistiques."
       },
       "horribles": {

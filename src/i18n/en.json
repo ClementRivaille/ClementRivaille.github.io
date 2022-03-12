@@ -96,7 +96,7 @@
         "description": "Series on web amateur fan-creation, around video-game. Because this kind of creation, despite its marginality and sometime weirdness, has its place in our culture, and deserve that we talk about it! We'll thus here discuss about fan-comics, music covers, fan-games, parodies… Art transformed by emerging culture."
       },
       "art-random": {
-        "title": "art.random",
+        "title": "art.random()",
         "description": "Series of three videos about procedural generation as an artistic process. What can we express through systems of which we don't control the final result? With ever changing creations, different on each new look! Randomness has a lot to offer, as well in video games that in other arts."
       },
       "horribles": {

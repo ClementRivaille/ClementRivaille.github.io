@@ -23,6 +23,7 @@
     />
     <span
       class="
+        label
         col-start-1
         row-start-1
         w-full
@@ -35,7 +36,7 @@
         font-bold
         transition-opacity
         duration-150
-        bg-opacity-50 bg-black
+        bg-opacity-30 bg-black
         text-base
         md:text-xl
         lg:text-2xl
@@ -51,3 +52,9 @@
 <script setup lang="ts">
 defineProps<{ title: string; img: string; url: string; active?: boolean }>();
 </script>
+
+<style scoped lang="scss">
+.label {
+  text-shadow: 0.1em 0.05em 0.2em rgba(0, 0, 0, 0.7);
+}
+</style>
