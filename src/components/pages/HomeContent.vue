@@ -26,30 +26,35 @@
       </div>
       <MusicToolbar>
         <ButtonIcon
-          name="piano"
-          size="m"
-          @click="onClickPiano"
-          :aria-label="t('home.instruments.piano')"
-        />
-        <ButtonIcon
-          name="violin"
-          size="m"
-          @click="onClickViolin"
-          :aria-label="t('home.instruments.violin')"
-        />
-        <ButtonIcon
-          name="flute"
-          size="m"
-          @click="onClickFlute"
-          :aria-label="t('home.instruments.flute')"
-        />
-        <ButtonIcon
+          v-if="getters.isUnlocked(Unlockable.drum)"
           name="drum"
           size="m"
           @click="onClickDrum"
           :aria-label="t('home.instruments.drum')"
         />
         <ButtonIcon
+          v-if="getters.isUnlocked(Unlockable.rhodes)"
+          name="piano"
+          size="m"
+          @click="onClickPiano"
+          :aria-label="t('home.instruments.piano')"
+        />
+        <ButtonIcon
+          v-if="getters.isUnlocked(Unlockable.clarinet)"
+          name="flute"
+          size="m"
+          @click="onClickFlute"
+          :aria-label="t('home.instruments.flute')"
+        />
+        <ButtonIcon
+          v-if="getters.isUnlocked(Unlockable.synth)"
+          name="violin"
+          size="m"
+          @click="onClickViolin"
+          :aria-label="t('home.instruments.violin')"
+        />
+        <ButtonIcon
+          v-if="getters.isUnlocked(Unlockable.wave)"
           name="water"
           size="m"
           @click="onClickWater"
@@ -73,20 +78,20 @@
 </template>
 
 <script setup lang="ts">
-import { StoreData } from "@/store";
+import { StoreData, Unlockable } from "@/store";
 import { useConductor } from "@/utils/conductor";
+import { useI18n } from "vue-i18n";
 import { useStore } from "vuex";
 import AnimatedText from "../atoms/AnimatedText.vue";
 import MusicToolbar from "../atoms/MusicToolbar.vue";
 import ButtonIcon from "../molecules/ButtonIcon.vue";
-import { useI18n } from "vue-i18n";
 import HomeMenu from "../organisms/HomeMenu.vue";
 
 const { t } = useI18n();
 
 const { playRhodes, playClarinet, playSynth, playDrums, toggleWaveEffect } =
   useConductor();
-const { state } = useStore<StoreData>();
+const { state, getters } = useStore<StoreData>();
 
 const onClickPiano = () => {
   playRhodes();

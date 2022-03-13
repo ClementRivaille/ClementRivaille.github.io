@@ -15,7 +15,7 @@
         :label="t('games.header')"
         class="self-start justify-self-start"
         instrument="drum"
-        @open="setPage(Page.Games)"
+        @open="openPage(Page.Games, Unlockable.drum)"
       />
     </div>
     <div class="flex content-center items-center">
@@ -24,7 +24,7 @@
         :label="t('music.header')"
         class="self-start justify-self-end"
         instrument="rhodes"
-        @open="setPage(Page.Music)"
+        @open="openPage(Page.Music, Unlockable.rhodes)"
       />
     </div>
     <div class="flex content-center items-center">
@@ -33,7 +33,7 @@
         :label="t('videos.header')"
         class="self-end justify-self-start"
         instrument="clarinet"
-        @open="setPage(Page.Videos)"
+        @open="openPage(Page.Videos, Unlockable.clarinet)"
       />
     </div>
     <div class="flex content-center items-center">
@@ -42,13 +42,14 @@
         :label="t('about.header')"
         class="self-end justify-self-end"
         instrument="synth"
-        @open="setPage(Page.About)"
+        @open="openPage(Page.About, Unlockable.synth)"
       />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Unlockable } from "@/store";
 import Page from "@/utils/pages";
 import { useAction } from "@/utils/vuex-hooks";
 import { useI18n } from "vue-i18n";
@@ -56,4 +57,10 @@ import PageButton from "../atoms/PageButton.vue";
 
 const { t } = useI18n();
 const setPage = useAction("setPage");
+const unlock = useAction("unlock");
+
+const openPage = (page: Page, unlocked: Unlockable) => {
+  setPage(page);
+  unlock(unlocked);
+};
 </script>
