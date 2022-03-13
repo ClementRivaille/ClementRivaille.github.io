@@ -9,23 +9,25 @@ import {
 } from "vuex";
 
 export enum Unlockable {
-  rhodes,
-  synth,
-  clarinet,
-  drum,
-  wave,
+  rhodes = "rhodes",
+  synth = "synth",
+  clarinet = "clarinet",
+  drum = "drum",
+  wave = "wave",
 }
 
 export interface StoreData {
   wave: boolean;
   page: Page;
   unlocked: Unlockable[];
+  new: Unlockable[];
 }
 
 enum MutationsType {
   setWave = "setWave",
   setPage = "setPage",
   unlock = "unlock",
+  removeNew = "removeNew",
 }
 
 const mutations: MutationTree<StoreData> = {
@@ -41,6 +43,9 @@ const mutations: MutationTree<StoreData> = {
       state.unlocked.push(Unlockable.wave);
     }
   },
+  [MutationsType.removeNew]: (state, value: Unlockable) => {
+    state.new = state.new.filter((unlocked) => unlocked !== value);
+  },
 };
 
 export interface Actions {
@@ -53,6 +58,10 @@ export interface Actions {
     context: ActionContext<StoreData, StoreData>,
     value: Unlockable
   ) => void;
+  playWith: (
+    context: ActionContext<StoreData, StoreData>,
+    value: Unlockable
+  ) => void;
 }
 const actions: Actions = {
   setWave: (store, value: boolean) => {
@@ -62,15 +71,18 @@ const actions: Actions = {
     store.commit(MutationsType.setPage, value);
   },
   unlock: (store, value) => store.commit(MutationsType.unlock, value),
+  playWith: (store, value) => store.commit(MutationsType.removeNew, value),
 };
 
 export interface Getters {
   isUnlocked: (state: StoreData) => (instrument: Unlockable) => boolean;
+  isNew: (state: StoreData) => (instrument: Unlockable) => boolean;
 }
 
 const getters: GetterTree<StoreData, StoreData> & Getters = {
   isUnlocked: (state) => (instrument: Unlockable) =>
     state.unlocked.includes(instrument),
+  isNew: (state) => (instrument: Unlockable) => state.new.includes(instrument),
 };
 
 export default createStore<StoreData>({
@@ -78,6 +90,7 @@ export default createStore<StoreData>({
     wave: false,
     page: Page.Home,
     unlocked: [],
+    new: Object.keys(Unlockable) as Unlockable[],
   },
   mutations,
   actions: { ...actions } as ActionTree<StoreData, StoreData>,
