@@ -28,7 +28,16 @@
       "I work in web since several years now. The web is a platform I admire, for the sharing of knowledge as well as the open (and chaotic) expression it allows. I have a particular interest for UX and accessibility. But in a more general way I enjoy development for the communication it implies. Developing an app is in my opinion a challenge of understanding towards the needs, designers, other team members, and final users.",
       "I also like to put my developers skills into more creative projects. Coding for something “useless”, systems that are just pleasant or beautiful. Whereas it's for musical softwares or games Logiciels musicaux ou jeux, creation is for me an exploration lead by curiosity. I'm tweaking programs for the satisfaction of discovering their final result. As you can see here, I keep an affection for the 2000s web, a giant mess of surprising and expressives pages.",
       "Beside this, I enjoy hiking, tabletop games, animation, fusion jazz and my tyrannical cat."
-    ]
+    ],
+    "links": {
+      "github": "Github",
+      "itch": "Itch",
+      "linkedin": "Linkedin",
+      "mail": "E-mail",
+      "soundcloud": "Soundcloud",
+      "twitter": "Twitter",
+      "youtube": "Youtube"
+    }
   },
   "contents": {
     "games": {

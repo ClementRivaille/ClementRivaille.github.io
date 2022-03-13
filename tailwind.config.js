@@ -7,12 +7,16 @@ module.exports = {
         primary: `var(--color-primary)`,
         secondary: `var(--color-secondary)`,
       },
+      gridTemplateColumns: {
+        leftMargin: "auto 1fr",
+      },
     },
   },
   variants: {
     extend: {},
     width: ["responsive", "hover", "focus"],
     height: ["responsive", "hover", "focus"],
+    dropShadow: ["hover", "focus"],
   },
   plugins: [],
 };

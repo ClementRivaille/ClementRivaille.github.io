@@ -15,7 +15,7 @@
         />
       </li>
     </ul>
-    <Transition mode="out-in">
+    <Transition name="quick-fade" mode="out-in">
       <div
         v-if="showDescription"
         class="text-center text-base md:text-lg lg:text-xl"
@@ -70,15 +70,3 @@ const displayItem = (item: Content) => {
   }
 };
 </script>
-
-<style lang="scss">
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-</style>

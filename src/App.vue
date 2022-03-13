@@ -31,7 +31,7 @@
             icon="user"
             v-else-if="state.page === Page.About"
           >
-            <div>Lorem ipsum…</div>
+            <AboutPage />
           </InfoPage>
         </Transition>
       </div>
@@ -50,6 +50,7 @@ import Page from "./utils/pages";
 import InfoPage from "./components/templates/InfoPage.vue";
 import { computed } from "vue";
 import ContentShowcase from "./components/organisms/ContentShowcase.vue";
+import AboutPage from "./components/pages/AboutPage.vue";
 
 const { instruments, loop } = useConductorProvider();
 
