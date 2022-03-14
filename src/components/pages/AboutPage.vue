@@ -33,6 +33,7 @@
       <div>{{ t("about.presentation.0") }}</div>
       <div>{{ t("about.presentation.1") }}</div>
       <div>{{ t("about.presentation.2") }}</div>
+      <div>{{ t("about.presentation.3") }}</div>
     </div>
   </div>
 </template>
