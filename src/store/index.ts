@@ -88,7 +88,7 @@ const getters: GetterTree<StoreData, StoreData> & Getters = {
 export default createStore<StoreData>({
   state: {
     wave: false,
-    page: Page.Home,
+    page: Page.Welcome,
     unlocked: [],
     new: Object.keys(Unlockable) as Unlockable[],
   },

@@ -114,5 +114,10 @@
         "description": "Games don't have to always be fun! By confining us in happiness, they prevent us to see beyond our ego. This essay slightly tinted in irony suggest to envision games with some frustration, pain, boredom, nastiness and stupidity. Unpleasing games, but authentic. Because without darkness, there is no light."
       }
     }
+  },
+  "welcome": {
+    "message": "This website offers an interactive musical experience. Make sure that your sound is on.",
+    "accept": "Ok, I'm ready!",
+    "deny": "No thanks, just take me to a regular website"
   }
 }

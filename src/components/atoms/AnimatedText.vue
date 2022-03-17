@@ -58,7 +58,7 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const msg = t("home.title");
-const activeLetter = ref(0);
+const activeLetter = ref(-1);
 
 const updateLetter = () => {
   let newValue = (activeLetter.value + 1) % msg.length;

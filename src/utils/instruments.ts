@@ -1,4 +1,4 @@
-import { Reverb, Sampler, Vibrato, Players, Gain } from "tone";
+import { Reverb, Sampler, Vibrato, Players, Gain, getContext } from "tone";
 import { Scale } from "@tonaljs/tonal";
 
 const probabilities = {
@@ -305,28 +305,28 @@ export default class Instruments {
   }
 
   playBass() {
-    if (!this.bass) return;
+    if (!this.bass || !this.bass.loaded) return;
     this.bass.releaseAll();
     const note = this.bassNotes[getRandomNote("scale")];
     this.bass.triggerAttackRelease(note, "4n");
   }
 
   playClarinet() {
-    if (!this.clarinet) return;
+    if (!this.clarinet || !this.clarinet.loaded) return;
     const note =
       this.clarinetNotes[getRandomNote("solo") + (Math.random() > 0.5 ? 7 : 0)];
     this.clarinet.triggerAttackRelease(note, 1);
   }
 
   playSynth() {
-    if (!this.synth) return;
+    if (!this.synth || !this.synth.loaded) return;
     this.synth.releaseAll();
     const note = this.synthNotes[getRandomNote("melody")];
     this.synth.triggerAttack(note);
   }
 
   playRhodes() {
-    if (!this.rhodes) return;
+    if (!this.rhodes || !this.rhodes.loaded) return;
     const nbNotes = 2 + (Math.random() > 0.5 ? 1 : 0);
     const base =
       [0, 2, 4][Math.floor(Math.random() * 3)] + (Math.random() > 0.5 ? 7 : 0);
@@ -347,7 +347,7 @@ export default class Instruments {
   }
 
   playDrums() {
-    if (!this.drums) return;
+    if (!this.drums || !this.drums.loaded) return;
     const sound =
       this.drumsSounds[Math.floor(Math.random() * this.drumsSounds.length)];
     this.drums.player(sound).start();
@@ -364,5 +364,9 @@ export default class Instruments {
     if (!this.rhodes || !this.synth) return;
     this.rhodes.releaseAll();
     this.synth.releaseAll();
+  }
+
+  setMute(value: boolean) {
+    this.master.gain.setValueAtTime(value ? 0 : 1, getContext().currentTime);
   }
 }

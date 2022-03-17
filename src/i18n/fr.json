@@ -114,5 +114,10 @@
         "description": "Les jeux n'ont pas à être toujours fun ! En nous enfermant dans du joyeux, ils nous empêchent de voir plus loin que notre égo. Cet essai teinté d'ironie propose de concevoir les jeux avec une part de frustration, de pénible, d'ennuyeux, de méchant et stupide. Des jeux déplaisants, mais authentiques. Car sans obscurité, il n'y a pas de lumière."
       }
     }
+  },
+  "welcome": {
+    "message": "Ce site propore une expérience musicale interactive. Il est donc recommandé d'avoir le son actif.",
+    "accept": "Ok, je suis prêt !",
+    "deny": "Non merci, je veux juste visiter un site web normal"
   }
 }

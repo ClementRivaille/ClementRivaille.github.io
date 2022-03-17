@@ -4,7 +4,8 @@
       <AnimatedBackground />
       <div class="z-10 absolute h-screen w-screen overflow-auto">
         <Transition name="fade-page" :mode="transitionMode">
-          <HomeContent v-if="state.page === Page.Home" />
+          <WelcomePage v-if="state.page === Page.Welcome" @validate="start" />
+          <HomeContent v-else-if="state.page === Page.Home" />
           <InfoPage
             title="Games"
             icon="puzzle"
@@ -51,17 +52,29 @@ import InfoPage from "./components/templates/InfoPage.vue";
 import { computed } from "vue";
 import ContentShowcase from "./components/organisms/ContentShowcase.vue";
 import AboutPage from "./components/pages/AboutPage.vue";
+import WelcomePage from "./components/pages/WelcomePage.vue";
+import { useAction } from "./utils/vuex-hooks";
+import { start as startTone } from "tone";
 
 const { instruments, loop } = useConductorProvider();
 
 const { state } = useStore<StoreData>();
+const setPage = useAction("setPage");
 
 async function startConductor() {
   await instruments.load();
+  startTone();
   loop.start();
 }
 
-startConductor();
+async function start(sound: boolean) {
+  if (sound) {
+    await startConductor();
+  } else {
+    instruments.setMute(true);
+  }
+  setPage(Page.Home);
+}
 
 const transitionMode = computed(() =>
   [Page.Games, Page.Music, Page.Videos, Page.About].includes(state.page)
