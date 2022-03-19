@@ -9,7 +9,7 @@
       md:w-28 md:h-28 md:hover:w-48 md:hover:h-48 md:focus:w-48 md:focus:h-48
       lg:w-40 lg:h-40 lg:hover:w-64 lg:hover:h-64 lg:focus:w-64 lg:focus:h-64
       focus:outline-none
-      text-white text-opacity-30
+      text-white
       page-button
     "
     :class="{ 'z-30': transitioning, 'cursor-default': transitioning }"
@@ -33,8 +33,9 @@
       @motioncomplete="$emit('open')"
     />
 
-    <div
+    <Motion
       class="
+        content
         absolute
         top-0
         w-full
@@ -47,13 +48,19 @@
         items-center
         px-2
         md:px-0
+        transition-opacity
+        duration-200
+        opacity-30
       "
+      :animate="contentFadeOut"
+      :transition="contentFadeOutOptions"
+      :class="{ 'flex-row-reverse': direction === 'right' }"
     >
       <Icon :name="icon" size="l" />
       <div class="label font-medium font-sans lg:text-3xl md:text-2xl text-lg">
         {{ label }}
       </div>
-    </div>
+    </Motion>
   </button>
 </template>
 
@@ -70,6 +77,7 @@ const props = defineProps<{
   icon: keyof typeof IconsName;
   label: string;
   instrument: keyof typeof PlayableInstrument;
+  direction?: "left" | "right";
 }>();
 defineEmits(["open"]);
 
@@ -86,6 +94,15 @@ const transitionAnimation = computed<MotionKeyframesDefinition>(() =>
 );
 const transitionTransition: AnimationListOptions = {
   duration: 0.6,
+  easing: "ease-in",
+};
+
+const contentFadeOut = computed<MotionKeyframesDefinition>(() =>
+  transitioning.value ? { opacity: 0 } : {}
+);
+const contentFadeOutOptions: AnimationListOptions = {
+  delay: 0.3,
+  duration: 0.5,
   easing: "ease-in",
 };
 
@@ -118,8 +135,17 @@ const startTransition = () => {
 </script>
 
 <style lang="scss" scoped>
-.transition-bg {
-  transform: translate(-50%, -50%);
+.page-button {
+  .transition-bg {
+    transform: translate(-50%, -50%);
+  }
+
+  &:focus,
+  &:hover {
+    .content {
+      opacity: 80%;
+    }
+  }
 }
 
 @media (min-width: 768px) {

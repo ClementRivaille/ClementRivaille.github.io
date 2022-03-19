@@ -18,6 +18,7 @@
     <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="puzzle"
+        direction="left"
         :label="t('games.header')"
         class="self-start justify-self-start"
         instrument="drum"
@@ -27,6 +28,7 @@
     <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="music"
+        direction="right"
         :label="t('music.header')"
         class="self-start justify-self-end"
         instrument="rhodes"
@@ -36,6 +38,7 @@
     <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="film"
+        direction="left"
         :label="t('videos.header')"
         class="self-end justify-self-start"
         instrument="clarinet"
@@ -45,6 +48,7 @@
     <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="user"
+        direction="right"
         :label="t('about.header')"
         class="self-end justify-self-end"
         instrument="synth"

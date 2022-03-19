@@ -5,7 +5,8 @@
       focus:opacity-80
       hover:opacity-80
       transition-all
-      delay-75
+      duration-100
+      ease-in-out
       transform
       focus:-translate-y-1
       hover:-translate-y-1
