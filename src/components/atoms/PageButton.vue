@@ -3,11 +3,12 @@
     class="
       relative
       bg-secondary
-      rounded-full
-      w-40
-      h-40
-      hover:w-64 hover:h-64
-      focus:w-64 focus:h-64 focus:outline-none
+      md:rounded-full
+      w-full
+      h-12
+      md:w-28 md:h-28 md:hover:w-48 md:hover:h-48 md:focus:w-48 md:focus:h-48
+      lg:w-40 lg:h-40 lg:hover:w-64 lg:hover:h-64 lg:focus:w-64 lg:focus:h-64
+      focus:outline-none
       text-white text-opacity-30
       page-button
     "
@@ -22,8 +23,10 @@
         left-1/2
         top-1/2
         bg-secondary
-        rounded-full
+        md:rounded-full
         transition-bg
+        max-w-full
+        md:max-w-none
       "
       :animate="transitionAnimation"
       :transition="transitionTransition"
@@ -36,13 +39,20 @@
         top-0
         w-full
         h-full
-        flex flex-col
-        justify-center
+        flex
+        md:flex-col md:justify-center
+        gap-4
+        md:gap-0
+        justify-start
         items-center
+        px-2
+        md:px-0
       "
     >
       <Icon :name="icon" size="l" />
-      <div class="label font-medium font-sans text-3xl">{{ label }}</div>
+      <div class="label font-medium font-sans lg:text-3xl md:text-2xl text-lg">
+        {{ label }}
+      </div>
     </div>
   </button>
 </template>
@@ -69,8 +79,8 @@ const transitioning = ref(false);
 const transitionAnimation = computed<MotionKeyframesDefinition>(() =>
   transitioning.value
     ? {
-        width: ["100%", "200vw"],
-        height: ["100%", "200vw"],
+        width: ["100%", "max(200vw, 250vh)"],
+        height: ["100%", "max(200vw, 250vh)"],
       }
     : {}
 );
@@ -108,27 +118,39 @@ const startTransition = () => {
 </script>
 
 <style lang="scss" scoped>
-.page-button {
-  transition: width 300ms ease, height 300ms ease;
-  .label {
-    opacity: 0;
-    height: 0px;
-    transition: all 300ms ease;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-  }
+.transition-bg {
+  transform: translate(-50%, -50%);
+}
 
-  &:focus,
-  &:hover {
+@media (min-width: 768px) {
+  .page-button {
+    transition: width 300ms ease, height 300ms ease;
     .label {
-      height: 56px;
-      opacity: 1;
+      opacity: 0;
+      height: 0px;
+      transition: all 300ms ease;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &:focus,
+    &:hover {
+      .label {
+        height: 40px;
+        opacity: 1;
+      }
     }
   }
 }
-
-.transition-bg {
-  transform: translate(-50%, -50%);
+@media (min-width: 1024px) {
+  .page-button {
+    &:focus,
+    &:hover {
+      .label {
+        height: 56px;
+      }
+    }
+  }
 }
 </style>

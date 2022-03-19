@@ -10,6 +10,13 @@ module.exports = {
       gridTemplateColumns: {
         leftMargin: "auto 1fr",
       },
+      maxHeight: {
+        menuLg: "calc(100vh - 5rem)",
+        menu: "calc(100vh - 3.75rem)",
+      },
+      height: {
+        home: "min(18rem, calc(100vh - 4rem))",
+      },
     },
   },
   variants: {

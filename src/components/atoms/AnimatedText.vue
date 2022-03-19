@@ -8,8 +8,9 @@
       text-white
       opacity-70
       font-bold
-      text-5xl
-      md:text-8xl
+      text-3xl
+      md:text-5xl
+      lg:text-8xl
       title-font
       text-center
     "

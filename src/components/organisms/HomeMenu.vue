@@ -1,15 +1,21 @@
 <template>
   <div
     class="
-      grid grid-rows-2 grid-cols-2
+      flex flex-col
+      items-stretch
+      md:grid md:grid-rows-2 md:grid-cols-2
       w-full
-      h-5/6
       justify-items-center
-      items-center
-      gap-y-40 gap-x-56
+      md:items-center
+      gap-4
+      lg:gap-y-40
+      md:gap-y-28 md:gap-x-56
+      lg:gap-x-96
+      md:max-h-menu
+      lg:max-h-menuLg
     "
   >
-    <div class="flex content-center items-center">
+    <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="puzzle"
         :label="t('games.header')"
@@ -18,7 +24,7 @@
         @open="openPage(Page.Games, Unlockable.drum)"
       />
     </div>
-    <div class="flex content-center items-center">
+    <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="music"
         :label="t('music.header')"
@@ -27,7 +33,7 @@
         @open="openPage(Page.Music, Unlockable.rhodes)"
       />
     </div>
-    <div class="flex content-center items-center">
+    <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="film"
         :label="t('videos.header')"
@@ -36,7 +42,7 @@
         @open="openPage(Page.Videos, Unlockable.clarinet)"
       />
     </div>
-    <div class="flex content-center items-center">
+    <div class="md:flex md:content-center md:items-center">
       <PageButton
         icon="user"
         :label="t('about.header')"
