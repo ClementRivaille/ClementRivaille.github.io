@@ -117,3 +117,9 @@ export const contents: Contents = {
     },
   ],
 };
+
+export const contentMainLinks: { [key in ContentCategory]: string } = {
+  games: "https://itooh.itch.io",
+  music: "https://itooh.itch.io",
+  videos: "https://www.youtube.com/channel/UCsP7go1EC0-jQLDPgExIBEw",
+};

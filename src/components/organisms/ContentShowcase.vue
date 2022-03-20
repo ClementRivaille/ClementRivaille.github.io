@@ -1,7 +1,18 @@
 <template>
   <div class="flex flex-col gap-6 md:gap-10 lg:gap-20 items-center">
-    <div class="text-base md:text-lg lg:text-xl text-center">
-      {{ t(`contents.${category}.description`) }}
+    <div
+      class="
+        text-base
+        md:text-lg
+        lg:text-xl
+        text-center
+        flex flex-col
+        items-center
+        gap-2
+      "
+    >
+      <p>{{ t(`contents.${category}.description`) }}</p>
+      <Link :href="moreLink" target="_blank">{{ t(`${category}.more`) }}</Link>
     </div>
     <ul class="flex flex-wrap gap-4 md:gap-8 lg:gap-16 justify-center">
       <li v-for="item in contentList" :key="item.key">
@@ -47,7 +58,12 @@
 
 <script setup lang="ts">
 import { useInstruments } from "@/utils/conductor";
-import { Content, ContentCategory, contents } from "@/utils/content";
+import {
+  Content,
+  ContentCategory,
+  contentMainLinks,
+  contents,
+} from "@/utils/content";
 import { PlayableInstrument } from "@/utils/instruments";
 import { isHoverable } from "@/utils/utils";
 import { ref } from "vue";
@@ -55,6 +71,7 @@ import { useI18n } from "vue-i18n";
 import ContentItem from "../atoms/ContentItem.vue";
 import Button from "../atoms/Button.vue";
 import Icon from "../atoms/Icon.vue";
+import Link from "../atoms/Link.vue";
 
 const { t } = useI18n();
 const hoverable = isHoverable();
@@ -65,6 +82,7 @@ const props = defineProps<{
 }>();
 
 const contentList = contents[props.category];
+const moreLink = contentMainLinks[props.category];
 const displayed = ref<Content | undefined>();
 const showDescription = ref(false);
 
