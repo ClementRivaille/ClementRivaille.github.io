@@ -10,6 +10,8 @@ import puzzle from "@/assets/icons/puzzle.svg?inline";
 import close from "@/assets/icons/close.svg?inline";
 import spinner from "@/assets/icons/spinner.svg?inline";
 import arrow from "@/assets/icons/arrow.svg?inline";
+import volume from "@/assets/icons/volume.svg?inline";
+import volumeOff from "@/assets/icons/volume-off.svg?inline";
 import { VueElementConstructor } from "vue";
 
 export enum IconsName {
@@ -25,6 +27,8 @@ export enum IconsName {
   close = "close",
   spinner = "spinner",
   arrow = "arrow",
+  volume = "volume",
+  volumeOff = "volumeOff",
 }
 
 export type IconSize = "s" | "m" | "l" | "xl";
@@ -42,4 +46,6 @@ export const iconsMap: { [key in IconsName]: VueElementConstructor<any> } = {
   close,
   spinner,
   arrow,
+  volume,
+  volumeOff,
 };

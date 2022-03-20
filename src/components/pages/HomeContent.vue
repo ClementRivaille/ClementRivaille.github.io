@@ -44,7 +44,7 @@
         flex
         md:flex-col
         flex-col-reverse
-        gap-2
+        gap-4
         md:gap-1
       "
     >

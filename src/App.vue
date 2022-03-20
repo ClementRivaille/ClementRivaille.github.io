@@ -56,7 +56,7 @@ import WelcomePage from "./components/pages/WelcomePage.vue";
 import { useAction } from "./utils/vuex-hooks";
 import { start as startTone } from "tone";
 
-const { instruments, loop } = useConductorProvider();
+const { instruments, loop, active } = useConductorProvider();
 
 const { state } = useStore<StoreData>();
 const setPage = useAction("setPage");
@@ -73,6 +73,7 @@ async function start(sound: boolean) {
   } else {
     instruments.setMute(true);
   }
+  active.value = sound;
   setPage(Page.Home);
 }
 

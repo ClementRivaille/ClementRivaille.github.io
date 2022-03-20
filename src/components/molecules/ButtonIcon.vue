@@ -11,6 +11,9 @@
       duration-100
       focus:outline-white
       ease-in
+      flex
+      justify-center
+      items-center
     "
     :class="{ 'opacity-100': active }"
     :animate="highlight.animation"

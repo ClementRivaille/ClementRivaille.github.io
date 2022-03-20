@@ -14,12 +14,13 @@
 
 <script setup lang="ts">
 import { IconSize, iconsMap, IconsName } from "@/utils/icons";
+import { computed } from "vue";
 const props = defineProps<{
   name?: keyof typeof IconsName;
   size?: IconSize;
 }>();
 
-const SvgIcon = iconsMap[props.name || "piano"];
+const SvgIcon = computed(() => iconsMap[props.name || "piano"]);
 </script>
 
 <style scoped lang="scss">

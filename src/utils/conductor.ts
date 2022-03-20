@@ -1,15 +1,17 @@
 import { StoreData } from "@/store";
 import { Sequence, Transport } from "tone";
-import { inject, provide } from "vue";
+import { inject, provide, Ref, ref } from "vue";
 import { useStore } from "vuex";
 import Instruments from "./instruments";
 import Signal, { Callback } from "./signal";
 import { useAction } from "./vuex-hooks";
+import { start as startTone } from "tone";
 
 enum Provided {
   instruments = "instruments",
   signal = "signal",
   loop = "loop",
+  active = "active",
 }
 
 export enum Events {
@@ -34,9 +36,12 @@ export function useConductorProvider() {
     "4n"
   );
 
+  const active = ref(false);
+
   provide(Provided.instruments, instruments);
   provide(Provided.signal, signal);
   provide(Provided.loop, loop);
+  provide(Provided.active, active);
 
   Transport.start();
 
@@ -44,21 +49,12 @@ export function useConductorProvider() {
     instruments,
     signal,
     loop,
+    active,
   };
 }
 
 export function useInstruments() {
   return inject<Instruments>(Provided.instruments);
-}
-
-export function startLoop() {
-  const loop = inject<Sequence>(Provided.loop);
-  loop?.start();
-}
-
-export function PauseLoop() {
-  const loop = inject<Sequence>(Provided.loop);
-  loop?.stop();
 }
 
 export function useSubscribe(event: Events, callback: Callback) {
@@ -73,6 +69,8 @@ export function useSubscribe(event: Events, callback: Callback) {
 export function useConductor() {
   const instruments = useInstruments();
   const signal = inject<Signal<Events>>(Provided.signal);
+  const loop = inject<Sequence>(Provided.loop);
+  const active = inject<Ref<boolean>>(Provided.active);
   const setWave = useAction("setWave");
   const { state } = useStore<StoreData>();
 
@@ -97,5 +95,22 @@ export function useConductor() {
       instruments?.setEffect(!state.wave);
       setWave(!state.wave);
     },
+    start: async () => {
+      await instruments?.load();
+      startTone();
+      instruments?.setMute(false);
+      loop?.start();
+      if (active !== undefined) {
+        active.value = true;
+      }
+    },
+    stop: () => {
+      loop?.stop();
+      instruments?.setMute(true);
+      if (active !== undefined) {
+        active.value = false;
+      }
+    },
+    isPlaying: active,
   };
 }

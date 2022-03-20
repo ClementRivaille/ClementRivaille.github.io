@@ -136,6 +136,10 @@
         "short": "en",
         "long": "English"
       }
+    },
+    "sound": {
+      "mute": "Mute audio",
+      "unmute": "Start audio"
     }
   }
 }
