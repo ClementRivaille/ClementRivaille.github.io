@@ -6,10 +6,10 @@
           {{ t("welcome.message") }}
         </div>
         <div class="flex flex-col items-center gap-2 md:gap-3">
-          <Button color="default" @click="validate(true)">
+          <Button color="default" @click="validate(true)" fixed-width>
             {{ t("welcome.accept") }}
           </Button>
-          <Button color="secondary" small @click="validate(false)">
+          <Button color="secondary" small @click="validate(false)" fixed-width>
             {{ t("welcome.deny") }}
           </Button>
         </div>

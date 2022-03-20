@@ -11,13 +11,19 @@
     }
   },
   "games": {
-    "header": "Jeux"
+    "header": "Jeux",
+    "more": "Voir sur itch.io",
+    "play": "Jouer"
   },
   "music": {
-    "header": "Musique"
+    "header": "Musique",
+    "more": "Voir sur itch.io",
+    "play": "Jouer"
   },
   "videos": {
-    "header": "Vidéos"
+    "header": "Vidéos",
+    "more": "Plus sur Youtube",
+    "play": "Visionner"
   },
   "about": {
     "header": "Qui je suis",
@@ -42,7 +48,7 @@
   },
   "contents": {
     "games": {
-      "description": "Je développe des petits jeux en tant que hobby, principalement sous Godot ou HTML5. Souvent focalisé sur la musique, mon approche du game-design est de cibler l'amusement du présent. Sans objectif ou difficulté, je recherche à produire des interaction amusantes et des systèmes explorables. Je considère d'ailleurs le présent site comme une de mes créations ludiques.",
+      "description": "Je développe des petits jeux en tant que hobby, principalement sous Godot ou HTML5. Souvent focalisé sur la musique, mon approche du game-design est de cibler l'amusement du présent. Sans nécessairement d'objectif ou de difficulté, je recherche d'abord à produire des interactions plaisantes et des systèmes intéressants à explorer. Je considère d'ailleurs le présent site comme une de mes créations ludiques.",
       "echoes-traveler": {
         "title": "Echoes Traveler",
         "description": "Un jeu d'exploration entièrement musical. Fermez les yeux, et laissez-vous vous perdre au travers d'un monde composé uniquement d'instruments. Saurez-vous en percer les secrets ?"

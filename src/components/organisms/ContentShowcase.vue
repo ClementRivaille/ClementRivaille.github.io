@@ -8,22 +8,38 @@
         <ContentItem
           :title="t(`contents.${category}.${item.key}.title`)"
           :img="item.img"
-          :url="item.link"
+          :url="hoverable ? item.link : undefined"
           :active="displayed ? displayed.key === item.key : undefined"
-          @mouseenter="displayItem(item)"
-          @focus="displayItem(item)"
+          @mouseenter="hoverable ? displayItem(item) : 'prevent'"
+          @focus="hoverable ? displayItem(item) : 'prevent'"
+          @click="displayItem(item)"
         />
       </li>
     </ul>
     <Transition name="quick-fade" mode="out-in">
       <div
         v-if="showDescription"
-        class="text-center text-base md:text-lg lg:text-xl"
+        class="
+          flex flex-col
+          gap-2
+          items-center
+          text-center text-base
+          md:text-lg
+          lg:text-xl
+        "
       >
-        <h2 class="md:hidden text-lg font-semibold mb-2">
+        <h2 class="md:hidden text-lg font-semibold">
           {{ t(`contents.${category}.${displayed?.key}.title`) }}
         </h2>
         <div>{{ t(`contents.${category}.${displayed?.key}.description`) }}</div>
+        <Button
+          class="touchscreen-only inline-flex"
+          :href="displayed?.link"
+          color="secondary"
+          :aria-label="t(`${category}.play`)"
+        >
+          <Icon name="arrow" size="s" />
+        </Button>
       </div>
     </Transition>
   </div>
@@ -33,11 +49,15 @@
 import { useInstruments } from "@/utils/conductor";
 import { Content, ContentCategory, contents } from "@/utils/content";
 import { PlayableInstrument } from "@/utils/instruments";
+import { isHoverable } from "@/utils/utils";
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import ContentItem from "../atoms/ContentItem.vue";
+import Button from "../atoms/Button.vue";
+import Icon from "../atoms/Icon.vue";
 
 const { t } = useI18n();
+const hoverable = isHoverable();
 
 const props = defineProps<{
   category: keyof typeof ContentCategory;
@@ -51,12 +71,14 @@ const showDescription = ref(false);
 const instruments = useInstruments();
 
 const displayItem = (item: Content) => {
-  displayed.value = item;
-  if (showDescription.value) {
-    showDescription.value = false;
-    setTimeout(() => (showDescription.value = true), 100);
-  } else {
-    showDescription.value = true;
+  if (item.key !== displayed.value?.key) {
+    displayed.value = item;
+    if (showDescription.value) {
+      showDescription.value = false;
+      setTimeout(() => (showDescription.value = true), 100);
+    } else {
+      showDescription.value = true;
+    }
   }
 
   // Play note

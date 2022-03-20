@@ -104,3 +104,19 @@
     --title-font: yrsa;
   }
 }
+
+.hover-only {
+  display: none;
+}
+.touchscreen-only {
+  display: default;
+}
+
+@media (hover: hover) {
+  .hover-only {
+    display: inherit;
+  }
+  .touchscreen-only {
+    display: none;
+  }
+}

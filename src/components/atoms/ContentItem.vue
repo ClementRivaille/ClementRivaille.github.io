@@ -1,5 +1,8 @@
 <template>
-  <a
+  <component
+    :is="url ? 'a' : 'button'"
+    :href="url"
+    target="_blank"
     class="
       w-24
       h-24
@@ -13,8 +16,6 @@
       focus:outline-none
     "
     :class="{ 'opacity-40 md:opacity-60': active === false }"
-    :href="url"
-    target="_blank"
   >
     <img
       class="col-start-1 row-start-1 w-full h-full object-cover overflow-hidden"
@@ -46,11 +47,16 @@
     >
       {{ title }}
     </span>
-  </a>
+  </component>
 </template>
 
 <script setup lang="ts">
-defineProps<{ title: string; img: string; url: string; active?: boolean }>();
+defineProps<{
+  title: string;
+  img: string;
+  url?: string;
+  active?: boolean;
+}>();
 </script>
 
 <style scoped lang="scss">

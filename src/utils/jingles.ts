@@ -1,11 +1,6 @@
 import { useInstruments } from "./conductor";
 import { PlayableInstrument } from "./instruments";
-
-export function yieldTimeout(delay: number) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, delay);
-  });
-}
+import { yieldTimeout } from "./utils";
 
 /**
  * Play several notes of a given instrument
