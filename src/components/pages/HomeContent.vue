@@ -51,6 +51,7 @@
       <HomeMenu class="justify-self-center self-center flex-1" />
       <MusicToolbar />
     </div>
+    <OptionsBar class="absolute top-2 left-2" />
   </div>
 </template>
 
@@ -58,4 +59,5 @@
 import AnimatedText from "../atoms/AnimatedText.vue";
 import HomeMenu from "../organisms/HomeMenu.vue";
 import MusicToolbar from "../organisms/MusicToolbar.vue";
+import OptionsBar from "../organisms/OptionsBar.vue";
 </script>

@@ -55,16 +55,20 @@ import { useStore } from "vuex";
 import { Motion } from "motion/vue";
 import { spring } from "motion";
 import { useI18n } from "vue-i18n";
+import { watch } from "vue";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
-const msg = t("home.title");
+const msg = ref(t("home.title"));
+watch([locale], () => {
+  msg.value = t("home.title");
+});
 const activeLetter = ref(-1);
 
 const updateLetter = () => {
-  let newValue = (activeLetter.value + 1) % msg.length;
-  while (msg[newValue] === " ") {
-    newValue = (newValue + 1) % msg.length;
+  let newValue = (activeLetter.value + 1) % msg.value.length;
+  while (msg.value[newValue] === " ") {
+    newValue = (newValue + 1) % msg.value.length;
   }
   activeLetter.value = newValue;
 };

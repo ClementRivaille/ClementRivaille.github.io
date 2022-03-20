@@ -125,5 +125,17 @@
     "message": "This website offers an interactive musical experience. Make sure that your sound is on.",
     "accept": "Ok, I'm ready!",
     "deny": "No thanks, just take me to a regular website"
+  },
+  "options": {
+    "locale": {
+      "fr": {
+        "short": "fr",
+        "long": "Français"
+      },
+      "en": {
+        "short": "en",
+        "long": "English"
+      }
+    }
   }
 }
