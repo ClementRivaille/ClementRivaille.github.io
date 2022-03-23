@@ -8,8 +8,8 @@
       text-white text-center
       rounded-full
       transform
-      hover:scale-110
-      focus:scale-110
+      focus-visible:scale-110
+      hover:font-medium
       transition-transform
       outline-none
       inline-flex
@@ -20,7 +20,7 @@
       'border-white border-2': color === ButtonColor.secondary,
       'text-sm md:text-base': !small,
       'text-xs md:text-sm': small,
-      'w-48 md:w-64': fixedWidth,
+      'w-52 md:w-64': fixedWidth,
     }"
     :href="href"
     :target="(href && '_blank') || ''"

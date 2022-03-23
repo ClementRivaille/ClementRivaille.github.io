@@ -20,7 +20,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      scale: ["focus-visible"],
+      outline: ["focus-visible"],
+      fontWeight: ["hover"],
+    },
     width: ["responsive", "hover", "focus"],
     height: ["responsive", "hover", "focus"],
     dropShadow: ["hover", "focus"],

@@ -9,7 +9,7 @@
       opacity-60
       hover:opacity-100
       duration-100
-      focus:outline-white
+      focus-visible:outline-white
       ease-in
       flex
       justify-center
