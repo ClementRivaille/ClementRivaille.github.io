@@ -20,7 +20,7 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "vue/multi-word-component-names": ["warn",
-      { ignores: "Link" }
+      { ignores: ["Link"] }
     ],
     "@typescript-eslint/no-unused-vars": ["warn", { varsIgnorePattern: "^_" }]
   },

@@ -1,4 +1,12 @@
-import { Reverb, Sampler, Vibrato, Players, Gain, getContext } from "tone";
+import {
+  Reverb,
+  Sampler,
+  Vibrato,
+  Players,
+  Gain,
+  getContext,
+  Compressor,
+} from "tone";
 import { Scale } from "@tonaljs/tonal";
 
 const probabilities = {
@@ -159,14 +167,20 @@ export default class Instruments {
     const promises = [];
 
     this.effect = new Vibrato(4.5, 0.5).toDestination();
+
     this.master = new Gain().toDestination();
+    // Compressor
+    const compressor = new Compressor(-30, 4).connect(this.master);
+    compressor.attack.setValueAtTime(0.4, 0);
+    compressor.release.setValueAtTime(0.6, 0);
+    compressor.debug = true;
 
     promises.push(
       new Promise<void>((resolve) => {
         const bassReverb = new Reverb({
           decay: 1,
           wet: 0.3,
-        }).connect(this.master);
+        }).connect(compressor);
         this.bass = new Sampler(
           {
             Ab1: "Ab1.ogg",
@@ -192,7 +206,7 @@ export default class Instruments {
         const rhodesReverb = new Reverb({
           decay: 1,
           wet: 0.2,
-        }).connect(this.master);
+        }).connect(compressor);
         this.rhodes = new Sampler(
           {
             B3: "3_B_3.wav",
@@ -217,7 +231,7 @@ export default class Instruments {
         const clarinetReverb = new Reverb({
           decay: 4,
           wet: 0.5,
-        }).connect(this.master);
+        }).connect(compressor);
         this.clarinet = new Sampler(
           {
             Bb3: "Bb3.wav",
@@ -246,7 +260,7 @@ export default class Instruments {
         const synthReverb = new Reverb({
           decay: 5,
           wet: 0.5,
-        }).connect(this.master);
+        }).connect(compressor);
         this.synth = new Sampler(
           {
             B4: "B4.ogg",
@@ -269,7 +283,7 @@ export default class Instruments {
         const drumReverb = new Reverb({
           decay: 5,
           wet: 0.5,
-        }).connect(this.master);
+        }).connect(compressor);
         this.drums = new Players(
           {
             kick: "./instruments/drums/Kick04.wav",
