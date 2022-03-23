@@ -35,6 +35,14 @@
     font-family: "yrsa";
     src: url("./fonts/Yrsa-SemiBold.ttf");
   }
+  @font-face {
+    font-family: "comic-neue";
+    src: url("./fonts/ComicNeue-Angular-Bold.ttf");
+  }
+  @font-face {
+    font-family: "cheltenham";
+    src: url("./fonts/CheltenhamStdBookCond.otf");
+  }
 
   .theme-blue {
     --color-primary: theme("colors.blue.400");
@@ -102,6 +110,12 @@
   }
   .font-yrsa {
     --title-font: yrsa;
+  }
+  .font-comic {
+    --title-font: comic-neue;
+  }
+  .font-cheltenham {
+    --title-font: cheltenham;
   }
 }
 

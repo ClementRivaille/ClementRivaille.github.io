@@ -35,15 +35,16 @@ const colorTheme = computed(() => THEMES[colorIdx.value]);
 
 // Font
 const FONTS = [
-  "font-sans",
+  "font-leaguespartan",
+  "font-oswald",
   "font-arista",
   "font-ataristocrat",
   "font-bungee",
   "font-geosanslight",
-  "font-leaguespartan",
-  "font-oswald",
   "font-uroob",
   "font-yrsa",
+  "font-comic",
+  "font-cheltenham",
 ];
 const fontIdx = ref(0);
 useSubscribe(Events.drums, () => {
