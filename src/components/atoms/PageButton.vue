@@ -143,7 +143,7 @@ const startTransition = () => {
   &:focus,
   &:hover {
     .content {
-      opacity: 80%;
+      opacity: 0.8;
     }
   }
 }
