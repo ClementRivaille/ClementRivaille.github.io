@@ -124,7 +124,7 @@
     }
   },
   "welcome": {
-    "message": "Ce site propore une expérience musicale interactive. Il est donc recommandé d'avoir le son actif.",
+    "message": "Ce site propose une expérience musicale interactive. Il est donc recommandé d'avoir le son actif.",
     "accept": "Ok, je suis prêt !",
     "deny": "Non merci, je veux juste visiter un site web normal"
   },

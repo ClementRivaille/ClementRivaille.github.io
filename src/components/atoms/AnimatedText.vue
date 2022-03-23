@@ -84,9 +84,15 @@ const { state } = useStore<StoreData>();
 const waveAnimation = computed(() =>
   state.wave
     ? {
-        translateY: [0, "35%", 0, "-35%", 0],
+        transform: [
+          "translateY(0)",
+          "translateY(35%)",
+          "translateY(0)",
+          "translateY(-35%)",
+          0,
+        ],
       }
-    : { translateY: 0 }
+    : { transform: "translateY(0)" }
 );
 const makeWaveTransition = (index: number) =>
   state.wave
