@@ -173,7 +173,6 @@ export default class Instruments {
     const compressor = new Compressor(-30, 4).connect(this.master);
     compressor.attack.setValueAtTime(0.4, 0);
     compressor.release.setValueAtTime(0.6, 0);
-    compressor.debug = true;
 
     promises.push(
       new Promise<void>((resolve) => {
