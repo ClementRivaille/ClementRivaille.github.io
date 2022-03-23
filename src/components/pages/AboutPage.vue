@@ -5,7 +5,7 @@
       gap-4
       md:gap-8
       items-center
-      gap-y-8
+      gap-y-6
       md:gap-y-10
     "
   >
@@ -26,8 +26,7 @@
         self-start
         gap-4
         flex flex-col
-        text-sm
-        md:text-base
+        text-base
       "
     >
       <div>{{ t("about.presentation.0") }}</div>

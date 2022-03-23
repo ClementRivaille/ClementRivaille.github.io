@@ -7,3 +7,7 @@ export function yieldTimeout(delay: number) {
     setTimeout(resolve, delay);
   });
 }
+
+export function isMedium() {
+  return window.matchMedia("(min-width: 768px)").matches;
+}

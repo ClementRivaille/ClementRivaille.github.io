@@ -24,16 +24,18 @@
       v-for="(letter, index) in [...msg]"
       :key="index"
       :style="{
-        color: activeLetter === index ? 'red' : 'white',
         ...(letter === ' ' ? { width: '0.3em' } : {}),
       }"
+      :class="{ 'text-red-500': activeLetter === index }"
       :animate="waveAnimation"
       :transition="makeWaveTransition(index)"
     >
       <Motion
         tag="span"
         class="inline-flex"
-        :animate="activeLetter === index ? { translateY: [-20, 0] } : {}"
+        :animate="
+          activeLetter === index ? { translateY: [-stringStrength, 0] } : {}
+        "
         :transition="{
           easing: spring({
             stiffness: 2500,
@@ -56,6 +58,7 @@ import { Motion } from "motion/vue";
 import { spring } from "motion";
 import { useI18n } from "vue-i18n";
 import { watch } from "vue";
+import { isMedium } from "@/utils/utils";
 
 const { t, locale } = useI18n();
 
@@ -64,6 +67,8 @@ watch([locale], () => {
   msg.value = t("home.title");
 });
 const activeLetter = ref(-1);
+
+const stringStrength = ref(isMedium() ? 20 : 8);
 
 const updateLetter = () => {
   let newValue = (activeLetter.value + 1) % msg.value.length;
