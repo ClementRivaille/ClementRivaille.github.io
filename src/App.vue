@@ -49,12 +49,13 @@ import { useStore } from "vuex";
 import { StoreData } from "./store";
 import Page from "./utils/pages";
 import InfoPage from "./components/templates/InfoPage.vue";
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import ContentShowcase from "./components/organisms/ContentShowcase.vue";
 import AboutPage from "./components/pages/AboutPage.vue";
 import WelcomePage from "./components/pages/WelcomePage.vue";
 import { useAction } from "./utils/vuex-hooks";
 import { start as startTone } from "tone";
+import { useI18n } from "vue-i18n";
 
 const { instruments, loop, active } = useConductorProvider();
 
@@ -82,6 +83,12 @@ const transitionMode = computed(() =>
     ? "in-out"
     : "default"
 );
+
+const { t, locale } = useI18n();
+document.title = t("title");
+watch([locale], () => {
+  document.title = t("title");
+});
 </script>
 
 <style scoped lang="scss">

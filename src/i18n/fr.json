@@ -1,4 +1,5 @@
 {
+  "title": "Itooh crée des trucs",
   "home": {
     "title": "Je crée des trucs",
     "back": "Retour",
@@ -30,6 +31,7 @@
     "name": "Clément Rivaille (Itooh)",
     "profession": "Développeur web",
     "location": "Nantes, France",
+    "pronouns": "il / lui",
     "presentation": [
       "La création est à mon sens une exploration, motivée par la curiosité. Je crée ainsi pour le plaisir de la découverte. Au-delà d'une quelconque vision, je suis surtout adepte de la bidouille. J'aime élaborer des machines dans lesquelles je peux ajuster des variables, notes, instruments, couleurs, afin de trouver un résultat agréable. Il en va à vrai dire de même pour l'écriture, où je me focalise sur un tableau pour y développer ses émotions, et me laisser porter vers là où elles me dirigent.",
       "Le web est une plate-forme formidable pour la création. Vous avez dû le remarquer ici, je suis nostalgique du web des années 2000, où chaque page pouvait être surprenante et expressive. Dans un web 2.0 où chaque app est un business potentiel, je trouve libérateur de mettre mes compétences de développeur au service de quelque chose « d'inutile ». Coder des programmes qui n'ont aucune autre finalité que d'être beaux, c'est une petite rebellion contre la logique impérative des algorithmes.",

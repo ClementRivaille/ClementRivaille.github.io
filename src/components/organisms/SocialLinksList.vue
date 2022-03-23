@@ -8,7 +8,7 @@
   >
     <SocialLink
       :img="mailLogo"
-      href="mailto:rivaille.clement@orange.fr"
+      href="mailto:elucubrations.itooh@gmail.com"
       @mouseover="playNote"
       @focus="playNote"
       :aria-label="t('about.links.mail')"

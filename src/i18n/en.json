@@ -1,4 +1,5 @@
 {
+  "title": "Itooh makes stuff",
   "home": {
     "title": "I make stuff",
     "back": "Back",
@@ -30,6 +31,7 @@
     "name": "Clément Rivaille (Itooh)",
     "profession": "Web developer",
     "location": "Nantes, France",
+    "pronouns": "he / him",
     "presentation": [
       "I see creation as an exploration, driven by curiosity. I thus create for the joy of discovery. Beyond any vision, I'm mostly fond of fiddling. I like to build machines in which I can adjust variables, notes, instruments, colors, in order to find a pleasing result. Truth be told, I use the same process for writing. I focus on a setting, to develop its emotions and let myself be carried toward where they take me.",
       "Web is a wonderful platform for creation. As you might have guessed here, I'm nostalgic of the web from the 2000s, where every page could be surprising and expressive. In a web 2.0 where each app is a potential business, I find it liberating to put my development skills in something “useless”. Coding programs that have no other finality than being beautiful is a small rebellion against the imperative logic of algorithms.",

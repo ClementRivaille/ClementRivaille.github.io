@@ -12,12 +12,16 @@
     <img class="col-start-1 w-20 md:w-32" :src="logoImg" />
     <div class="col-start-2">
       <div class="font-bold text-lg md:text-2xl">{{ t("about.name") }}</div>
-      <div class="text-sm md:text-base">{{ t("about.location") }}</div>
-      <div class="text-sm md:text-base italic">
-        {{ t("about.profession") }}
+      <div class="text-sm md:text-base">
+        {{ t("about.location") }}
+      </div>
+      <div class="text-sm md:text-base italic flex gap-3">
+        <span>{{ t("about.profession") }}</span>
+        <span class="not-italic">|</span>
+        <span>{{ t("about.pronouns") }}</span>
       </div>
     </div>
-    <SocialLinksList class="col-span-2 md:col-span-1" />
+    <SocialLinksList class="col-span-2 md:col-span-1 md:self-start" />
     <div
       class="
         md:col-start-2
