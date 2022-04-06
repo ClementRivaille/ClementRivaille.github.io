@@ -6,6 +6,7 @@ import {
   Gain,
   getContext,
   Compressor,
+  AmplitudeEnvelope,
 } from "tone";
 import { Scale } from "@tonaljs/tonal";
 
@@ -117,6 +118,7 @@ export default class Instruments {
 
   private bass?: Sampler;
   private rhodes?: Sampler;
+  private rhodesEnvelope?: AmplitudeEnvelope;
   private synth?: Sampler;
   private clarinet?: Sampler;
   private drums?: Players;
@@ -206,6 +208,9 @@ export default class Instruments {
           decay: 1,
           wet: 0.2,
         }).connect(compressor);
+        this.rhodesEnvelope = new AmplitudeEnvelope(0, 0, 1, 8).connect(
+          rhodesReverb
+        );
         this.rhodes = new Sampler(
           {
             B3: "3_B_3.wav",
@@ -220,7 +225,7 @@ export default class Instruments {
             onload: resolve,
             volume: -6,
           }
-        ).connect(rhodesReverb);
+        ).connect(this.rhodesEnvelope);
         rhodesReverb.generate();
       })
     );
@@ -339,7 +344,7 @@ export default class Instruments {
   }
 
   playRhodes() {
-    if (!this.rhodes || !this.rhodes.loaded) return;
+    if (!this.rhodes || !this.rhodesEnvelope || !this.rhodes.loaded) return;
     const nbNotes = 2 + (Math.random() > 0.5 ? 1 : 0);
     const base =
       [0, 2, 4][Math.floor(Math.random() * 3)] + (Math.random() > 0.5 ? 7 : 0);
@@ -354,8 +359,10 @@ export default class Instruments {
     }
 
     this.rhodes.releaseAll();
+    this.rhodesEnvelope.triggerRelease();
     for (const note of notes) {
       this.rhodes.triggerAttack(note);
+      this.rhodesEnvelope.triggerAttackRelease(2);
     }
   }
 

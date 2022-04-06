@@ -45,6 +45,13 @@ export function useConductorProvider() {
 
   Transport.start();
 
+  window.addEventListener("blur", () => {
+    Transport.pause();
+  });
+  window.addEventListener("focus", () => {
+    Transport.start();
+  });
+
   return {
     instruments,
     signal,

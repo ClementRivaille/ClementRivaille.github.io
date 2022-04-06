@@ -1,15 +1,7 @@
 <template>
   <div class="flex flex-col gap-6 md:gap-10 lg:gap-20 items-center">
     <div
-      class="
-        text-base
-        md:text-lg
-        lg:text-xl
-        text-center
-        flex flex-col
-        items-center
-        gap-2
-      "
+      class="text-base md:text-lg lg:text-xl text-center flex flex-col items-center gap-2"
     >
       <p>{{ t(`contents.${category}.description`) }}</p>
       <Link :href="moreLink" target="_blank">{{ t(`${category}.more`) }}</Link>
@@ -23,21 +15,14 @@
           :active="displayed ? displayed.key === item.key : undefined"
           @mouseenter="hoverable ? displayItem(item) : 'prevent'"
           @focus="hoverable ? displayItem(item) : 'prevent'"
-          @click="displayItem(item)"
+          @click="!hoverable ? displayItem(item) : 'prevent'"
         />
       </li>
     </ul>
     <Transition name="quick-fade" mode="out-in">
       <div
         v-if="showDescription"
-        class="
-          flex flex-col
-          gap-2
-          items-center
-          text-center text-base
-          md:text-lg
-          lg:text-xl
-        "
+        class="flex flex-col gap-2 items-center text-center text-base md:text-lg lg:text-xl"
       >
         <h2 class="md:hidden text-lg font-semibold">
           {{ t(`contents.${category}.${displayed?.key}.title`) }}
