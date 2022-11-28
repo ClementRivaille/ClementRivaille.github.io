@@ -1,50 +1,53 @@
 <template>
-  <div
-    class="
-      grid grid-cols-leftMargin
-      gap-4
-      md:gap-8
-      items-center
-      gap-y-6
-      md:gap-y-10
-    "
-  >
-    <img class="col-start-1 w-20 md:w-32" :src="logoImg" />
-    <div class="col-start-2">
-      <div class="font-bold text-lg md:text-2xl">{{ t("about.name") }}</div>
-      <div class="text-sm md:text-base">
-        {{ t("about.location") }}
-      </div>
-      <div class="text-sm md:text-base italic flex gap-3">
-        <span>{{ t("about.profession") }}</span>
-        <span class="not-italic">|</span>
-        <span>{{ t("about.pronouns") }}</span>
-      </div>
-    </div>
-    <SocialLinksList class="col-span-2 md:col-span-1 md:self-start" />
+  <InfoPage icon="user">
     <div
       class="
-        md:col-start-2
-        col-span-2
-        md:col-span-1
-        self-start
+        grid grid-cols-leftMargin
         gap-4
-        flex flex-col
-        text-base
+        md:gap-8
+        items-center
+        gap-y-6
+        md:gap-y-10
       "
     >
-      <div>{{ t("about.presentation.0") }}</div>
-      <div>{{ t("about.presentation.1") }}</div>
-      <div>{{ t("about.presentation.2") }}</div>
-      <div>{{ t("about.presentation.3") }}</div>
+      <img class="col-start-1 w-20 md:w-32" :src="logoImg" />
+      <div class="col-start-2">
+        <div class="font-bold text-lg md:text-2xl">{{ t("about.name") }}</div>
+        <div class="text-sm md:text-base">
+          {{ t("about.location") }}
+        </div>
+        <div class="text-sm md:text-base italic flex gap-3">
+          <span>{{ t("about.profession") }}</span>
+          <span class="not-italic">|</span>
+          <span>{{ t("about.pronouns") }}</span>
+        </div>
+      </div>
+      <SocialLinksList class="col-span-2 md:col-span-1 md:self-start" />
+      <div
+        class="
+          md:col-start-2
+          col-span-2
+          md:col-span-1
+          self-start
+          gap-4
+          flex flex-col
+          text-base
+        "
+      >
+        <div>{{ t("about.presentation.0") }}</div>
+        <div>{{ t("about.presentation.1") }}</div>
+        <div>{{ t("about.presentation.2") }}</div>
+        <div>{{ t("about.presentation.3") }}</div>
+      </div>
     </div>
-  </div>
+  </InfoPage>
 </template>
 
 <script lang="ts" setup>
 import logoImg from "@/assets/logo.png";
 import { useI18n } from "vue-i18n";
 import SocialLinksList from "../organisms/SocialLinksList.vue";
+import InfoPage from "../templates/InfoPage.vue";
 
 const { t } = useI18n();
 </script>

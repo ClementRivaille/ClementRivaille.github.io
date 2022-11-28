@@ -21,6 +21,7 @@
 </template>
 
 <script setup lang="ts">
+import { useAction } from "@/utils/vuex-hooks";
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import Button from "../atoms/Button.vue";
@@ -28,12 +29,10 @@ import Icon from "../atoms/Icon.vue";
 import LangSelection from "../organisms/LangSelection.vue";
 
 const loading = ref(false);
-const emit = defineEmits<{
-  (e: "validate", value: boolean): void;
-}>();
+const selectInitMute = useAction("selectInitMute")
 const validate = (value: boolean) => {
   loading.value = true;
-  emit("validate", value);
+  selectInitMute(value)
 };
 
 const { t } = useI18n();
