@@ -29,10 +29,10 @@ import Icon from "../atoms/Icon.vue";
 import LangSelection from "../organisms/LangSelection.vue";
 
 const loading = ref(false);
-const selectInitMute = useAction("selectInitMute")
+const selectInitMute = useAction("selectInitMute");
 const validate = (value: boolean) => {
   loading.value = true;
-  selectInitMute(value)
+  selectInitMute(value);
 };
 
 const { t } = useI18n();

@@ -4,7 +4,10 @@
       <AnimatedBackground />
       <div class="z-10 absolute h-screen w-screen overflow-auto">
         <RouterView v-slot="{ Component }">
-          <Transition :name="state.initMute !== null && 'fade-page'" :mode="transitionMode">
+          <Transition
+            :name="state.initMute !== null && 'fade-page'"
+            :mode="transitionMode"
+          >
             <component :is="Component" />
           </Transition>
         </RouterView>
@@ -27,8 +30,8 @@ import { StoreData } from "./store";
 
 const { instruments, loop, active } = useConductorProvider();
 
-const router = useRouter()
-const currentPage = computed(() => router.currentRoute.value.name as Page)
+const router = useRouter();
+const currentPage = computed(() => router.currentRoute.value.name as Page);
 
 async function startConductor() {
   await instruments.load();
@@ -45,13 +48,13 @@ async function start(sound: boolean) {
     instruments.setMute(true);
   }
   active.value = sound;
-  router.push({ name: Page.Home })
+  router.push({ name: Page.Home });
 }
 watchEffect(() => {
   if (state.initMute !== null && currentPage.value === Page.Welcome) {
-    start(state.initMute)
+    start(state.initMute);
   } else if (state.initMute === null) {
-    router.replace({ name: Page.Welcome })
+    router.replace({ name: Page.Welcome });
   }
 });
 

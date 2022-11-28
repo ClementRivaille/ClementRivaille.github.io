@@ -26,7 +26,7 @@ enum MutationsType {
   setWave = "setWave",
   unlock = "unlock",
   removeNew = "removeNew",
-  setInitMute = 'setInitMute',
+  setInitMute = "setInitMute",
 }
 
 const mutations: MutationTree<StoreData> = {
@@ -44,7 +44,7 @@ const mutations: MutationTree<StoreData> = {
   },
   [MutationsType.setInitMute]: (state, value: boolean) => {
     state.initMute = value;
-  }
+  },
 };
 
 export interface Actions {
@@ -71,7 +71,8 @@ const actions: Actions = {
   },
   unlock: (store, value) => store.commit(MutationsType.unlock, value),
   playWith: (store, value) => store.commit(MutationsType.removeNew, value),
-  selectInitMute: (store, value) => store.commit(MutationsType.setInitMute, value)
+  selectInitMute: (store, value) =>
+    store.commit(MutationsType.setInitMute, value),
 };
 
 export interface Getters {
@@ -90,7 +91,7 @@ export default createStore<StoreData>({
     wave: false,
     unlocked: [],
     new: Object.keys(Unlockable) as Unlockable[],
-    initMute: null
+    initMute: null,
   },
   mutations,
   actions: { ...actions } as ActionTree<StoreData, StoreData>,

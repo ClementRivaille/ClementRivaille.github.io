@@ -18,7 +18,10 @@
 
 <script setup lang="ts">
 import { StoreData } from "@/store";
-import { AnimationListOptions, MotionKeyframesDefinition } from "@motionone/dom";
+import {
+  AnimationListOptions,
+  MotionKeyframesDefinition,
+} from "@motionone/dom";
 import { glide } from "motion";
 import { Motion } from "motion/vue";
 import { computed, ref, watch } from "vue";

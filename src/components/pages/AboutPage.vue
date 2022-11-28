@@ -1,14 +1,12 @@
 <template>
   <InfoPage icon="user">
     <div
-      class="
-        grid grid-cols-leftMargin
+      :class="`grid grid-cols-leftMargin
         gap-4
         md:gap-8
         items-center
         gap-y-6
-        md:gap-y-10
-      "
+        md:gap-y-10`"
     >
       <img class="col-start-1 w-20 md:w-32" :src="logoImg" />
       <div class="col-start-2">
@@ -24,15 +22,13 @@
       </div>
       <SocialLinksList class="col-span-2 md:col-span-1 md:self-start" />
       <div
-        class="
-          md:col-start-2
+        :class="`md:col-start-2
           col-span-2
           md:col-span-1
           self-start
           gap-4
           flex flex-col
-          text-base
-        "
+          text-base`"
       >
         <div>{{ t("about.presentation.0") }}</div>
         <div>{{ t("about.presentation.1") }}</div>

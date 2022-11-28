@@ -1,7 +1,7 @@
 <template>
   <button
-    class="
-      relative
+    :class="{
+      [`relative
       bg-secondary
       md:rounded-full
       w-full
@@ -10,14 +10,15 @@
       lg:w-40 lg:h-40 lg:hover:w-64 lg:hover:h-64 lg:focus:w-64 lg:focus:h-64
       focus:outline-none
       text-white
-      page-button
-    "
-    :class="{ 'z-30': transitioning, 'cursor-default': transitioning }"
+      page-button`]: true,
+      'z-30': transitioning,
+      'cursor-default': transitioning,
+    }"
     @click="startTransition()"
     :disabled="transitioning"
   >
     <Motion
-      class="
+      :class="`
         absolute
         z-0
         left-1/2
@@ -27,15 +28,17 @@
         transition-bg
         max-w-full
         md:max-w-none
-      "
+      `"
       :animate="transitionAnimation"
       :transition="transitionTransition"
       @motioncomplete="$emit('open')"
     />
 
     <Motion
-      class="
-        content
+      :animate="contentFadeOut"
+      :transition="contentFadeOutOptions"
+      :class="{
+        [`content
         absolute
         top-0
         w-full
@@ -50,11 +53,9 @@
         md:px-0
         transition-opacity
         duration-200
-        opacity-30
-      "
-      :animate="contentFadeOut"
-      :transition="contentFadeOutOptions"
-      :class="{ 'flex-row-reverse': direction === 'right' }"
+        opacity-30`]: true,
+        'flex-row-reverse': direction === 'right',
+      }"
     >
       <Icon :name="icon" size="l" />
       <div class="label font-medium font-sans lg:text-3xl md:text-2xl text-lg">
@@ -68,7 +69,10 @@
 import { IconsName } from "@/utils/icons";
 import { PlayableInstrument } from "@/utils/instruments";
 import { useJingle } from "@/utils/jingles";
-import { AnimationListOptions, MotionKeyframesDefinition } from "@motionone/dom";
+import {
+  AnimationListOptions,
+  MotionKeyframesDefinition,
+} from "@motionone/dom";
 import { Motion } from "motion/vue";
 import { computed, ref } from "vue";
 import Icon from "./Icon.vue";
