@@ -38,7 +38,7 @@ const FONTS = [
   "font-leaguespartan",
   "font-oswald",
   "font-arista",
-  "font-ataristocrat",
+  "font-sporty",
   "font-bungee",
   "font-geosanslight",
   "font-uroob",

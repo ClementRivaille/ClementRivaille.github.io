@@ -43,6 +43,10 @@
     font-family: "cheltenham";
     src: url("./fonts/CheltenhamStdBookCond.otf");
   }
+  @font-face {
+    font-family: "sporty";
+    src: url("./fonts/Born2bSportyV2.ttf");
+  }
 
   .theme-blue {
     --color-primary: theme("colors.blue.400");
@@ -116,6 +120,9 @@
   }
   .font-cheltenham {
     --title-font: cheltenham;
+  }
+  .font-sporty {
+    --title-font: sporty;
   }
 }
 
