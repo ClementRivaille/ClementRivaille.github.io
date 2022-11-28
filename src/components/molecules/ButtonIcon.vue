@@ -25,7 +25,8 @@
 
 <script setup lang="ts">
 import { IconSize, IconsName } from "@/utils/icons";
-import { AnimationOptions, MotionKeyframes } from "motion";
+import { MotionKeyframes } from "@motionone/dom";
+import { AnimationOptions } from "@motionone/types";
 import { Motion } from "motion/vue";
 import { computed, reactive } from "vue";
 import Icon from "../atoms/Icon.vue";

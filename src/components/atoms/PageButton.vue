@@ -68,7 +68,7 @@
 import { IconsName } from "@/utils/icons";
 import { PlayableInstrument } from "@/utils/instruments";
 import { useJingle } from "@/utils/jingles";
-import { AnimationListOptions, MotionKeyframesDefinition } from "motion";
+import { AnimationListOptions, MotionKeyframesDefinition } from "@motionone/dom";
 import { Motion } from "motion/vue";
 import { computed, ref } from "vue";
 import Icon from "./Icon.vue";
