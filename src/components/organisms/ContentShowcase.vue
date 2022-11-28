@@ -6,7 +6,9 @@
       <p>{{ t(`contents.${category}.description`) }}</p>
       <Link :href="moreLink" target="_blank">{{ t(`${category}.more`) }}</Link>
     </div>
-    <ul class="flex flex-wrap gap-4 md:gap-8 lg:gap-16 justify-center">
+    <ul
+      class="flex flex-wrap gap-4 md:gap-8 lg:gap-16 justify-center w-showcase"
+    >
       <li v-for="item in contentList" :key="item.key">
         <ContentItem
           :title="t(`contents.${category}.${item.key}.title`)"

@@ -14,6 +14,9 @@ module.exports = {
         menuLg: "calc(100vh - 5rem)",
         menu: "calc(100vh - 3.75rem)",
       },
+      width: {
+        showcase: "calc(100vw - 4rem)",
+      },
       height: {
         home: "min(18rem, calc(100vh - 4rem))",
       },
