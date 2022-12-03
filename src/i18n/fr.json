@@ -52,6 +52,14 @@
   "contents": {
     "games": {
       "description": "Je développe des petits jeux en tant que hobby, principalement sous Godot ou HTML5. Souvent focalisé sur la musique, mon approche du game-design est de cibler l'amusement du présent. Sans nécessairement d'objectif ou de difficulté, je recherche d'abord à produire des interactions plaisantes et des systèmes intéressants à explorer. Je considère d'ailleurs le présent site comme une de mes créations ludiques.",
+      "line-momentum": {
+        "title": "Line Momentum",
+        "description": "Jeu de rythme en un seul bouton, basé sur de la musique minimaliste inspirée de Steve Reich. Maintenez le rythme et répétez les motifs jusqu'à bien les incorporer."
+      },
+      "last-point": {
+        "title": "Last Point",
+        "description": "Dans ce jeu à la narration non-linéaire, votre mission est de sauver la galaxie. À moins que vous ne souhaitiez explorer le système solaire pour mieux comprendre les mystères qui l'entourent ?"
+      },
       "echoes-traveler": {
         "title": "Echoes Traveler",
         "description": "Un jeu d'exploration entièrement musical. Fermez les yeux, et laissez-vous vous perdre au travers d'un monde composé uniquement d'instruments. Saurez-vous en percer les secrets ?"
@@ -79,6 +87,10 @@
     },
     "music": {
       "description": "La musique générative et le minimalisme me fascinent. J'aime concevoir des systèmes logiques produisant des atmosphères harmoniques ou des mélodies émergentes. Avec également une composante interactive, car jouer de la musique procure un plaisir primitif que je souhaite partager. Je n'ai donc pas vraiment de morceaux à montrer ici, mais des applications musicales ludiques.",
+      "noon-invasion": {
+        "title": "The Noon Invasion",
+        "description": "Une transpisition de Space Invaders en musique. Dans ce jeu, tout est un instrument : les aliens, les tirs, les explosions… Improvisez votre propre solo de jazz simplement en jouant !"
+      },
       "colors-universe": {
         "title": "Colors of the Universe",
         "description": "Un voyage au cœur des harmoniques. Plongez à l'intérieur d'une symphonie abstraite réagissant à tous vos mouvements, dans un microcosme de couleurs infini. En cherchant bien, vous pourriez même trouver la solution de son énigme…"
@@ -106,6 +118,14 @@
     },
     "videos": {
       "description": "Au travers de la chaîne Youtube Excursions Virtuelles, je partage des réflexions sur le jeu-vidéo comme un imaginaire à explorer. Des émotions que peut procurer un game-design, à ce qu'exprime un environnement virtuel, en passant parfois par la culture web et, toujours, l'évasion. Mais ce qui me plait dans la création de vidéo, c'est aussi l'exercice sur l'écriture, le rythme et même le jeu d'acteur.",
+      "anodyne": {
+        "title": "La désillusion des mondes virtuels",
+        "description": "Une réflexion partant d'Anodyne 2 et ses paysages, pour s'intéresser à notre relation avec les mondes virtuels. Des mondes d'évasion, factices, aux supercheries parfois apparentes… Mais qui laissent une empreinte en nous."
+      },
+      "web3": {
+        "title": "Les mensonges du Web3",
+        "description": "En 2021 on a vu apparaître de nulle part l'expression « Year of NFT », et on nous a vendu la blockchain et la crypto comme l'avenir du web. C'est bien entendu une arnaque tissée de toute pièce. Cet essai vise à décrypter le discours manipulateur autour de l'auto-proclamé « Web3 »."
+      },
       "traversees": {
         "title": "Traversées",
         "description": "Les espaces virtuels ont beaucoup à nous dire ! Par leurs architectures, leurs styles visuels, la façon dont on les explore… Cette série de courtes vidéos invite à faire découvrir des paysages de jeu mémorables."

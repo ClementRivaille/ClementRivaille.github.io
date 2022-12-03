@@ -2,16 +2,18 @@ import artRandomImg from "@/assets/img/art-random.png";
 import bazzaNavaImg from "@/assets/img/bazza-nava.png";
 import bloodNotAllowedImg from "../assets/img/blood-not-allowed.png";
 import colorsUniverseImg from "@/assets/img/colors-universe.png";
-import desertVroomImg from "@/assets/img/desert-vroom.png";
+import lastPointImg from "@/assets/img/last-point.png";
+import lineMomentumImg from "@/assets/img/line-momentum.png";
 import echoSingsNightImg from "@/assets/img/echo-sings-night.png";
 import echoesTravelerImg from "@/assets/img/echoes-traveler.png";
-import hellsImg from "@/assets/img/hells.png";
 import horriblesImg from "@/assets/img/horribles.png";
-import joyPhasesImg from "@/assets/img/joy-phases.png";
+import web3Img from "@/assets/img/web3.png";
 import octaveImg from "@/assets/img/octave.png";
-import oneColorfulGridImg from "@/assets/img/one-colorful-grid.png";
+import desertVroomImg from "@/assets/img/desert-vroom.png";
 import orchestreJsImg from "@/assets/img/orchestre-js.png";
+import noonInvasionImg from "@/assets/img/noon-invasion.png";
 import sideWebImg from "@/assets/img/side-web.png";
+import anodyneImg from "@/assets/img/anodyne.png";
 import simpleSamplerImg from "@/assets/img/simple-sampler.png";
 import traverseesImg from "@/assets/img/traversees.png";
 
@@ -32,19 +34,19 @@ type Contents = { [key in ContentCategory]: Content[] };
 export const contents: Contents = {
   [ContentCategory.games]: [
     {
+      key: "line-momentum",
+      img: lineMomentumImg,
+      link: "https://itooh.itch.io/line-momentum",
+    },
+    {
+      key: "last-point",
+      img: lastPointImg,
+      link: "https://itooh.itch.io/last-point",
+    },
+    {
       key: "echoes-traveler",
       img: echoesTravelerImg,
       link: "https://itooh.itch.io/echoes-traveler",
-    },
-    {
-      key: "colorful-grid",
-      img: oneColorfulGridImg,
-      link: "https://itooh.itch.io/one-colorful-grid",
-    },
-    {
-      key: "hells-vignette",
-      img: hellsImg,
-      link: "https://itooh.itch.io/hell-vignette",
     },
     {
       key: "desert-vroom",
@@ -64,6 +66,11 @@ export const contents: Contents = {
   ],
   [ContentCategory.music]: [
     {
+      key: "noon-invasion",
+      img: noonInvasionImg,
+      link: "https://itooh.itch.io/the-noon-invasion",
+    },
+    {
       key: "colors-universe",
       img: colorsUniverseImg,
       link: "https://itooh.itch.io/colors-of-the-universe",
@@ -79,11 +86,6 @@ export const contents: Contents = {
       link: "https://itooh.itch.io/bazza-nava",
     },
     {
-      key: "joy-phases",
-      img: joyPhasesImg,
-      link: "https://clementrivaille.github.io/joy-phases/",
-    },
-    {
       key: "blood-not-allowed",
       img: bloodNotAllowedImg,
       link: "https://itooh.itch.io/blood-not-allowed",
@@ -96,6 +98,11 @@ export const contents: Contents = {
   ],
   [ContentCategory.videos]: [
     {
+      key: "web3",
+      img: web3Img,
+      link: "https://www.youtube.com/watch?v=h7UbytKttEA",
+    },
+    {
       key: "traversees",
       img: traverseesImg,
       link: "https://www.youtube.com/watch?v=KASCk-cPSdE&list=PLBL06fBaMpRNfU2MFLK2tBW_IiKylK0nK",
@@ -104,6 +111,11 @@ export const contents: Contents = {
       key: "side-web",
       img: sideWebImg,
       link: "https://www.youtube.com/watch?v=DUB6eN1G1VQ&list=PLBL06fBaMpRNBPlXwaLkQTVzIBOEIpckf",
+    },
+    {
+      key: "anodyne",
+      img: anodyneImg,
+      link: "https://www.youtube.com/watch?v=N--qJBYm-9A",
     },
     {
       key: "art-random",

@@ -3,8 +3,8 @@
     :is="url ? 'a' : 'button'"
     :href="url"
     target="_blank"
-    class="
-      w-24
+    :class="{
+      [`w-24
       h-24
       md:w-44 md:h-44
       lg:w-52 lg:h-52
@@ -13,9 +13,9 @@
       duration-200
       transition-opacity
       overflow-hidden
-      focus:outline-none
-    "
-    :class="{ 'opacity-40 md:opacity-60': active === false }"
+      focus:outline-none`]: true,
+      'opacity-40 md:opacity-60': active === false,
+    }"
   >
     <img
       class="col-start-1 row-start-1 w-full h-full object-cover overflow-hidden"
@@ -23,12 +23,13 @@
       :src="img"
     />
     <span
-      class="
-        label
+      :class="{
+        [`label
         col-start-1
         row-start-1
         w-full
         h-full
+        min-w-0
         hidden
         md:flex
         justify-center
@@ -41,9 +42,9 @@
         text-base
         md:text-xl
         lg:text-2xl
-        p-1
-      "
-      :class="{ 'opacity-0': !active }"
+        p-1`]: true,
+        'opacity-0': !active,
+      }"
     >
       {{ title }}
     </span>
