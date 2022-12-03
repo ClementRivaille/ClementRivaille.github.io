@@ -33,7 +33,7 @@ import itchLogo from "@/assets/logos/itch.png";
 import linkedinLogo from "@/assets/logos/linkedin.png";
 import mailLogo from "@/assets/logos/mail.png";
 import soundcloudLogo from "@/assets/logos/soundcloud.png";
-import twitterLogo from "@/assets/logos/twitter.png";
+import mastodonLogo from "@/assets/logos/mastodon.png";
 import youtubeLogo from "@/assets/logos/youtube.png";
 import { Motion } from "motion/vue";
 import { useInstruments } from "@/utils/conductor";
@@ -64,14 +64,14 @@ const items: SocialItem[] = [
     url: "https://www.youtube.com/channel/UCsP7go1EC0-jQLDPgExIBEw",
   },
   {
+    key: "mastodon",
+    logo: mastodonLogo,
+    url: "https://ludosphere.fr/@Itooh",
+  },
+  {
     key: "linkedin",
     logo: linkedinLogo,
     url: "https://www.linkedin.com/in/cl%C3%A9ment-rivaille-39424b51/",
-  },
-  {
-    key: "twitter",
-    logo: twitterLogo,
-    url: "https://twitter.com/Itooh_",
   },
   {
     key: "soundcloud",

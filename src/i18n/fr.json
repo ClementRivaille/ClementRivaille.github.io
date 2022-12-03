@@ -13,17 +13,17 @@
   },
   "games": {
     "header": "Jeux",
-    "more": "Voir sur itch.io",
+    "more": "Liste complète sur itch.io",
     "play": "Jouer"
   },
   "music": {
     "header": "Musique",
-    "more": "Voir sur itch.io",
+    "more": "Liste complète sur itch.io",
     "play": "Jouer"
   },
   "videos": {
     "header": "Vidéos",
-    "more": "Voir sur Youtube",
+    "more": "Liste complète sur Youtube",
     "play": "Visionner"
   },
   "about": {
@@ -45,6 +45,7 @@
       "mail": "E-mail",
       "soundcloud": "Soundcloud",
       "twitter": "Twitter",
+      "mastodon": "Mastodon",
       "youtube": "Youtube"
     }
   },

@@ -13,17 +13,17 @@
   },
   "games": {
     "header": "Games",
-    "more": "More on itch.io",
+    "more": "See all on itch.io",
     "play": "Play"
   },
   "music": {
     "header": "Music",
-    "more": "More on itch.io",
+    "more": "See all on itch.io",
     "play": "Play"
   },
   "videos": {
     "header": "Videos",
-    "more": "More on Youtube",
+    "more": "See all on Youtube",
     "play": "Watch"
   },
   "about": {
@@ -45,6 +45,7 @@
       "mail": "E-mail",
       "soundcloud": "Soundcloud",
       "twitter": "Twitter",
+      "mastodon": "Mastodon",
       "youtube": "Youtube"
     }
   },
