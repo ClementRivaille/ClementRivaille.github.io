@@ -7,6 +7,7 @@ import {
   getContext,
   Compressor,
   AmplitudeEnvelope,
+  Filter,
 } from "tone";
 import { Scale } from "@tonaljs/tonal";
 
@@ -117,6 +118,7 @@ export default class Instruments {
   private master: Gain;
 
   private bass?: Sampler;
+  private bassLowPass?: Filter;
   private rhodes?: Sampler;
   private rhodesEnvelope?: AmplitudeEnvelope;
   private synth?: Sampler;
@@ -178,10 +180,16 @@ export default class Instruments {
 
     promises.push(
       new Promise<void>((resolve) => {
+        this.bassLowPass = new Filter({
+          frequency: 3000,
+          Q: 0,
+          rolloff: -12,
+          type: "lowpass",
+        }).connect(compressor);
         const bassReverb = new Reverb({
           decay: 1,
           wet: 0.3,
-        }).connect(compressor);
+        }).connect(this.bassLowPass);
         this.bass = new Sampler(
           {
             Ab1: "Ab1.ogg",
@@ -388,5 +396,13 @@ export default class Instruments {
 
   setMute(value: boolean) {
     this.master.gain.setValueAtTime(value ? 0 : 1, getContext().currentTime);
+  }
+
+  muffleBass(enabled: boolean) {
+    this.bassLowPass?.frequency.setTargetAtTime(
+      enabled ? 180 : 3000,
+      getContext().currentTime,
+      enabled ? 0.5 : 1
+    );
   }
 }

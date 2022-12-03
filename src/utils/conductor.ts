@@ -1,11 +1,13 @@
 import { StoreData } from "@/store";
 import { Sequence, Transport } from "tone";
-import { inject, provide, Ref, ref } from "vue";
+import { inject, provide, Ref, ref, watch } from "vue";
 import { useStore } from "vuex";
 import Instruments from "./instruments";
 import Signal, { Callback } from "./signal";
 import { useAction } from "./vuex-hooks";
 import { start as startTone } from "tone";
+import { useRouter } from "vue-router";
+import Page from "./pages";
 
 enum Provided {
   instruments = "instruments",
@@ -50,6 +52,14 @@ export function useConductorProvider() {
   });
   window.addEventListener("focus", () => {
     Transport.start();
+  });
+
+  const router = useRouter();
+  watch([router.currentRoute], () => {
+    const muffled = ![Page.Home, Page.Welcome].includes(
+      router.currentRoute.value.name as Page
+    );
+    instruments.muffleBass(muffled);
   });
 
   return {
