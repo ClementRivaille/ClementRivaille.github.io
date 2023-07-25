@@ -11,7 +11,7 @@ import web3Img from "@/assets/img/web3.png";
 import octaveImg from "@/assets/img/octave.png";
 import desertVroomImg from "@/assets/img/desert-vroom.png";
 import orchestreJsImg from "@/assets/img/orchestre-js.png";
-import noonInvasionImg from "@/assets/img/noon-invasion.png";
+import springsBalletImg from "@/assets/img/springs-ballet.png";
 import sideWebImg from "@/assets/img/side-web.png";
 import anodyneImg from "@/assets/img/anodyne.png";
 import simpleSamplerImg from "@/assets/img/simple-sampler.png";
@@ -66,9 +66,9 @@ export const contents: Contents = {
   ],
   [ContentCategory.music]: [
     {
-      key: "noon-invasion",
-      img: noonInvasionImg,
-      link: "https://itooh.itch.io/the-noon-invasion",
+      key: "springs-ballet",
+      img: springsBalletImg,
+      link: "https://itooh.itch.io/springs-ballet",
     },
     {
       key: "colors-universe",

@@ -87,9 +87,9 @@
     },
     "music": {
       "description": "Generative music and minimalism fascinate me. I like to design logic system that produce harmonic atmospheres our emerging melodies. Also with an interactive aspect, because playing music is a primordial pleasure that I want to share. Thus I don't really have any song to share here, but playful musical applications.",
-      "noon-invasion": {
-        "title": "The Noon Invasion",
-        "description": "A transposition of Space Invaders into music. In this game, everything is an instrument: aliens, shots, explosions… Make your own jazz solo only by playing!"
+      "springs-ballet": {
+        "title": "Spring's Ballet",
+        "description": "Short platform game where every actions are transposed into music. Each movement creates a note with different instruments. Thus creating a melody that evolves along the game."
       },
       "colors-universe": {
         "title": "Colors of the Universe",
