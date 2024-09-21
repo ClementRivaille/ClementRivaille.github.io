@@ -56,6 +56,10 @@
         "title": "Line Momentum",
         "description": "Single-button rhythm game, based on minimalist music inspired by Steve Reich. Keep the rhythm and repeat motifs until you acquire them."
       },
+      "sound-horizons": {
+        "title": "Sound Horizons",
+        "description": "Rhythm game build on procedural generation. Survive to a randomly generated level that creates its own generative music."
+      },
       "last-point": {
         "title": "Last Point",
         "description": "In this game with non-linear narration, your mission is to save the galaxy. Unless you want to explore the solar system to learn about the mysteries surrounding it?"

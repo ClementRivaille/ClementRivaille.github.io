@@ -9,13 +9,13 @@ import echoesTravelerImg from "@/assets/img/echoes-traveler.png";
 import horriblesImg from "@/assets/img/horribles.png";
 import web3Img from "@/assets/img/web3.png";
 import octaveImg from "@/assets/img/octave.png";
-import desertVroomImg from "@/assets/img/desert-vroom.png";
 import orchestreJsImg from "@/assets/img/orchestre-js.png";
 import springsBalletImg from "@/assets/img/springs-ballet.png";
 import sideWebImg from "@/assets/img/side-web.png";
 import anodyneImg from "@/assets/img/anodyne.png";
 import simpleSamplerImg from "@/assets/img/simple-sampler.png";
 import traverseesImg from "@/assets/img/traversees.png";
+import soundHorizonsImg from "@/assets/img/sound-horizons.png";
 
 export enum ContentCategory {
   games = "games",
@@ -34,6 +34,11 @@ type Contents = { [key in ContentCategory]: Content[] };
 export const contents: Contents = {
   [ContentCategory.games]: [
     {
+      key: "sound-horizons",
+      img: soundHorizonsImg,
+      link: "https://store.steampowered.com/app/3032080/Sound_Horizons/",
+    },
+    {
       key: "line-momentum",
       img: lineMomentumImg,
       link: "https://itooh.itch.io/line-momentum",
@@ -47,11 +52,6 @@ export const contents: Contents = {
       key: "echoes-traveler",
       img: echoesTravelerImg,
       link: "https://itooh.itch.io/echoes-traveler",
-    },
-    {
-      key: "desert-vroom",
-      img: desertVroomImg,
-      link: "https://itooh.itch.io/desert-vroom-2021",
     },
     {
       key: "octave",

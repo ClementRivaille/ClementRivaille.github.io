@@ -56,6 +56,10 @@
         "title": "Line Momentum",
         "description": "Jeu de rythme en un seul bouton, basé sur de la musique minimaliste inspirée de Steve Reich. Maintenez le rythme et répétez les motifs jusqu'à bien les incorporer."
       },
+      "sound-horizons": {
+        "title": "Sound Horizons",
+        "description": "Jeu de rythme basé sur la génération procédurale. Survivez à un niveau généré aléatoirement créant sa propre musique dynamique."
+      },
       "last-point": {
         "title": "Last Point",
         "description": "Dans ce jeu à la narration non-linéaire, votre mission est de sauver la galaxie. À moins que vous ne souhaitiez explorer le système solaire pour mieux comprendre les mystères qui l'entourent ?"
