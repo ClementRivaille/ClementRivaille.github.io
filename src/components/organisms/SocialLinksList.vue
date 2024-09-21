@@ -35,6 +35,7 @@ import mailLogo from "@/assets/logos/mail.png";
 import soundcloudLogo from "@/assets/logos/soundcloud.png";
 import mastodonLogo from "@/assets/logos/mastodon.png";
 import youtubeLogo from "@/assets/logos/youtube.png";
+import blueSkyLogo from "@/assets/logos/bluesky.png";
 import { Motion } from "motion/vue";
 import { useInstruments } from "@/utils/conductor";
 import { useI18n } from "vue-i18n";
@@ -61,7 +62,12 @@ const items: SocialItem[] = [
   {
     key: "youtube",
     logo: youtubeLogo,
-    url: "https://www.youtube.com/channel/UCsP7go1EC0-jQLDPgExIBEw",
+    url: "https://www.youtube.com/@itooh-gamedev",
+  },
+  {
+    key: "bluesky",
+    logo: blueSkyLogo,
+    url: "https://bsky.app/profile/itooh.bsky.social",
   },
   {
     key: "mastodon",

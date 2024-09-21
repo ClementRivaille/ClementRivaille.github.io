@@ -23,7 +23,7 @@
   },
   "videos": {
     "header": "Vidéos",
-    "more": "Liste complète sur Youtube",
+    "more": "Vidéos de gamedev",
     "play": "Visionner"
   },
   "about": {
@@ -46,7 +46,8 @@
       "soundcloud": "Soundcloud",
       "twitter": "Twitter",
       "mastodon": "Mastodon",
-      "youtube": "Youtube"
+      "youtube": "Youtube",
+      "bluesky": "Bluesky"
     }
   },
   "contents": {
@@ -121,7 +122,7 @@
       }
     },
     "videos": {
-      "description": "Au travers de la chaîne Youtube Excursions Virtuelles, je partage des réflexions sur le jeu-vidéo comme un imaginaire à explorer. Des émotions que peut procurer un game-design, à ce qu'exprime un environnement virtuel, en passant parfois par la culture web et, toujours, l'évasion. Mais ce qui me plait dans la création de vidéo, c'est aussi l'exercice sur l'écriture, le rythme et même le jeu d'acteur.",
+      "description": "J'ai tenu la chaîne Excursions Virtuelles, au travers de laquelle je partageais des réflexions sur le jeu-vidéo comme un imaginaire à explorer. Des émotions que peut procurer un game-design, à ce qu'exprime un environnement virtuel, en passant parfois par la culture web et, toujours, l'évasion. Aujourd'hui je tiens une chaîne consacrée au gamedev, sur laquelle je publie des devlog et post-mortem.",
       "anodyne": {
         "title": "La désillusion des mondes virtuels",
         "description": "Une réflexion partant d'Anodyne 2 et ses paysages, pour s'intéresser à notre relation avec les mondes virtuels. Des mondes d'évasion, factices, aux supercheries parfois apparentes… Mais qui laissent une empreinte en nous."
