@@ -1,9 +1,12 @@
 {
   "name": "clement-rivaille",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "private": true,
   "description": "Portfolio page",
   "author": "Clément Rivaille <rivaille.clement@orange.fr>",
+  "engines": {
+    "node": "16.20.2"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
