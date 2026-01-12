@@ -34,6 +34,7 @@
         <div>{{ t("about.presentation.1") }}</div>
         <div>{{ t("about.presentation.2") }}</div>
         <div>{{ t("about.presentation.3") }}</div>
+        <div>{{ t("about.presentation.4") }}</div>
       </div>
     </div>
   </InfoPage>
