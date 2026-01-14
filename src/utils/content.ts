@@ -3,8 +3,8 @@ import bazzaNavaImg from "@/assets/img/bazza-nava.png";
 import bloodNotAllowedImg from "../assets/img/blood-not-allowed.png";
 import colorsUniverseImg from "@/assets/img/colors-universe.png";
 import lastPointImg from "@/assets/img/last-point.png";
-import lineMomentumImg from "@/assets/img/line-momentum.png";
-import echoSingsNightImg from "@/assets/img/echo-sings-night.png";
+import circuitPaintPro from "@/assets/img/circuit-pp.png";
+import starseedHarmoniesImg from "@/assets/img/starseed-harmonies.png";
 import echoesTravelerImg from "@/assets/img/echoes-traveler.png";
 import horriblesImg from "@/assets/img/horribles.png";
 import web3Img from "@/assets/img/web3.png";
@@ -39,9 +39,9 @@ export const contents: Contents = {
       link: "https://store.steampowered.com/app/3032080/Sound_Horizons/",
     },
     {
-      key: "line-momentum",
-      img: lineMomentumImg,
-      link: "https://itooh.itch.io/line-momentum",
+      key: "circuit-paint-pro",
+      img: circuitPaintPro,
+      link: "https://itooh.itch.io/circuit-paint-pro",
     },
     {
       key: "last-point",
@@ -66,6 +66,11 @@ export const contents: Contents = {
   ],
   [ContentCategory.music]: [
     {
+      key: "starseed-harmonies",
+      img: starseedHarmoniesImg,
+      link: "https://starseed-harmonies.clementrivaille.fr",
+    },
+    {
       key: "springs-ballet",
       img: springsBalletImg,
       link: "https://itooh.itch.io/springs-ballet",
@@ -74,11 +79,6 @@ export const contents: Contents = {
       key: "colors-universe",
       img: colorsUniverseImg,
       link: "https://itooh.itch.io/colors-of-the-universe",
-    },
-    {
-      key: "echo-night",
-      img: echoSingsNightImg,
-      link: "https://itooh.itch.io/echo-sings-at-night",
     },
     {
       key: "bazza-nava",

@@ -53,6 +53,10 @@
   "contents": {
     "games": {
       "description": "I develop small games as a hobby, mostly with Godot or HTML5. Often focused on music, my game-design philosophy is to look for the pleasure of the instant. Without necessarily any goal or challenge, I try first to create playful interactions and systems worthy to explore. As such I consider this very web site as a playable space.",
+      "circuit-paint-pro": {
+        "title": "Circuit Paint Pro",
+        "description": "Racing and drawing game in the spirit of the SNES. Player must create their own track while trying to produce satisfying art."
+      },
       "line-momentum": {
         "title": "Line Momentum",
         "description": "Single-button rhythm game, based on minimalist music inspired by Steve Reich. Keep the rhythm and repeat motifs until you acquire them."
@@ -92,6 +96,10 @@
     },
     "music": {
       "description": "Generative music and minimalism fascinate me. I like to design logic system that produce harmonic atmospheres our emerging melodies. Also with an interactive aspect, because playing music is a primordial pleasure that I want to share. Thus I don't really have any song to share here, but playful musical applications.",
+      "starseed-harmonies": {
+        "title": "Starseed Harmonies",
+        "description": "Musical garden where you cultivate an organic song. Plant instruments, and enjoy the harmonies they create when they grow. Will you find the secrets hidden among the stars?"
+      },
       "springs-ballet": {
         "title": "Spring's Ballet",
         "description": "Short platform game where every actions are transposed into music. Each movement creates a note with different instruments. Thus creating a melody that evolves along the game."
